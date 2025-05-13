@@ -1,0 +1,9 @@
+api.command.clear.success: "§r§6All of §l§c%nickname%§r§6's inventory has been cleared."
+api.command.clear.accept: "§r§7To §lCONFIRM§r§7 clear your inventory, please repeat the command: §l§6/clear"
+
+api.teleport.on.survival: "§6► §fYou have teleported to coordinates\n§f X: §6%x%, §fY: §6%y%, §fZ: §6%z%"
+
+api.teleport.timer.teleportation: "§6Teleporting..."
+api.teleport.timer.count: "§6Teleportation will begin in §c%timer% seconds§6. Do not move."
+api.teleport.timer.success: "§6Teleportation begins..."
+api.teleport.timer.cancel: "§cTeleport request cancelled."

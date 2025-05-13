@@ -1,0 +1,5 @@
+name: ScoreBoard
+version: 1.0.0
+api: 3.28.0
+main: ScoreBoard\Loader
+author: S1mon

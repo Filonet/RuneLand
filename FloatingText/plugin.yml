@@ -1,0 +1,5 @@
+name: FloatingText
+version: 1.0.0
+api: 3.28.0
+main: FloatingText\Loader
+author: S1mon

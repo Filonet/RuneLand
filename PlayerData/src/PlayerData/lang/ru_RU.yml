@@ -1,0 +1,11 @@
+playerdata.auth.register: "§b§l► §r§fЧтобы зарегистрироваться, придумайте §bпароль §fи введите его в чат"
+playerdata.auth.login: "§b§l► §r§fПожалуйста, авторизуйтесь, введя §bпароль §fв чат"
+playerdata.auth.password.dont.match: "§l§c► §r§fПароли не совпадают, попробуйте еще раз"
+playerdata.auth.keep.password.more: "§l§e► §r§fВведите пароль в чат ещё раз"
+playerdata.auth.incorrect.syntax: "§l§c► §r§fПароль должен состоять из §7[§c6-24§7] §fсимволов и может включать в себя§7: \n §c► §fЛатиницу §7[§ca-z§7] | §fКириллицу §7[§cа-я§7] | §fЦифры §7[§c0-9§7] | §fСпец. символы §7[§c.,!?@#$%^&*_§7]"
+playerdata.auth.successful: "§7§l(§e!§7) §r§fУспешный вход!"
+playerdata.auth.wrong.password: "§c§l► §r§fВы ввели неверный пароль, осталось §l§c%attempt%§r§f попытки"
+playerdata.auth.kick.accaount.regesiter.error: "Аккаунт уже зарегистрирован"
+playerdata.auth.kick.many.select.password: "Вы использовали все попытки для ввода пароля"
+
+playerdata.dont.support.version: "Сервер работает от версии 1.16.0"

@@ -1,0 +1,11 @@
+playerdata.auth.register: "§b§l► §r§fTo register, please create a §bpassword §fand enter it in the chat"
+playerdata.auth.login: "§b§l► §r§fPlease log in by entering the §bpassword §fin the chat"
+playerdata.auth.password.dont.match: "§l§c► §r§fPasswords do not match, please try again"
+playerdata.auth.keep.password.more: "§l§e► §r§fEnter the password in the chat again"
+playerdata.auth.incorrect.syntax: "§l§c► §r§fPassword must be §7[§c6-24§7] §fcharacters long and may include§7: \n §c► §fLatin §7[§ca-z§7] | §fCyrillic §7[§cа-я§7] | §fNumbers §7[§c0-9§7] | §fSpecial characters §7[§c.,!?@#$%^&*_§7]"
+playerdata.auth.successful: "§7§l(§e!§7) §r§fSuccessful login!"
+playerdata.auth.wrong.password: "§c§l► §r§fYou entered an incorrect password, §l§c%attempt%§r§f attempts left"
+playerdata.auth.kick.accaount.regesiter.error: "Account already registered"
+playerdata.auth.kick.many.select.password: "You have used up all attempts to enter your password"
+
+playerdata.dont.support.version: "The server is running version 1.16.0"

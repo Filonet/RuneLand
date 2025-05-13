@@ -1,0 +1,5 @@
+name: Groups
+version: 1.0.0
+api: 3.28.0
+main: Groups\Loader
+author: S1mon

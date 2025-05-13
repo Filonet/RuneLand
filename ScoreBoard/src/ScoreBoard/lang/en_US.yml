@@ -1,0 +1,4 @@
+scoreboard.update.title: "§l§eRuneLand.NET"
+scoreboard.update.lines: "§r§fNick: §b%nickname%\n§r§fTitle: §b%title%\n§r§fGroup: §b%group%\n\n§r§fPing: §b%ping% md\n\n§r§fRunes: §6%runes%\n§r§fMoney: §e%money%"
+scoreboard.dont.group: "§7No"
+scoreboard.dont.title: "§7No"
