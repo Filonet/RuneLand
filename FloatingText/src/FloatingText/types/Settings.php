@@ -24,7 +24,7 @@ class Settings {
         [207.5, 123.6, 197.5, "%floating.text.useful.commands.board%"],
         [207.5, 123.3, 197.5, "%floating.text.useful.commands.itemtoggle%"],
         [207.5, 123, 197.5,   "%floating.text.useful.commands.shop%"],
-        [207.5, 122.7, 197, "%floating.text.useful.commands.buyer%"],
+        [207.5, 122.7, 197.5, "%floating.text.useful.commands.buyer%"],
         [207.5, 122.4, 197.5, "%floating.text.useful.commands.exchange%"],
         [207.5, 122.1, 197.5, "%floating.text.useful.commands.battlepass%"],
         [207.5, 121.8, 197.5, "%floating.text.useful.commands.donate%"],
