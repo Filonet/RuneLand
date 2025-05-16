@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace API\command\teleport;
+namespace API\command\home;
 
 use Groups\types\Permission;
 use PlayerData\data\PlayerDataFactory;
