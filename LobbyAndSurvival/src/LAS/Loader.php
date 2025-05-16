@@ -22,8 +22,10 @@ class Loader extends PluginBase {
 
         $survivalLevel = $this->getServer()->getLevelByName("survival");
         $survivalLevel->getGameRules()->setBool(GameRules::RULE_DO_MOB_SPAWNING, true);
+        $survivalLevel->getGameRules()->setBool(GameRules::RULE_SHOW_COORDINATES, true);
 
-        $survivalLevel = $this->getServer()->getDefaultLevel();
-        $survivalLevel->getGameRules()->setBool(GameRules::RULE_DO_MOB_SPAWNING, false);
+        $worldLevel = $this->getServer()->getDefaultLevel();
+        $worldLevel->getGameRules()->setBool(GameRules::RULE_DO_MOB_SPAWNING, false);
+        $worldLevel->getGameRules()->setBool(GameRules::RULE_SHOW_COORDINATES, true);
     }
 }
