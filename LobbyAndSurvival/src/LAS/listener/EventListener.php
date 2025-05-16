@@ -45,6 +45,13 @@ class EventListener implements Listener {
                     $player->sendMessage(Language::translate("%las.no.permission.pvp%", $player));
                 }
             }
+        } else {
+            $entity = $event->getEntity();
+            if ($entity instanceof Player) {
+                if ($entity->getLevel()->getFolderName() === $this->lobbyLevelName and !$entity->isOp()) {
+                    $event->setCancelled();
+                }
+            }
         }
     }
 }
