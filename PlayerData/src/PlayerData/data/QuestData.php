@@ -5,37 +5,41 @@ declare(strict_types=1);
 namespace PlayerData\data;
 
 use PlayerData\types\SessionIds;
+use PlayerData\types\StaticQuestData;
 
 class QuestData {
 
     public function __construct(
-        private int  $questId = -1,
-        private float  $progress = 0.0
+        private StaticQuestData $woodcutter,
+        private StaticQuestData $miner,
+        private StaticQuestData $farmer,
+        private StaticQuestData $hunter
     )
     {
     }
 
     public static function make() : self{
-        return new self();
+        return new self(
+            StaticQuestData::make(),
+            StaticQuestData::make(),
+            StaticQuestData::make(),
+            StaticQuestData::make()
+        );
     }
 
-    public function getQuestId() : int {
-        return $this->questId;
+    public function getWoodcutter() : StaticQuestData{
+        return $this->woodcutter;
     }
 
-    public function setQuestId(int $questId) : void{
-        $this->questId = $questId;
+    public function getMiner() : StaticQuestData{
+        return $this->miner;
     }
 
-    public function getProgress() : float{
-        return $this->progress;
+    public function getFarmer() : StaticQuestData{
+        return $this->farmer;
     }
 
-    public function setProgress(float $progress) : void{
-        $this->progress = $progress;
-    }
-
-    public function addProgress(float $progress) : void{
-        $this->progress += $progress;
+    public function getHunter() : StaticQuestData{
+        return $this->hunter;
     }
 }
