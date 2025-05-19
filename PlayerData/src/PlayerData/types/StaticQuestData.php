@@ -8,6 +8,7 @@ class StaticQuestData {
 
     public function __construct(
         private int    $questId = 0,
+        private bool   $isTake = false,
         private float  $progress = 0.0
     ){}
 
@@ -21,6 +22,14 @@ class StaticQuestData {
 
     public function setQuestId(int $questId): void {
         $this->questId = $questId;
+    }
+
+    public function isTake(): bool {
+        return $this->isTake;
+    }
+
+    public function setTake(bool $isTake): void {
+        $this->isTake = $isTake;
     }
 
     public function getProgress(): float {

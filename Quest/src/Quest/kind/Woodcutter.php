@@ -6,21 +6,45 @@ namespace Quest\kind;
 
 use PlayerData\data\PlayerDataFactory;
 use PlayerData\types\StaticQuestData;
+use pocketmine\item\Axe;
+use pocketmine\item\Sword;
 use pocketmine\Player;
 use Quest\types\Settings;
 
 class Woodcutter extends Kind {
     public function __construct() {
-        $this->add(0, new KindData(Settings::TYPE_DATA_PASS_ITEMS, "Здравствуй! Я вижу ты новенький. Для начала сделай себе топор!",
+        $this->add(0, new KindData(
+            function (Player $player) : void {
+                $player->sendMessage("Здравствуй! Я вижу ты новенький. Для начала сделай себе топор!");
+            },
             function (Player $player) : bool {
-                var_dump(1);
-                //проверяет, есть ли необходимое вещи (прогресс?)
+                $itemInHand = $player->getInventory()->getItemInHand();
+                if ($itemInHand instanceof Axe) {
+                    return true;
+                }
+
+                $player->sendMessage("Здравствуй ещё раз! Для начала сделай себе топор!");
                 return false;
             },
+            null,
+            true
+        ));
+
+        $this->add(1, new KindData(
             function (Player $player) : void {
-                var_dump(21);
-                //есть все успешно, то работает
-            }
+                $player->sendMessage("Хорошо. А теперь принеси мне (10 дуба), и получишь награду. ");
+            },
+            function (Player $player) : bool {
+                $itemInHand = $player->getInventory()->getItemInHand();
+                if ($itemInHand instanceof Sword) {
+                    return true;
+                }
+
+                $player->sendMessage("Принеси мне (10 дуба), и получишь награду.");
+                return false;
+            },
+            null, //выдача награды
+            true
         ));
     }
 

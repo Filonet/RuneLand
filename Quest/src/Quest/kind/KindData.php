@@ -6,25 +6,25 @@ namespace Quest\kind;
 
 class KindData {
     public function __construct(
-        private int $type,
-        private string $text,
+        private \Closure $take,
         private \Closure $check,
-        private \Closure $success,
+        private ?\Closure $success,
+        private bool $autoTakeNextQuest
     ) {}
 
-    public function getType() : int {
-        return $this->type;
-    }
-
-    public function getText() : string {
-        return $this->text;
+    public function getTake() : \Closure {
+        return $this->take;
     }
 
     public function getCheck() : \Closure {
         return $this->check;
     }
 
-    public function getSuccess() : \Closure {
+    public function getSuccess() : ?\Closure {
         return $this->success;
+    }
+
+    public function isAutoTakeNextQuest() : bool {
+        return $this->autoTakeNextQuest;
     }
 }

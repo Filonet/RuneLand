@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Quest\kind;
 
+use PlayerData\Language;
 use PlayerData\types\StaticQuestData;
 use pocketmine\Player;
 
@@ -27,17 +28,30 @@ abstract class Kind {
     public function find(Player $player) : void {
         $kindData = $this->get(($questData = $this->getQuestData($player))->getQuestId());
         if ($kindData === null) {
+            $player->sendMessage(Language::translate("%quest.all.passed%", $player));
             return;
         }
 
-        $isSuccess = ($kindData->getCheck())($player);
-        if (!$isSuccess) {
+        if (!$questData->isTake()) {
+            ($kindData->getTake())($player);
+
+            $questData->setTake(true); //TODO: set database
             return;
         }
 
-        ($kindData->getSuccess())($player);
+        if (!(($kindData->getCheck())($player))) {
+            return;
+        }
 
-        $questData->setQuestId($questData->getQuestId() + 1);
-        //TODO: set database
+        $success = $kindData->getSuccess();
+        if ($success !== null) {
+            ($kindData->getSuccess())($player);
+        }
+
+        $questData->setQuestId($questData->getQuestId() + 1); //TODO: set database
+
+        if ($kindData->isAutoTakeNextQuest()) {
+            $this->find($player);
+        }
     }
 }

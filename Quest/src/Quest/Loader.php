@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Quest;
 
+use PlayerData\Language;
 use pocketmine\plugin\PluginBase;
 use Quest\command\QuestCommand;
 
@@ -15,6 +16,8 @@ class Loader extends PluginBase {
     }
 
     public function onEnable() : void{
+        Language::loadFromPath($this->getFile() . DIRECTORY_SEPARATOR . "src" . DIRECTORY_SEPARATOR . "Quest" . DIRECTORY_SEPARATOR . "lang");
+
         self::$instance = $this;
 
         $this->getServer()->getCommandMap()->register("quest", new QuestCommand());
