@@ -18,6 +18,7 @@ use API\listener\EventListener;
 use API\manager\Manager;
 use PlayerData\Language;
 use pocketmine\plugin\PluginBase;
+use pocketmine\scheduler\ClosureTask;
 
 class Loader extends PluginBase {
     private static self $instance;
@@ -53,6 +54,10 @@ class Loader extends PluginBase {
             new DelHomeCommand(),
             new HomeCommand($this->manager),
         ]);
+
+        $this->getScheduler()->scheduleDelayedTask(new ClosureTask(function (int $currentTick) : void {
+            $this->getServer()->shutdown();
+        }), 20 * 60 * 60 * 5);
     }
 
     public function getManager() : Manager{
