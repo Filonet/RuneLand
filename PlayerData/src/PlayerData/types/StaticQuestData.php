@@ -7,7 +7,7 @@ namespace PlayerData\types;
 class StaticQuestData {
 
     public function __construct(
-        private int    $questId = -1,
+        private int    $questId = 0,
         private float  $progress = 0.0
     ){}
 

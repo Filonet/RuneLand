@@ -13,12 +13,7 @@ class Manager {
     }
 
     public function find(Player $player) : void {
-        $questData = PlayerDataFactory::getData($player->getLowerCaseName())->getQuestData();
-        $questId = $questData->getQuestId();
-        if ($questId === -1) {
 
-
-        }
     }
 
 }
