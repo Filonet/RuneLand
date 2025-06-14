@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace API\manager;
 
 use API\Loader;
+use PlayerData\data\PlayerDataFactory;
 use PlayerData\Language;
 use pocketmine\level\Level;
 use pocketmine\level\Position;
@@ -79,5 +80,20 @@ class Manager {
 
             unset($this->teleports[$player->getLowerCaseName()]);
         }
+    }
+
+    /*
+     * Выводим наигранное время тоже
+     */
+    public function getGameTime(Player $player) : int {
+        $nickname = $player->getLowerCaseName();
+
+        $total = 0;
+        $total += PlayerDataFactory::getData($nickname)->getStatsData()->getGameTime();
+        if (isset(Loader::$playerTimes[$nickname])){
+            $total += time() - Loader::$playerTimes[$nickname];
+        }
+
+        return $total;
     }
 }

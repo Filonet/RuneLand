@@ -14,11 +14,11 @@ class Settings {
         //NOOP
     }
 
-    public const REPLACE_SWEAR = '******';
+    public const string REPLACE_SWEAR = '******';
 
-    public const INTS_FILTER = '/(?<![0-9])[0-9]{5}(?![0-9])/';
+    public const string INTS_FILTER = '/(?<![0-9])[0-9]{5}(?![0-9])/';
 
-    public const MESSAGES_NOT_REPLACE = [
+    public const array MESSAGES_NOT_REPLACE = [
         '!нет' => true,
         'нет' => true,
         '! нет' => true,
@@ -27,7 +27,7 @@ class Settings {
         '! сом' => true
     ];
 
-    public const ADS_FILTER = [
+    public const array ADS_FILTER = [
         '/[\s\pP]\s*[tт]\s*[kк](?![а-яa-z])|(?<![а-яa-z])[tт]\s*[kк](?![а-яa-z])/ui',
         '/[\s\pP]\s*[pр]\s*[eе](?![а-яa-z])|(?<![а-яa-z])[pр]\s*[eе](?![а-яa-z])/ui',
         '/[\s\pP]\s*[cс]\s*[cс](?![а-яa-z])|(?<![а-яa-z])[cс]\s*[cс](?![а-яa-z])/ui',
@@ -39,7 +39,7 @@ class Settings {
         '/[\pP]\s*[sс]\s*[uyу]\s*(?![а-яa-z])/ui'
     ];
 
-    public const SWEAR_FILTER = [
+    public const array SWEAR_FILTER = [
         'bad_words' => [
             '(?<=\PL) %RE_PRETEXT%?
                       [hхx]_?[уyu]_?[ийiеeёяюju]     #хуй, хуя, хую, хуем, хуёвый, охуительный
@@ -148,7 +148,7 @@ class Settings {
         ]
     ];
 
-    public const CHAT = [
+    public const array CHAT = [
         Group::NONE => '{nickname}§r§8: §7{message}§r',
         Group::GRIEFER => '{nickname}§r§4: §7{message}§r',
         Group::HUSTANG => '{nickname}§r§6: §7{message}§r',
@@ -159,50 +159,15 @@ class Settings {
         Group::STINGER => '{nickname}§r§5: §7{message}§r'
     ];
 
-    public const TAG_LIST = [
-        Group::NONE => [
-            'message' => '§f§r{name}',
-            'nametag' => '§f§r{name}'
-        ],
-
-        Group::GRIEFER => [
-            'message' => '§c§o§lGRIEFER§r §f§r{name}',
-            'nametag' => '§c§o§lGRIEFER§r §f§r{name}'
-        ],
-
-        Group::HUSTANG => [
-            'message' => '§e§o§lHUSTANGE§r §f§r{name}',
-            'nametag' => '§e§o§lHUSTANGE§r §f§r{name}'
-        ],
-
-        Group::GHAST => [
-            'message' => '§b§o§lGHAST§r §f§r{name}',
-            'nametag' => '§b§o§lGHAST§r §f§r{name}'
-        ],
-
-        Group::WITHER => [
-            'message' => '§6§o§lWITHER§r §f§r{name}',
-            'nametag' => '§6§o§lWITHER§r §f§r{name}'
-        ],
-
-        Group::KRAKEN => [
-            'message' => '§a§o§lKRAKEN§r §f§r{name}',
-            'nametag' => '§a§o§lKRAKEN§r §f§r{name}'
-        ],
-
-        Group::DRAGON => [
-            'message' => '§5§o§lDRAGON§r §f§r{name}',
-            'nametag' => '§5§o§lDRAGON§r §f§r{name}'
-        ],
-
-        Group::STINGER => [
-            'message' => '§c§o§lSTINGER§r §f§r{name}',
-            'nametag' => '§c§o§lSTINGER§r §f§r{name}'
-        ],
-
-        Group::ETERNITY => [
-            'message' => '§d§o§lETERNITY§r §f§r{name}',
-            'nametag' => '§d§o§lETERNITY§r §f§r{name}'
-        ],
+    public const array TAG_LIST = [
+        Group::NONE => '§f§r{name}',
+        Group::GRIEFER => '§c§o§lGRIEFER§r §f§r{name}',
+        Group::HUSTANG => '§e§o§lHUSTANGE§r §f§r{name}',
+        Group::GHAST => '§b§o§lGHAST§r §f§r{name}',
+        Group::WITHER => '§6§o§lWITHER§r §f§r{name}',
+        Group::KRAKEN => '§a§o§lKRAKEN§r §f§r{name}',
+        Group::DRAGON => '§5§o§lDRAGON§r §f§r{name}',
+        Group::STINGER => '§c§o§lSTINGER§r §f§r{name}',
+        Group::ETERNITY => '§d§o§lETERNITY§r §f§r{name}',
     ];
 }

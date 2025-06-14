@@ -4,10 +4,13 @@ declare(strict_types=1);
 
 namespace API\listener;
 
+use API\Loader;
 use API\manager\Manager;
 use pocketmine\event\entity\EntityDamageEvent;
 use pocketmine\event\Listener;
+use pocketmine\event\player\PlayerJoinEvent;
 use pocketmine\event\player\PlayerMoveEvent;
+use pocketmine\event\player\PlayerQuitEvent;
 use pocketmine\Player;
 
 class EventListener implements Listener {
@@ -27,6 +30,22 @@ class EventListener implements Listener {
             if ($this->manager->isRandomTeleport($entity)) {
                 $event->setCancelled();
             }
+        }
+    }
+
+    public function onJoin(PlayerJoinEvent $event) : void{
+        $player = $event->getPlayer();
+        Loader::$playerTimes[$player->getLowerCaseName()] = time();
+    }
+
+    public function onQuit(PlayerQuitEvent $event) : void{
+        $player = $event->getPlayer();
+
+        if (isset(Loader::$playerTimes[$player->getLowerCaseName()])) {
+            $time = (time() - Loader::$playerTimes[$player->getLowerCaseName()]);
+            \PlayerData\Loader::$mThread->pushQueryPacket('INSERT INTO `stats` (`nickname`, `money`, `runes`, `kills`, `deaths`, `gameTime`) VALUES("' . $player->getLowerCaseName() . '", ' . $time . ') ON DUPLICATE KEY UPDATE `gameTime` = `gameTime` + ' . $time . ';');
+
+            unset(Loader::$playerTimes[$player->getLowerCaseName()]);
         }
     }
 }

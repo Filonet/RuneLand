@@ -49,16 +49,14 @@ class GroupHelper {
 
         $tags = Settings::TAG_LIST[PlayerDataFactory::getData($nickname)->getGroupData()->getGroup()] ?? Settings::TAG_LIST[Group::NONE];
 
-        $message = $tags['message'];
+        $tags = str_replace(['{name}'], [$player->getName()], $tags);
 
-        $message = str_replace(['{name}'], [$player->getName()], $message);
-
-        $player->setDisplayName($message);
+        $player->setDisplayName($tags);
         if (!$player->isOnline()) {
             return;
         }
 
-        $player->setNameTag($message);
+        $player->setNameTag($tags);
 
         self::$tags[$player->getName()] = $player->getNameTag();
     }

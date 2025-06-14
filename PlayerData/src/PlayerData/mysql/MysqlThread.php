@@ -88,10 +88,10 @@ class MysqlThread extends Thread{
                         }
                     }
 
-                    $q = $db->query("SELECT `nickname`, `money`, `runes`, `kills`, `deaths` FROM `stats` WHERE " . str_replace("`name`", "`nickname`", $querySeq));
+                    $q = $db->query("SELECT `nickname`, `money`, `runes`, `kills`, `deaths`, `gameTime` FROM `stats` WHERE " . str_replace("`name`", "`nickname`", $querySeq));
                     if ($q !== false && count($data = $q->fetch_all())) {
                         foreach ($data as $row) {
-                            $result[trim(strtolower($row[0]))]->setStatsData(new StatsData((int)$row[1], (int)$row[2], (int)$row[3], (int)$row[4]));
+                            $result[trim(strtolower($row[0]))]->setStatsData(new StatsData((int)$row[1], (int)$row[2], (int)$row[3], (int)$row[4], (int)$row[5]));
                         }
                     }
 

@@ -68,14 +68,14 @@ class EventListener implements Listener {
         $event->setDeathMessage("");
 
         PlayerDataFactory::getData($player->getLowerCaseName())->getStatsData()->addDeaths(1);
-        Loader::$mThread->pushQueryPacket('INSERT INTO `stats` (`nickname`, `money`, `runes`, `kills`, `deaths`) VALUES ("' . $player->getLowerCaseName() . '", 0, 0, 0, 1) ON DUPLICATE KEY UPDATE `deaths` = `deaths` + 1;');
+        Loader::$mThread->pushQueryPacket('INSERT INTO `stats` (`nickname`, `money`, `runes`, `kills`, `deaths`, `gameTime`) VALUES ("' . $player->getLowerCaseName() . '", 0, 0, 0, 1, 0) ON DUPLICATE KEY UPDATE `deaths` = `deaths` + 1;');
 
         $cause = $player->getLastDamageCause();
         if ($cause instanceof EntityDamageByEntityEvent) {
             $attacker = $cause->getDamager();
             if ($attacker instanceof Player) {
                 PlayerDataFactory::getData($attacker->getLowerCaseName())->getStatsData()->addKills(1);
-                Loader::$mThread->pushQueryPacket('INSERT INTO `stats` (`nickname`, `money`, `runes`, `kills`, `deaths`) VALUES ("' . $attacker->getLowerCaseName() . '", 0, 0, 1, 0) ON DUPLICATE KEY UPDATE `kills` = `kills` + 1;');
+                Loader::$mThread->pushQueryPacket('INSERT INTO `stats` (`nickname`, `money`, `runes`, `kills`, `deaths`, `gameTime`) VALUES ("' . $attacker->getLowerCaseName() . '", 0, 0, 1, 0, 0) ON DUPLICATE KEY UPDATE `kills` = `kills` + 1;');
             }
         }
     }

@@ -10,6 +10,7 @@ use API\command\home\HomeCommand;
 use API\command\home\SetHomeCommand;
 use API\command\RtpCommand;
 use API\command\SpawnCommand;
+use API\command\StatsCommand;
 use API\command\teleport\TpaCancelCommand;
 use API\command\teleport\TpAcceptCommand;
 use API\command\teleport\TpaCommand;
@@ -22,6 +23,8 @@ use pocketmine\scheduler\ClosureTask;
 
 class Loader extends PluginBase {
     private static self $instance;
+
+    public static array $playerTimes = [];
 
     public static function getInstance(): self {
         return self::$instance;
@@ -53,6 +56,8 @@ class Loader extends PluginBase {
             new SetHomeCommand(),
             new DelHomeCommand(),
             new HomeCommand($this->manager),
+
+            new StatsCommand($this->manager)
         ]);
 
         $this->getScheduler()->scheduleDelayedTask(new ClosureTask(function (int $currentTick) : void {

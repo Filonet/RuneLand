@@ -37,3 +37,10 @@ api.command.home.list: "§6Дома: §f%list%"
 api.command.delHome.usage: "§7Использование:\n§b/delhome <дом> §e- §fудаляет точку дома"
 api.command.delHome.dont.found: "§cОшибка: §4Дом не найден."
 api.command.delHome.success: "§6Дом §c%home%§6 удален."
+
+api.command.stats.wellPlayed: "Наиграно"
+
+api.utils.timer.days: "д."
+api.utils.timer.hour: "ч."
+api.utils.timer.minutes: "м."
+api.utils.timer.seconds: "с."

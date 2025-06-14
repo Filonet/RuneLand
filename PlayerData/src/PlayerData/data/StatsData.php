@@ -13,6 +13,7 @@ class StatsData {
         private int $runes = 0,
         private int $kills = 0,
         private int $deaths  = 0,
+        private int $gameTime = 0
     )
     {
     }
@@ -35,6 +36,10 @@ class StatsData {
 
     public function getDeaths() : int {
         return $this->deaths;
+    }
+
+    public function getGameTime() : int {
+        return $this->gameTime;
     }
 
     public function setMoney(int $money) : void{
@@ -67,5 +72,9 @@ class StatsData {
 
     public function addDeaths(int $deaths) : void{
         $this->deaths += $deaths;
+    }
+
+    public function setGameTime(int $gameTime) : void{
+        $this->gameTime = $gameTime;
     }
 }
