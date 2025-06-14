@@ -25,8 +25,13 @@ class GivegroupCommand extends Command {
         if ($sender instanceof Player) return false;
 
         if (!isset($args[1])) {
-            $sender->sendMessage(TextFormat::GREEN . "Usage: /givegroup <player> <group>");
+            $sender->sendMessage(TextFormat::GREEN . "Usage: /givegroup <player> <group> <expiration on days>");
             return false;
+        }
+
+        $expirationOnSecond = 0;
+        if (isset($args[2])) {
+            $expirationOnSecond = ((((int) $args[2]) * 24 * 60 * 60) + time());
         }
 
         $groupName = $args[1];
@@ -39,12 +44,12 @@ class GivegroupCommand extends Command {
         if ($player instanceof Player) {
             $nickname = $player->getLowerCaseName();
 
-            if (GroupHelper::getGroupValue($groupName) > GroupHelper::getGroupValue(PlayerDataFactory::getData($player->getLowerCaseName())->getGroupName())) {
+            if (GroupHelper::getGroupValue($groupName) > GroupHelper::getGroupValue(PlayerDataFactory::getData($player->getLowerCaseName())->getGroupData()->getGroup())) {
                 $sender->sendMessage(TextFormat::GREEN . "Added " . $nickname . " to the group successfully");
 
-                \PlayerData\Loader::$mThread->pushQueryPacket('INSERT INTO `groups` (`nickname`, `group`, `title`) VALUES("' . $nickname . '", "' . $groupName . '", "' . Title::NONE . '") ON DUPLICATE KEY UPDATE `group` = "' . $groupName . '";');
+                \PlayerData\Loader::$mThread->pushQueryPacket('INSERT INTO `groups` (`nickname`, `group`, `expirationGroup`, `title`) VALUES("' . $nickname . '", "' . $groupName . '", "' . $expirationOnSecond . '", "' . Title::NONE . '") ON DUPLICATE KEY UPDATE `group` = "' . $groupName . '", `expirationGroup` = "' . $expirationOnSecond . '";');
 
-                PlayerDataFactory::getData($player->getLowerCaseName())->setGroupName($groupName);
+                PlayerDataFactory::getData($player->getLowerCaseName())->getGroupData()->setGroup($groupName);
 
                 GroupHelper::updateTags($player);
             } else {
@@ -54,7 +59,7 @@ class GivegroupCommand extends Command {
             $nickname = strtolower($args[0]);
 
             \PlayerData\Loader::$mThread->pushQueryClosureInputPacket("SELECT `nickname`, `group` FROM `groups` WHERE `nickname` = '" . $nickname . "';",
-                function (array $result) use ($nickname, $sender, $groupName) {
+                function (array $result) use ($nickname, $sender, $groupName, $expirationOnSecond) {
                     $groupNameUser = Group::NONE;
                     foreach ($result as $row) {
                         $groupNameUser = $row[1];
@@ -63,7 +68,7 @@ class GivegroupCommand extends Command {
                     if (GroupHelper::getGroupValue($groupName) > GroupHelper::getGroupValue($groupNameUser)) {
                         $sender->sendMessage(TextFormat::GREEN . "Added " . $nickname . " to the group successfully");
 
-                        \PlayerData\Loader::$mThread->pushQueryPacket('INSERT INTO `groups` (`nickname`, `group`, `title`) VALUES("' . $nickname . '", "' . $groupName . '", "' . Title::NONE . '") ON DUPLICATE KEY UPDATE `group` = "' . $groupName . '";');
+                        \PlayerData\Loader::$mThread->pushQueryPacket('INSERT INTO `groups` (`nickname`, `group`, `expirationGroup`, `title`) VALUES("' . $nickname . '", "' . $groupName . '", "' . $expirationOnSecond . '", "' . Title::NONE . '") ON DUPLICATE KEY UPDATE `group` = "' . $groupName . '", `expirationGroup` = "' . $expirationOnSecond . '";');
                     } else {
                         $sender->sendMessage(TextFormat::GREEN . "The player " . $nickname . " has great privilege");
                     }

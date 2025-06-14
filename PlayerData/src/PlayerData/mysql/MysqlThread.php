@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace PlayerData\mysql;
 
 use PlayerData\data\AuthData;
+use PlayerData\data\GroupData;
 use PlayerData\data\PlayerData;
 use PlayerData\data\StatsData;
 use PlayerData\data\TeleportData;
@@ -80,12 +81,10 @@ class MysqlThread extends Thread{
                         return "`name`=\"" . $n[0] . "\"";
                     }, $players));
 
-                    $q = $db->query("SELECT `nickname`, `group`, `title` FROM `groups` WHERE " . str_replace("`name`", "`nickname`", $querySeq));
+                    $q = $db->query("SELECT `nickname`, `group`, `expirationGroup`, `title` FROM `groups` WHERE " . str_replace("`name`", "`nickname`", $querySeq));
                     if ($q !== false && count($data = $q->fetch_all())) {
                         foreach ($data as $row) {
-                            //можно было конечно их сложить в отдельный файл...
-                            $result[trim(strtolower($row[0]))]->setGroupName($row[1]);
-                            $result[trim(strtolower($row[0]))]->setTitle($row[2]);
+                            $result[trim(strtolower($row[0]))]->setGroupData(new GroupData($row[1], $row[2], $row[3]));
                         }
                     }
 

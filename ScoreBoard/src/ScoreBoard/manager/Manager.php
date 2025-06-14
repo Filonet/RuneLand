@@ -34,10 +34,18 @@ class Manager {
         $playerDataHelper = PlayerDataHelper::getInstance();
         $data = PlayerDataFactory::getData($nickname);
         $statsData = $data->getStatsData();
+        $groupData = $data->getGroupData();
+        $expirationGroup = $groupData->getExpirationGroup();
+
+        $groupText = $groupData->getGroup() === Group::NONE ? "%scoreboard.dont.group%" : $groupData->getGroup();
+        if ($expirationGroup !== 0) {
+            $groupText .= "§7 " . (floor(($expirationGroup - time()) / 24 / 60 / 60)) . "d.§r";
+        }
+
         $this->spawnTo($player, "%scoreboard.update.title%", "%scoreboard.update.lines%", [
             "nickname" => $player->getName(),
-            "group" => $data->getGroupName() === Group::NONE ? "%scoreboard.dont.group%" : $data->getGroupName(),
-            "title" => $data->getTitleName() === Group::NONE ? "%scoreboard.dont.title%" : $data->getTitleName(),
+            "group" => $groupData->getGroup() === Group::NONE ? "%scoreboard.dont.group%" : $groupData->getGroup(),
+            "title" => $groupText,
             "kills" => $statsData->getKills(),
             "deaths" => $statsData->getDeaths(),
             "ping" => $player->getPing(),

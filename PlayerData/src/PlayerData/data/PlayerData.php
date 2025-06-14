@@ -11,8 +11,7 @@ class PlayerData {
 
     public function __construct(
         private AuthData        $authData,
-        private string          $group,
-        private string          $title,
+        private GroupData       $groupData,
         private StatsData       $statsData,
         private QuestData       $questData,
         private TeleportData    $teleportData,
@@ -22,8 +21,7 @@ class PlayerData {
     public static function make(): PlayerData{
         return new self(
             AuthData::make(),
-            Group::NONE,
-            Title::NONE,
+            GroupData::make(),
             StatsData::make(),
             QuestData::make(),
             TeleportData::make()
@@ -34,12 +32,8 @@ class PlayerData {
         return $this->authData;
     }
 
-    public function getGroupName() : string{
-        return $this->group;
-    }
-
-    public function getTitleName() : string {
-        return $this->title;
+    public function getGroupData() : GroupData{
+        return $this->groupData;
     }
 
     public function getStatsData() : StatsData{
@@ -62,12 +56,8 @@ class PlayerData {
         $this->authData = $data;
     }
 
-    public function setGroupName(string $groupName) : void{
-        $this->group = $groupName;
-    }
-
-    public function setTitle(string $title) : void{
-        $this->title = $title;
+    public function setGroupData(GroupData $data) : void{
+        $this->groupData = $data;
     }
 
     public function setStatsData(StatsData $data) : void{

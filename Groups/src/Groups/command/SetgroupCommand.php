@@ -25,8 +25,13 @@ class SetgroupCommand extends Command {
         if ($sender instanceof Player) return false;
 
         if (!isset($args[1])) {
-            $sender->sendMessage(TextFormat::GREEN . "Usage: /setgroup <player> <group>");
+            $sender->sendMessage(TextFormat::GREEN . "Usage: /setgroup <player> <group> <expiration on days>");
             return false;
+        }
+
+        $expirationOnSecond = 0;
+        if (isset($args[2])) {
+            $expirationOnSecond = ((((int) $args[2]) * 24 * 60 * 60) + time());
         }
 
         $player = Server::getInstance()->getPlayer($args[0]);
@@ -44,10 +49,10 @@ class SetgroupCommand extends Command {
 
         $sender->sendMessage(TextFormat::GREEN . "Added " . $nickname . " to the group successfully");
 
-        \PlayerData\Loader::$mThread->pushQueryPacket('INSERT INTO `groups` (`nickname`, `group`, `title`) VALUES("' . $nickname . '", "' . $groupName . '", "' . Title::NONE . '") ON DUPLICATE KEY UPDATE `group` = "' . $groupName . '";');
+        \PlayerData\Loader::$mThread->pushQueryPacket('INSERT INTO `groups` (`nickname`, `group`, `expirationGroup`, `title`) VALUES("' . $nickname . '", "' . $groupName . '", "' . $expirationOnSecond . '", "' . Title::NONE . '") ON DUPLICATE KEY UPDATE `group` = "' . $groupName . '", `expirationGroup` = "' . $expirationOnSecond . '";');
 
         if ($player instanceof Player) {
-            PlayerDataFactory::getData($player->getLowerCaseName())->setGroupName($groupName);
+            PlayerDataFactory::getData($player->getLowerCaseName())->getGroupData()->setGroup($groupName);
 
             GroupHelper::updateTags($player);
         }

@@ -41,13 +41,13 @@ class GroupHelper {
     }
 
     public static function getChat(Player $player, string $message): string{
-        return str_replace(['{nickname}', '{message}'], [$player->getDisplayName(), $message], (Settings::CHAT[PlayerDataFactory::getData($player->getLowerCaseName())->getGroupName()] ?? Settings::CHAT[Group::NONE]));
+        return str_replace(['{nickname}', '{message}'], [$player->getDisplayName(), $message], (Settings::CHAT[PlayerDataFactory::getData($player->getLowerCaseName())->getGroupData()->getGroup()] ?? Settings::CHAT[Group::NONE]));
     }
 
     public static function updateTags(Player $player) : void{
         $nickname = $player->getLowerCaseName();
 
-        $tags = Settings::TAG_LIST[PlayerDataFactory::getData($nickname)->getGroupName()] ?? Settings::TAG_LIST[Group::NONE];
+        $tags = Settings::TAG_LIST[PlayerDataFactory::getData($nickname)->getGroupData()->getGroup()] ?? Settings::TAG_LIST[Group::NONE];
 
         $message = $tags['message'];
 

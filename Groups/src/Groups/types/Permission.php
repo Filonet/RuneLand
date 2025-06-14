@@ -59,7 +59,7 @@ final class Permission {
         if ($groupName instanceof Player) {
             if (in_array($groupName->getLowerCaseName(), \PlayerData\types\Settings::UNLIMITED)) return true;
 
-            $groupName = PlayerDataFactory::getData($groupName->getLowerCaseName())->getGroupName();
+            $groupName = PlayerDataFactory::getData($groupName->getLowerCaseName())->getGroupData()->getGroup();
         }
 
         return isset(self::getPermissionsFromGroupName($groupName)[$permissionName]);

@@ -10,7 +10,9 @@ use Groups\types\Settings;
 use Groups\utils\Utils;
 use PlayerData\data\PlayerDataFactory;
 use PlayerData\event\LoadPlayerDataEvent;
+use PlayerData\types\Group;
 use PlayerData\types\SessionIds;
+use pocketmine\command\ConsoleCommandSender;
 use pocketmine\event\Listener;
 use pocketmine\event\player\PlayerChatEvent;
 use pocketmine\event\player\PlayerCommandPreprocessEvent;
@@ -32,7 +34,17 @@ class EventListener implements Listener {
     public function onLoadPlayerDataEvent(LoadPlayerDataEvent $event): void{
         if ($event->isCancelled()) return;
 
-        GroupHelper::updateTags($event->getPlayer());
+        $player = $event->getPlayer();
+
+        $groupData = $event->getData()->getGroupData();
+        $expirationGroup = $groupData->getExpirationGroup();
+        if ($expirationGroup !== 0 && $expirationGroup < time()) {
+            $groupData->setGroup(Group::NONE);
+
+            $player->getServer()->dispatchCommand(new ConsoleCommandSender(), "setgroup " . $player->getLowerCaseName() . " " . Group::NONE);
+        }
+
+        GroupHelper::updateTags($player);
     }
 
     public function onChat(PlayerChatEvent $event): void{
