@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace NPC\manager;
 
 use NPC\entity\CustomHuman;
+use NPC\Loader;
 use pocketmine\entity\Entity;
 use pocketmine\entity\Skin;
 use pocketmine\level\format\Chunk;
@@ -22,11 +23,13 @@ class Manager {
     private const TAG_SKIN_GEOMETRY_NAME = "GeometryName"; //TAG_String
     private const TAG_SKIN_GEOMETRY_DATA = "GeometryData"; //TAG_ByteArray
 
-    public function __construct(){
+    public function __construct(
+        private Loader $loader
+    ){
         //NOOP
     }
 
-    public function spawnToAll(Location $location, Skin $skin, ?\Closure $onUse = null) : ?CustomHuman{
+    public function getHuman(Location $location, Skin $skin, ?\Closure $onUse = null) : ?CustomHuman{
         $x = (int) $location->x;
         $z = (int) $location->z;
 
@@ -52,17 +55,22 @@ class Manager {
         return new CustomHuman($level, $nbt, $onUse);
     }
 
-    public function getSkinDataFromPng(string $file) : string{
-        $image = imagecreatefrompng($file);
-        $data = "";
-        for ($y = 0; $y < imagesy($image); ++$y) {
-            for ($x = 0; $x < imagesx($image); ++$x) {
-                $color = imagecolorsforindex($image, imagecolorat($image, $x, $y));
-                $data .= chr($color["red"]) . chr($color["green"]) . chr($color["blue"]) . chr($color["alpha"] === 0 ? 0xff : ~$color["alpha"] << 1 & 0xff);
-            }
+    public function getSkin(string $skinData, ?string $modelPath = null, string $skinId = "Custom_Human") : Skin {
+        $skinData = file_get_contents($this->loader->getDataFolder() . "skins/" . $skinData . ".skindata");
+
+        $geometryName = null;
+        if ($modelPath !== null) {
+            $geometryData = file_get_contents($this->loader->getDataFolder() . "geometry/" . $modelPath . ".json");
+            $json = json_decode($geometryData, true);
+            $geometryName = $json['minecraft:geometry'][0]['description']['identifier'];
         }
 
-        imagedestroy($image);
-        return $data;
+        return new Skin(
+            $skinId,
+            $skinData,
+            "",
+            $geometryName ?? "",
+            $geometryData ?? ""
+        );
     }
 }

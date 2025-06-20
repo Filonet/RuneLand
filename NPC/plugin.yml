@@ -2,5 +2,6 @@ name: NPC
 version: 1.0.0
 api: 3.28.0
 main: NPC\Loader
+load: STARTUP
 author: S1mon
 description: made for RuneLand

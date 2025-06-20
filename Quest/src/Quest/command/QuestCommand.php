@@ -22,8 +22,9 @@ class QuestCommand extends Command {
                 return false;
             }
 
-            if ($args[0] === "woodcutter") {
-                KindFactory::getInstance()->get(Woodcutter::class)->find($sender);
+            $quests = KindFactory::getInstance()->getAll();
+            if (isset($quests[$args[0]])) {
+                $quests[$args[0]]->find($sender);
             }
 
             return true;

@@ -24,7 +24,7 @@ class Loader extends PluginBase {
 
         Entity::registerEntity(CustomHuman::class);
 
-        $this->manager = new Manager();
+        $this->manager = new Manager($this);
     }
 
     public function getManager() : Manager{
