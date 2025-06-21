@@ -35,37 +35,37 @@ class Farmer extends Kind
     {
         // Квест 1: Первые яйца
         $this->addQuest(0, 1, [
-            [ItemIds::EGG, 0] => 10  // ID 344, damage 0
+            ItemIds::EGG . ':0' => 10  // ID 344, damage 0
         ], [], 120, 60);
 
         // Квест 2: Куриное мясо
         $this->addQuest(1, 2, [
-            [ItemIds::RAW_CHICKEN, 0] => 5  // ID 365, damage 0
+            ItemIds::RAW_CHICKEN . ':0' => 5  // ID 365, damage 0
         ], [], 150, 75);
 
         // Квест 3: Перья для подушек
         $this->addQuest(2, 3, [
-            [ItemIds::FEATHER, 0] => 15  // ID 288, damage 0
+            ItemIds::FEATHER . ':0' => 15  // ID 288, damage 0
         ], [], 180, 90);
 
         // Квест 4: Свинина для пира
         $this->addQuest(3, 4, [
-            [ItemIds::RAW_PORKCHOP, 0] => 8  // ID 319, damage 0
+            ItemIds::RAW_PORKCHOP . ':0' => 8  // ID 319, damage 0
         ], [], 200, 100);
 
         // Квест 5: Кожа для ремесла
         $this->addQuest(4, 5, [
-            [ItemIds::LEATHER, 0] => 12  // ID 334, damage 0
+            ItemIds::LEATHER . ':0' => 12  // ID 334, damage 0
         ], [], 250, 125);
 
         // Квест 6: Говядина высшего качества
         $this->addQuest(5, 6, [
-            [ItemIds::RAW_BEEF, 0] => 6  // ID 363, damage 0
+            ItemIds::RAW_BEEF . ':0' => 6  // ID 363, damage 0
         ], [], 300, 150);
 
         // Квест 7: Шерсть для одежды
         $this->addQuest(6, 7, [
-            [ItemIds::WOOL, 0] => 20  // ID 35, damage 0 (белая шерсть)
+            ItemIds::WOOL . ':0' => 20  // ID 35, damage 0 (белая шерсть)
         ], [], 350, 175);
 
         // Квест 8: Отдых - забота о животных
@@ -73,54 +73,54 @@ class Farmer extends Kind
 
         // Квест 9: Разнообразие мяса
         $this->addQuest(8, 9, [
-            [ItemIds::RAW_CHICKEN, 0] => 10,  // курица
-            [ItemIds::RAW_PORKCHOP, 0] => 10, // свинина
-            [ItemIds::RAW_BEEF, 0] => 8       // говядина
+            ItemIds::RAW_CHICKEN . ':0' => 10,  // курица
+            ItemIds::RAW_PORKCHOP . ':0' => 10, // свинина
+            ItemIds::RAW_BEEF . ':0' => 8       // говядина
         ], [], 450, 225);
 
         // Квест 10: Большая партия яиц
         $this->addQuest(9, 10, [
-            [ItemIds::EGG, 0] => 32
+            ItemIds::EGG . ':0' => 32
         ], [], 500, 250);
 
         // Квест 11: Цветная шерсть
         $this->addQuest(10, 11, [
-            [ItemIds::WOOL, 0] => 16,   // белая
-            [ItemIds::WOOL, 1] => 16,   // оранжевая
-            [ItemIds::WOOL, 2] => 16,   // пурпурная
-            [ItemIds::WOOL, 3] => 16    // голубая
+            ItemIds::WOOL . ':0' => 16,   // белая
+            ItemIds::WOOL . ':1' => 16,   // оранжевая
+            ItemIds::WOOL . ':2' => 16,   // пурпурная
+            ItemIds::WOOL . ':3' => 16    // голубая
         ], [], 600, 300);
 
         // Квест 12: Кролиководство
         $this->addQuest(11, 12, [
-            [ItemIds::RAW_RABBIT, 0] => 15,    // ID 411, damage 0
-            [ItemIds::RABBIT_HIDE, 0] => 10    // ID 415, damage 0
+            ItemIds::RAW_RABBIT . ':0' => 15,    // ID 411, damage 0
+            ItemIds::RABBIT_HIDE . ':0' => 10    // ID 415, damage 0
         ], [], 650, 325);
 
         // Квест 13: Баранина для ресторана
         $this->addQuest(12, 13, [
-            [ItemIds::RAW_MUTTON, 0] => 12  // ID 423, damage 0
+            ItemIds::RAW_MUTTON . ':0' => 12  // ID 423, damage 0
         ], [], 700, 350);
 
         // Квест 14: Массовое производство кожи
         $this->addQuest(13, 14, [
-            [ItemIds::LEATHER, 0] => 32
+            ItemIds::LEATHER . ':0' => 32
         ], [], 800, 400);
 
         // Квест 15: Пёстрая шерсть
         $this->addQuest(14, 15, [
-            [ItemIds::WOOL, 4] => 12,   // жёлтая
-            [ItemIds::WOOL, 5] => 12,   // лаймовая
-            [ItemIds::WOOL, 6] => 12,   // розовая
-            [ItemIds::WOOL, 7] => 12,   // серая
-            [ItemIds::WOOL, 8] => 12    // светло-серая
+            ItemIds::WOOL . ':4' => 12,   // жёлтая
+            ItemIds::WOOL . ':5' => 12,   // лаймовая
+            ItemIds::WOOL . ':6' => 12,   // розовая
+            ItemIds::WOOL . ':7' => 12,   // серая
+            ItemIds::WOOL . ':8' => 12    // светло-серая
         ], [], 900, 450);
 
         // Квест 16: Птицефабрика
         $this->addQuest(15, 16, [
-            [ItemIds::RAW_CHICKEN, 0] => 25,
-            [ItemIds::FEATHER, 0] => 40,
-            [ItemIds::EGG, 0] => 48
+            ItemIds::RAW_CHICKEN . ':0' => 25,
+            ItemIds::FEATHER . ':0' => 40,
+            ItemIds::EGG . ':0' => 48
         ], [], 1000, 500);
 
         // Квест 17: Отдых - улучшение фермы
@@ -128,27 +128,27 @@ class Farmer extends Kind
 
         // Квест 18: Мясной ассортимент
         $this->addQuest(17, 18, [
-            [ItemIds::RAW_BEEF, 0] => 20,
-            [ItemIds::RAW_PORKCHOP, 0] => 20,
-            [ItemIds::RAW_MUTTON, 0] => 15,
-            [ItemIds::RAW_RABBIT, 0] => 25
+            ItemIds::RAW_BEEF . ':0' => 20,
+            ItemIds::RAW_PORKCHOP . ':0' => 20,
+            ItemIds::RAW_MUTTON . ':0' => 15,
+            ItemIds::RAW_RABBIT . ':0' => 25
         ], [], 1200, 600);
 
         // Квест 19: Радужная шерсть
         $this->addQuest(18, 19, [
-            [ItemIds::WOOL, 9] => 10,   // циановая
-            [ItemIds::WOOL, 10] => 10,  // фиолетовая
-            [ItemIds::WOOL, 11] => 10,  // синяя
-            [ItemIds::WOOL, 12] => 10,  // коричневая
-            [ItemIds::WOOL, 13] => 10,  // зелёная
-            [ItemIds::WOOL, 14] => 10,  // красная
-            [ItemIds::WOOL, 15] => 10   // чёрная
+            ItemIds::WOOL . ':9' => 10,   // циановая
+            ItemIds::WOOL . ':10' => 10,  // фиолетовая
+            ItemIds::WOOL . ':11' => 10,  // синяя
+            ItemIds::WOOL . ':12' => 10,  // коричневая
+            ItemIds::WOOL . ':13' => 10,  // зелёная
+            ItemIds::WOOL . ':14' => 10,  // красная
+            ItemIds::WOOL . ':15' => 10   // чёрная
         ], [], 1400, 700);
 
         // Квест 20: Кожевенное дело
         $this->addQuest(19, 20, [
-            [ItemIds::LEATHER, 0] => 64,
-            [ItemIds::RABBIT_HIDE, 0] => 32
+            ItemIds::LEATHER . ':0' => 64,
+            ItemIds::RABBIT_HIDE . ':0' => 32
         ], [], 1600, 800);
 
         // Квест 21: Отдых - модернизация оборудования
@@ -156,37 +156,37 @@ class Farmer extends Kind
 
         // Квест 22: Промышленное животноводство
         $this->addQuest(21, 22, [
-            [ItemIds::RAW_BEEF, 0] => 40,
-            [ItemIds::RAW_PORKCHOP, 0] => 40,
-            [ItemIds::RAW_CHICKEN, 0] => 50,
-            [ItemIds::RAW_MUTTON, 0] => 30,
-            [ItemIds::RAW_RABBIT, 0] => 35
+            ItemIds::RAW_BEEF . ':0' => 40,
+            ItemIds::RAW_PORKCHOP . ':0' => 40,
+            ItemIds::RAW_CHICKEN . ':0' => 50,
+            ItemIds::RAW_MUTTON . ':0' => 30,
+            ItemIds::RAW_RABBIT . ':0' => 35
         ], [], 2000, 1000);
 
         // Квест 23: Перьевая подушка
         $this->addQuest(22, 23, [
-            [ItemIds::FEATHER, 0] => 128
+            ItemIds::FEATHER . ':0' => 128
         ], [], 2500, 1250);
 
         // Квест 24: Шерстяная империя
         $this->addQuest(23, 24, [
-            [ItemIds::WOOL, 0] => 64,   // белая
-            [ItemIds::WOOL, 1] => 32,   // оранжевая
-            [ItemIds::WOOL, 4] => 32,   // жёлтая
-            [ItemIds::WOOL, 11] => 32,  // синяя
-            [ItemIds::WOOL, 14] => 32,  // красная
-            [ItemIds::WOOL, 15] => 32   // чёрная
+            ItemIds::WOOL . ':0' => 64,   // белая
+            ItemIds::WOOL . ':1' => 32,   // оранжевая
+            ItemIds::WOOL . ':4' => 32,   // жёлтая
+            ItemIds::WOOL . ':11' => 32,  // синяя
+            ItemIds::WOOL . ':14' => 32,  // красная
+            ItemIds::WOOL . ':15' => 32   // чёрная
         ], [], 3000, 1500);
 
         // Квест 25: Мастер животноводства
         $this->addQuest(24, 25, [
-            [ItemIds::EGG, 0] => 128,
-            [ItemIds::LEATHER, 0] => 96,
-            [ItemIds::RAW_BEEF, 0] => 64,
-            [ItemIds::RAW_PORKCHOP, 0] => 64,
-            [ItemIds::RAW_CHICKEN, 0] => 80,
-            [ItemIds::FEATHER, 0] => 160,
-            [ItemIds::WOOL, 0] => 128
+            ItemIds::EGG . ':0' => 128,
+            ItemIds::LEATHER . ':0' => 96,
+            ItemIds::RAW_BEEF . ':0' => 64,
+            ItemIds::RAW_PORKCHOP . ':0' => 64,
+            ItemIds::RAW_CHICKEN . ':0' => 80,
+            ItemIds::FEATHER . ':0' => 160,
+            ItemIds::WOOL . ':0' => 128
         ], [], 5000, 2500);
     }
 
@@ -197,8 +197,8 @@ class Farmer extends Kind
      * 
      * @param int $questId ID квеста (начинается с 0)
      * @param int $questNumber Номер квеста для языковых строк (1-25)
-     * @param array $requirements Требования [[itemId, damage] => amount]
-     * @param array $rewards Награды предметами [[itemId, damage] => amount]
+     * @param array $requirements Требования ['itemId:damage' => amount]
+     * @param array $rewards Награды предметами ['itemId:damage' => amount]
      * @param int $coins Награда монетами
      * @param int $exp Награда опытом
      */
@@ -238,7 +238,7 @@ class Farmer extends Kind
 
     /**
      * Проверка: в инвентаре есть ВСЕ требуемые предметы/кол-ва с учётом damage values.
-     * @param array $requirements Требования в формате [[itemId, damage] => amount]
+     * @param array $requirements Требования в формате ['itemId:damage' => amount]
      */
     private function makeCheckHasItems(array $requirements): callable
     {
@@ -246,18 +246,17 @@ class Farmer extends Kind
             // Собираем счётчики из инвентаря с учётом damage values
             $have = [];
             foreach ($p->getInventory()->getContents() as $stack) {
-                $key = [$stack->getId(), $stack->getDamage()];
-                $have[serialize($key)] = ($have[serialize($key)] ?? 0) + $stack->getCount();
+                $key = $stack->getId() . ':' . $stack->getDamage();
+                $have[$key] = ($have[$key] ?? 0) + $stack->getCount();
             }
 
             // Ищем недостающие позиции
             $missing = [];
             foreach ($requirements as $itemKey => $need) {
-                $serializedKey = serialize($itemKey);
-                if (($have[$serializedKey] ?? 0) < $need) {
-                    [$itemId, $damage] = $itemKey;
-                    $item = ItemFactory::get($itemId, $damage);
-                    $missing[] = $item->getName() . " ×" . ($need - ($have[$serializedKey] ?? 0));
+                if (($have[$itemKey] ?? 0) < $need) {
+                    [$itemId, $damage] = explode(':', $itemKey);
+                    $item = ItemFactory::get((int)$itemId, (int)$damage);
+                    $missing[] = $item->getName() . " ×" . ($need - ($have[$itemKey] ?? 0));
                 }
             }
 
@@ -281,7 +280,7 @@ class Farmer extends Kind
     /**
      * Награда: опыт → деньги → предметы.
      *
-     * @param array $items  Предметы в формате [[itemId, damage] => amount]
+     * @param array $items  Предметы в формате ['itemId:damage' => amount]
      * @param int   $coins  Сколько монет начислить
      * @param int   $exp    Сколько опыта профессии дать
      * @param string $langKey Ключ языкового сообщения игроку
@@ -308,8 +307,8 @@ class Farmer extends Kind
 
             // Добавляем предметы
             foreach ($items as $itemKey => $amount) {
-                [$itemId, $damage] = $itemKey;
-                $item = ItemFactory::get($itemId, $damage, $amount);
+                [$itemId, $damage] = explode(':', $itemKey);
+                $item = ItemFactory::get((int)$itemId, (int)$damage, $amount);
                 if ($p->getInventory()->canAddItem($item)) {
                     $p->getInventory()->addItem($item);
                 } else {

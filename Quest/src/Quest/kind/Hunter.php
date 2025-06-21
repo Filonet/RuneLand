@@ -35,37 +35,37 @@ class Hunter extends Kind
     {
         // Квест 1: Первые трофеи
         $this->addQuest(0, 1, [
-            [ItemIds::ROTTEN_FLESH, 0] => 8  // ID 367, damage 0
+            ItemIds::ROTTEN_FLESH . ':0' => 8  // ID 367, damage 0
         ], [], 140, 70);
 
         // Квест 2: Костная мука
         $this->addQuest(1, 2, [
-            [ItemIds::BONE, 0] => 6  // ID 352, damage 0
+            ItemIds::BONE . ':0' => 6  // ID 352, damage 0
         ], [], 160, 80);
 
         // Квест 3: Паучьи сети
         $this->addQuest(2, 3, [
-            [ItemIds::STRING, 0] => 12  // ID 287, damage 0
+            ItemIds::STRING . ':0' => 12  // ID 287, damage 0
         ], [], 180, 90);
 
         // Квест 4: Взрывчатка
         $this->addQuest(3, 4, [
-            [ItemIds::GUNPOWDER, 0] => 10  // ID 289, damage 0
+            ItemIds::GUNPOWDER . ':0' => 10  // ID 289, damage 0
         ], [], 220, 110);
 
         // Квест 5: Глаза хищника
         $this->addQuest(4, 5, [
-            [ItemIds::SPIDER_EYE, 0] => 8  // ID 375, damage 0
+            ItemIds::SPIDER_EYE . ':0' => 8  // ID 375, damage 0
         ], [], 250, 125);
 
         // Квест 6: Липкая слизь
         $this->addQuest(5, 6, [
-            [ItemIds::SLIMEBALL, 0] => 5  // ID 341, damage 0
+            ItemIds::SLIMEBALL . ':0' => 5  // ID 341, damage 0
         ], [], 280, 140);
 
         // Квест 7: Чернила для письма
         $this->addQuest(6, 7, [
-            [ItemIds::DYE, 0] => 10  // ID 351, damage 0 (чернила)
+            ItemIds::DYE . ':0' => 10  // ID 351, damage 0 (чернила)
         ], [], 320, 160);
 
         // Квест 8: Отдых - изучение повадок
@@ -73,48 +73,48 @@ class Hunter extends Kind
 
         // Квест 9: Ночная охота
         $this->addQuest(8, 9, [
-            [ItemIds::ROTTEN_FLESH, 0] => 20,  // зомби
-            [ItemIds::BONE, 0] => 15,          // скелеты
-            [ItemIds::STRING, 0] => 18         // пауки
+            ItemIds::ROTTEN_FLESH . ':0' => 20,  // зомби
+            ItemIds::BONE . ':0' => 15,          // скелеты
+            ItemIds::STRING . ':0' => 18         // пауки
         ], [], 400, 200);
 
         // Квест 10: Взрывоопасный груз
         $this->addQuest(9, 10, [
-            [ItemIds::GUNPOWDER, 0] => 24
+            ItemIds::GUNPOWDER . ':0' => 24
         ], [], 480, 240);
 
         // Квест 11: Алхимические компоненты
         $this->addQuest(10, 11, [
-            [ItemIds::SPIDER_EYE, 0] => 16,
-            [ItemIds::SLIMEBALL, 0] => 12,
-            [ItemIds::GUNPOWDER, 0] => 20
+            ItemIds::SPIDER_EYE . ':0' => 16,
+            ItemIds::SLIMEBALL . ':0' => 12,
+            ItemIds::GUNPOWDER . ':0' => 20
         ], [], 600, 300);
 
         // Квест 12: Эндер жемчужина
         $this->addQuest(11, 12, [
-            [ItemIds::ENDER_PEARL, 0] => 3  // ID 368, damage 0
+            ItemIds::ENDER_PEARL . ':0' => 3  // ID 368, damage 0
         ], [], 800, 400);
 
         // Квест 13: Огненный стержень
         $this->addQuest(12, 13, [
-            [ItemIds::BLAZE_ROD, 0] => 2  // ID 369, damage 0
+            ItemIds::BLAZE_ROD . ':0' => 2  // ID 369, damage 0
         ], [], 1000, 500);
 
         // Квест 14: Слёзы гаста
         $this->addQuest(13, 14, [
-            [ItemIds::GHAST_TEAR, 0] => 1  // ID 370, damage 0
+            ItemIds::GHAST_TEAR . ':0' => 1  // ID 370, damage 0
         ], [], 1200, 600);
 
         // Квест 15: Магматический крем
         $this->addQuest(14, 15, [
-            [ItemIds::MAGMA_CREAM, 0] => 4  // ID 378, damage 0
+            ItemIds::MAGMA_CREAM . ':0' => 4  // ID 378, damage 0
         ], [], 1000, 500);
 
         // Квест 16: Портальное путешествие
         $this->addQuest(15, 16, [
-            [ItemIds::ENDER_PEARL, 0] => 8,
-            [ItemIds::BLAZE_ROD, 0] => 4,
-            [ItemIds::GHAST_TEAR, 0] => 2
+            ItemIds::ENDER_PEARL . ':0' => 8,
+            ItemIds::BLAZE_ROD . ':0' => 4,
+            ItemIds::GHAST_TEAR . ':0' => 2
         ], [], 1600, 800);
 
         // Квест 17: Отдых - улучшение снаряжения
@@ -122,22 +122,22 @@ class Hunter extends Kind
 
         // Квест 18: Массовая охота
         $this->addQuest(17, 18, [
-            [ItemIds::ROTTEN_FLESH, 0] => 64,
-            [ItemIds::BONE, 0] => 48,
-            [ItemIds::STRING, 0] => 40,
-            [ItemIds::GUNPOWDER, 0] => 32
+            ItemIds::ROTTEN_FLESH . ':0' => 64,
+            ItemIds::BONE . ':0' => 48,
+            ItemIds::STRING . ':0' => 40,
+            ItemIds::GUNPOWDER . ':0' => 32
         ], [], 1800, 900);
 
         // Квест 19: Редкие трофеи
         $this->addQuest(18, 19, [
-            [ItemIds::SPIDER_EYE, 0] => 32,
-            [ItemIds::SLIMEBALL, 0] => 24,
-            [ItemIds::DYE, 0] => 32  // чернила
+            ItemIds::SPIDER_EYE . ':0' => 32,
+            ItemIds::SLIMEBALL . ':0' => 24,
+            ItemIds::DYE . ':0' => 32  // чернила
         ], [], 2000, 1000);
 
         // Квест 20: Эндер коллекция
         $this->addQuest(19, 20, [
-            [ItemIds::ENDER_PEARL, 0] => 16
+            ItemIds::ENDER_PEARL . ':0' => 16
         ], [], 2400, 1200);
 
         // Квест 21: Отдых - древние знания
@@ -145,35 +145,35 @@ class Hunter extends Kind
 
         // Квест 22: Адские материалы
         $this->addQuest(21, 22, [
-            [ItemIds::BLAZE_ROD, 0] => 8,
-            [ItemIds::GHAST_TEAR, 0] => 4,
-            [ItemIds::MAGMA_CREAM, 0] => 12
+            ItemIds::BLAZE_ROD . ':0' => 8,
+            ItemIds::GHAST_TEAR . ':0' => 4,
+            ItemIds::MAGMA_CREAM . ':0' => 12
         ], [], 2800, 1400);
 
         // Квест 23: Алхимический склад
         $this->addQuest(22, 23, [
-            [ItemIds::SPIDER_EYE, 0] => 64,
-            [ItemIds::GUNPOWDER, 0] => 64,
-            [ItemIds::SLIMEBALL, 0] => 48
+            ItemIds::SPIDER_EYE . ':0' => 64,
+            ItemIds::GUNPOWDER . ':0' => 64,
+            ItemIds::SLIMEBALL . ':0' => 48
         ], [], 3200, 1600);
 
         // Квест 24: Мастер порталов
         $this->addQuest(23, 24, [
-            [ItemIds::ENDER_PEARL, 0] => 32,
-            [ItemIds::BLAZE_ROD, 0] => 16,
-            [ItemIds::GHAST_TEAR, 0] => 8
+            ItemIds::ENDER_PEARL . ':0' => 32,
+            ItemIds::BLAZE_ROD . ':0' => 16,
+            ItemIds::GHAST_TEAR . ':0' => 8
         ], [], 4000, 2000);
 
         // Квест 25: Легендарный охотник
         $this->addQuest(24, 25, [
-            [ItemIds::ROTTEN_FLESH, 0] => 128,
-            [ItemIds::BONE, 0] => 96,
-            [ItemIds::STRING, 0] => 80,
-            [ItemIds::GUNPOWDER, 0] => 64,
-            [ItemIds::SPIDER_EYE, 0] => 48,
-            [ItemIds::ENDER_PEARL, 0] => 24,
-            [ItemIds::BLAZE_ROD, 0] => 12,
-            [ItemIds::GHAST_TEAR, 0] => 6
+            ItemIds::ROTTEN_FLESH . ':0' => 128,
+            ItemIds::BONE . ':0' => 96,
+            ItemIds::STRING . ':0' => 80,
+            ItemIds::GUNPOWDER . ':0' => 64,
+            ItemIds::SPIDER_EYE . ':0' => 48,
+            ItemIds::ENDER_PEARL . ':0' => 24,
+            ItemIds::BLAZE_ROD . ':0' => 12,
+            ItemIds::GHAST_TEAR . ':0' => 6
         ], [], 6000, 3000);
     }
 
@@ -184,8 +184,8 @@ class Hunter extends Kind
      * 
      * @param int $questId ID квеста (начинается с 0)
      * @param int $questNumber Номер квеста для языковых строк (1-25)
-     * @param array $requirements Требования [[itemId, damage] => amount]
-     * @param array $rewards Награды предметами [[itemId, damage] => amount]
+     * @param array $requirements Требования ['itemId:damage' => amount]
+     * @param array $rewards Награды предметами ['itemId:damage' => amount]
      * @param int $coins Награда монетами
      * @param int $exp Награда опытом
      */
@@ -225,7 +225,7 @@ class Hunter extends Kind
 
     /**
      * Проверка: в инвентаре есть ВСЕ требуемые предметы/кол-ва с учётом damage values.
-     * @param array $requirements Требования в формате [[itemId, damage] => amount]
+     * @param array $requirements Требования в формате ['itemId:damage' => amount]
      */
     private function makeCheckHasItems(array $requirements): callable
     {
@@ -233,18 +233,17 @@ class Hunter extends Kind
             // Собираем счётчики из инвентаря с учётом damage values
             $have = [];
             foreach ($p->getInventory()->getContents() as $stack) {
-                $key = [$stack->getId(), $stack->getDamage()];
-                $have[serialize($key)] = ($have[serialize($key)] ?? 0) + $stack->getCount();
+                $key = $stack->getId() . ':' . $stack->getDamage();
+                $have[$key] = ($have[$key] ?? 0) + $stack->getCount();
             }
 
             // Ищем недостающие позиции
             $missing = [];
             foreach ($requirements as $itemKey => $need) {
-                $serializedKey = serialize($itemKey);
-                if (($have[$serializedKey] ?? 0) < $need) {
-                    [$itemId, $damage] = $itemKey;
-                    $item = ItemFactory::get($itemId, $damage);
-                    $missing[] = $item->getName() . " ×" . ($need - ($have[$serializedKey] ?? 0));
+                if (($have[$itemKey] ?? 0) < $need) {
+                    [$itemId, $damage] = explode(':', $itemKey);
+                    $item = ItemFactory::get((int)$itemId, (int)$damage);
+                    $missing[] = $item->getName() . " ×" . ($need - ($have[$itemKey] ?? 0));
                 }
             }
 
@@ -268,7 +267,7 @@ class Hunter extends Kind
     /**
      * Награда: опыт → деньги → предметы.
      *
-     * @param array $items  Предметы в формате [[itemId, damage] => amount]
+     * @param array $items  Предметы в формате ['itemId:damage' => amount]
      * @param int   $coins  Сколько монет начислить
      * @param int   $exp    Сколько опыта профессии дать
      * @param string $langKey Ключ языкового сообщения игроку
@@ -295,8 +294,8 @@ class Hunter extends Kind
 
             // Добавляем предметы
             foreach ($items as $itemKey => $amount) {
-                [$itemId, $damage] = $itemKey;
-                $item = ItemFactory::get($itemId, $damage, $amount);
+                [$itemId, $damage] = explode(':', $itemKey);
+                $item = ItemFactory::get((int)$itemId, (int)$damage, $amount);
                 if ($p->getInventory()->canAddItem($item)) {
                     $p->getInventory()->addItem($item);
                 } else {

@@ -42,27 +42,27 @@ class Woodcutter extends Kind
     {
         // Квест 1: Дубовая палочка
         $this->addQuest(0, 1, [
-            [ItemIds::STICK, 0] => 1  // ID 280, damage 0
+            ItemIds::STICK . ':0' => 1  // ID 280, damage 0
         ], [], 100, 50);
 
         // Квест 2: 10 дубовых брёвен
         $this->addQuest(1, 2, [
-            [ItemIds::LOG, 0] => 10  // ID 17, damage 0 (дуб)
+            ItemIds::LOG . ':0' => 10  // ID 17, damage 0 (дуб)
         ], [], 150, 75);
 
         // Квест 3: 32 дубовых брёвен
         $this->addQuest(2, 3, [
-            [ItemIds::LOG, 0] => 32  // ID 17, damage 0 (дуб)
+            ItemIds::LOG . ':0' => 32  // ID 17, damage 0 (дуб)
         ], [], 200, 100);
 
         // Квест 4: 32 дубовых досок
         $this->addQuest(3, 4, [
-            [ItemIds::PLANKS, 0] => 32  // ID 5, damage 0 (дуб)
+            ItemIds::PLANKS . ':0' => 32  // ID 5, damage 0 (дуб)
         ], [], 250, 125);
 
         // Квест 5: 64 дубовых брёвен
         $this->addQuest(4, 5, [
-            [ItemIds::LOG, 0] => 64  // ID 17, damage 0 (дуб)
+            ItemIds::LOG . ':0' => 64  // ID 17, damage 0 (дуб)
         ], [], 300, 150);
 
         // Квест 6: Отдых
@@ -70,12 +70,12 @@ class Woodcutter extends Kind
 
         // Квест 7: 64 дубовых досок
         $this->addQuest(6, 7, [
-            [ItemIds::PLANKS, 0] => 64  // ID 5, damage 0 (дуб)
+            ItemIds::PLANKS . ':0' => 64  // ID 5, damage 0 (дуб)
         ], [], 400, 200);
 
         // Квест 8: 128 дубовых брёвен
         $this->addQuest(7, 8, [
-            [ItemIds::LOG, 0] => 128  // ID 17, damage 0 (дуб)
+            ItemIds::LOG . ':0' => 128  // ID 17, damage 0 (дуб)
         ], [], 500, 250);
 
         // Квест 9: Отдых
@@ -83,26 +83,26 @@ class Woodcutter extends Kind
 
         // Квест 10: 32 берёзовых + 32 тёмного дуба
         $this->addQuest(9, 10, [
-            [ItemIds::LOG2, 0] => 32,  // ID 162, damage 0 (берёза)
-            [ItemIds::LOG2, 1] => 32   // ID 162, damage 1 (тёмный дуб)
+            ItemIds::LOG2 . ':0' => 32,  // ID 162, damage 0 (берёза)
+            ItemIds::LOG2 . ':1' => 32   // ID 162, damage 1 (тёмный дуб)
         ], [], 600, 300);
 
         // Квест 11: 64 берёзовых + 64 тёмного дуба
         $this->addQuest(10, 11, [
-            [ItemIds::LOG2, 0] => 64,  // ID 162, damage 0 (берёза)
-            [ItemIds::LOG2, 1] => 64   // ID 162, damage 1 (тёмный дуб)
+            ItemIds::LOG2 . ':0' => 64,  // ID 162, damage 0 (берёза)
+            ItemIds::LOG2 . ':1' => 64   // ID 162, damage 1 (тёмный дуб)
         ], [], 700, 350);
 
         // Квест 12: 64 акации
         $this->addQuest(11, 12, [
-            [ItemIds::LOG2, 2] => 64  // ID 162, damage 2 (акация)
+            ItemIds::LOG2 . ':2' => 64  // ID 162, damage 2 (акация)
         ], [], 750, 375);
 
         // Квест 13: Смешанная древесина
         $this->addQuest(12, 13, [
-            [ItemIds::LOG2, 0] => 64,  // ID 162, damage 0 (берёза)
-            [ItemIds::LOG2, 1] => 64,  // ID 162, damage 1 (тёмный дуб)
-            [ItemIds::LOG2, 2] => 64   // ID 162, damage 2 (акация)
+            ItemIds::LOG2 . ':0' => 64,  // ID 162, damage 0 (берёза)
+            ItemIds::LOG2 . ':1' => 64,  // ID 162, damage 1 (тёмный дуб)
+            ItemIds::LOG2 . ':2' => 64   // ID 162, damage 2 (акация)
         ], [], 800, 400);
 
         // Квест 14: Отдых
@@ -110,58 +110,58 @@ class Woodcutter extends Kind
 
         // Квест 15: Доски: 128 дубовых, 192 берёзовых, 64 тёмного дуба
         $this->addQuest(14, 15, [
-            [ItemIds::PLANKS, 0] => 128,  // ID 5, damage 0 (дуб)
-            [ItemIds::PLANKS, 2] => 192,  // ID 5, damage 2 (берёза)
-            [ItemIds::PLANKS, 5] => 64    // ID 5, damage 5 (тёмный дуб)
+            ItemIds::PLANKS . ':0' => 128,  // ID 5, damage 0 (дуб)
+            ItemIds::PLANKS . ':2' => 192,  // ID 5, damage 2 (берёза)
+            ItemIds::PLANKS . ':5' => 64    // ID 5, damage 5 (тёмный дуб)
         ], [], 1000, 500);
 
         // Квест 16: 64 акации, 128 тёмного дуба, 256 дубовых досок
         $this->addQuest(15, 16, [
-            [ItemIds::LOG2, 2] => 64,     // ID 162, damage 2 (акация)
-            [ItemIds::LOG2, 1] => 128,    // ID 162, damage 1 (тёмный дуб)
-            [ItemIds::PLANKS, 0] => 256   // ID 5, damage 0 (дуб)
+            ItemIds::LOG2 . ':2' => 64,     // ID 162, damage 2 (акация)
+            ItemIds::LOG2 . ':1' => 128,    // ID 162, damage 1 (тёмный дуб)
+            ItemIds::PLANKS . ':0' => 256   // ID 5, damage 0 (дуб)
         ], [], 1200, 600);
 
         // Квест 17: 384 дубовых плит, 64 акации, 128 тёмного дуба
         $this->addQuest(16, 17, [
-            [ItemIds::WOODEN_SLAB, 0] => 384,  // ID 158, damage 0 (дубовые плиты)
-            [ItemIds::LOG2, 2] => 64,          // ID 162, damage 2 (акация)
-            [ItemIds::LOG2, 1] => 128          // ID 162, damage 1 (тёмный дуб)
+            ItemIds::WOODEN_SLAB . ':0' => 384,  // ID 158, damage 0 (дубовые плиты)
+            ItemIds::LOG2 . ':2' => 64,          // ID 162, damage 2 (акация)
+            ItemIds::LOG2 . ':1' => 128          // ID 162, damage 1 (тёмный дуб)
         ], [], 1500, 750);
 
         // Квест 18: 64 тропического дерева
         $this->addQuest(17, 18, [
-            [ItemIds::LOG, 3] => 64  // ID 17, damage 3 (тропическое)
+            ItemIds::LOG . ':3' => 64  // ID 17, damage 3 (тропическое)
         ], [], 1600, 800);
 
         // Квест 19: 128 тропического дерева, 15 мёртвых кустов, 32 тропических листа
         $this->addQuest(18, 19, [
-            [ItemIds::LOG, 3] => 128,         // ID 17, damage 3 (тропическое)
-            [ItemIds::DEAD_BUSH, 0] => 15,    // ID 32, damage 0
-            [ItemIds::LEAVES, 3] => 32        // ID 18, damage 3 (тропические)
+            ItemIds::LOG . ':3' => 128,         // ID 17, damage 3 (тропическое)
+            ItemIds::DEAD_BUSH . ':0' => 15,    // ID 32, damage 0
+            ItemIds::LEAVES . ':3' => 32        // ID 18, damage 3 (тропические)
         ], [], 1800, 900);
 
         // Квест 20: По 15 саженцев каждого дерева
         $this->addQuest(19, 20, [
-            [ItemIds::SAPLING, 0] => 15,  // ID 6, damage 0 (дуб)
-            [ItemIds::SAPLING, 1] => 15,  // ID 6, damage 1 (ель)
-            [ItemIds::SAPLING, 2] => 15,  // ID 6, damage 2 (берёза)
-            [ItemIds::SAPLING, 3] => 15   // ID 6, damage 3 (тропическое)
+            ItemIds::SAPLING . ':0' => 15,  // ID 6, damage 0 (дуб)
+            ItemIds::SAPLING . ':1' => 15,  // ID 6, damage 1 (ель)
+            ItemIds::SAPLING . ':2' => 15,  // ID 6, damage 2 (берёза)
+            ItemIds::SAPLING . ':3' => 15   // ID 6, damage 3 (тропическое)
         ], [], 2000, 1000);
 
         // Квест 21: Алмазный топор
         $this->addQuest(20, 21, [
-            [ItemIds::DIAMOND_AXE, 0] => 1
+            ItemIds::DIAMOND_AXE . ':0' => 1
         ], [
-            [ItemIds::DIAMOND_AXE, 0] => 1
+            ItemIds::DIAMOND_AXE . ':0' => 1
         ], 2500, 1250);
 
         // Квест 22: Испытание алмазного топора
         $this->addQuest(21, 22, [
-            [ItemIds::LOG, 0] => 224,   // ID 17, damage 0 (дуб)
-            [ItemIds::LOG, 1] => 224,   // ID 17, damage 1 (ель)
-            [ItemIds::LOG, 2] => 224,   // ID 17, damage 2 (берёза)
-            [ItemIds::LOG, 3] => 224    // ID 17, damage 3 (тропическое)
+            ItemIds::LOG . ':0' => 224,   // ID 17, damage 0 (дуб)
+            ItemIds::LOG . ':1' => 224,   // ID 17, damage 1 (ель)
+            ItemIds::LOG . ':2' => 224,   // ID 17, damage 2 (берёза)
+            ItemIds::LOG . ':3' => 224    // ID 17, damage 3 (тропическое)
         ], [], 3000, 1500);
 
         // Квест 23: Отдых
@@ -169,19 +169,19 @@ class Woodcutter extends Kind
 
         // Квест 24: Помощь строителям
         $this->addQuest(23, 24, [
-            [ItemIds::LOG, 0] => 256,           // ID 17, damage 0 (дуб)
-            [ItemIds::LOG, 3] => 256,           // ID 17, damage 3 (тропическое)
-            [ItemIds::WOODEN_SLAB, 0] => 320    // ID 158, damage 0 (дубовые плиты)
+            ItemIds::LOG . ':0' => 256,           // ID 17, damage 0 (дуб)
+            ItemIds::LOG . ':3' => 256,           // ID 17, damage 3 (тропическое)
+            ItemIds::WOODEN_SLAB . ':0' => 320    // ID 158, damage 0 (дубовые плиты)
         ], [], 3500, 1750);
 
         // Квест 25: Финальное испытание
         $this->addQuest(24, 25, [
-            [ItemIds::SAPLING, 0] => 32,        // ID 6, damage 0 (дуб)
-            [ItemIds::LEAVES, 3] => 128,        // ID 18, damage 3 (тропические)
-            [ItemIds::WOODEN_SLAB, 5] => 64,    // ID 158, damage 5 (тёмный дуб)
-            [ItemIds::WOODEN_SLAB, 2] => 64,    // ID 158, damage 2 (берёза)
-            [ItemIds::LOG, 3] => 192,           // ID 17, damage 3 (тропическое)
-            [ItemIds::PLANKS, 2] => 256         // ID 5, damage 2 (берёза)
+            ItemIds::SAPLING . ':0' => 32,        // ID 6, damage 0 (дуб)
+            ItemIds::LEAVES . ':3' => 128,        // ID 18, damage 3 (тропические)
+            ItemIds::WOODEN_SLAB . ':5' => 64,    // ID 158, damage 5 (тёмный дуб)
+            ItemIds::WOODEN_SLAB . ':2' => 64,    // ID 158, damage 2 (берёза)
+            ItemIds::LOG . ':3' => 192,           // ID 17, damage 3 (тропическое)
+            ItemIds::PLANKS . ':2' => 256         // ID 5, damage 2 (берёза)
         ], [], 5000, 2500);
     }
 
@@ -192,8 +192,8 @@ class Woodcutter extends Kind
      * 
      * @param int $questId ID квеста (начинается с 0)
      * @param int $questNumber Номер квеста для языковых строк (1-25)
-     * @param array $requirements Требования [[itemId, damage] => amount]
-     * @param array $rewards Награды предметами [[itemId, damage] => amount]
+     * @param array $requirements Требования ['itemId:damage' => amount]
+     * @param array $rewards Награды предметами ['itemId:damage' => amount]
      * @param int $coins Награда монетами
      * @param int $exp Награда опытом
      */
@@ -233,7 +233,7 @@ class Woodcutter extends Kind
 
     /**
      * Проверка: в инвентаре есть ВСЕ требуемые предметы/кол-ва с учётом damage values.
-     * @param array $requirements Требования в формате [[itemId, damage] => amount]
+     * @param array $requirements Требования в формате ['itemId:damage' => amount]
      */
     private function makeCheckHasItems(array $requirements): callable
     {
@@ -241,18 +241,17 @@ class Woodcutter extends Kind
             // Собираем счётчики из инвентаря с учётом damage values
             $have = [];
             foreach ($p->getInventory()->getContents() as $stack) {
-                $key = [$stack->getId(), $stack->getDamage()];
-                $have[serialize($key)] = ($have[serialize($key)] ?? 0) + $stack->getCount();
+                $key = $stack->getId() . ':' . $stack->getDamage();
+                $have[$key] = ($have[$key] ?? 0) + $stack->getCount();
             }
 
             // Ищем недостающие позиции
             $missing = [];
             foreach ($requirements as $itemKey => $need) {
-                $serializedKey = serialize($itemKey);
-                if (($have[$serializedKey] ?? 0) < $need) {
-                    [$itemId, $damage] = $itemKey;
-                    $item = ItemFactory::get($itemId, $damage);
-                    $missing[] = $item->getName() . " ×" . ($need - ($have[$serializedKey] ?? 0));
+                if (($have[$itemKey] ?? 0) < $need) {
+                    [$itemId, $damage] = explode(':', $itemKey);
+                    $item = ItemFactory::get((int)$itemId, (int)$damage);
+                    $missing[] = $item->getName() . " ×" . ($need - ($have[$itemKey] ?? 0));
                 }
             }
 
@@ -276,7 +275,7 @@ class Woodcutter extends Kind
     /**
      * Награда: опыт → деньги → предметы.
      *
-     * @param array $items  Предметы в формате [[itemId, damage] => amount]
+     * @param array $items  Предметы в формате ['itemId:damage' => amount]
      * @param int   $coins  Сколько монет начислить
      * @param int   $exp    Сколько опыта профессии дать
      * @param string $langKey Ключ языкового сообщения игроку
@@ -303,8 +302,8 @@ class Woodcutter extends Kind
 
             // Добавляем предметы
             foreach ($items as $itemKey => $amount) {
-                [$itemId, $damage] = $itemKey;
-                $item = ItemFactory::get($itemId, $damage, $amount);
+                [$itemId, $damage] = explode(':', $itemKey);
+                $item = ItemFactory::get((int)$itemId, (int)$damage, $amount);
                 if ($p->getInventory()->canAddItem($item)) {
                     $p->getInventory()->addItem($item);
                 } else {
