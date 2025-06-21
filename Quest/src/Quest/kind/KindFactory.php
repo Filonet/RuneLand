@@ -20,6 +20,9 @@ class KindFactory {
 
     public function __construct(){
         $this->register(new Woodcutter());
+        $this->register(new Miner());
+        $this->register(new Farmer());
+        $this->register(new Hunter());
     }
 
     public function register(Kind $kind) : void {

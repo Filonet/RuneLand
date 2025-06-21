@@ -1,1 +1,361 @@
-quest.all.passed: "You have completed all the quests!"
+quest.all.passed: "You have completed all quests!"
+
+# WOODCUTTER
+quest.woodcutter.quest1.first: "Newbie, you don't go into the forest without a §ewooden axe§r. Make one and come back."
+quest.woodcutter.quest1.second: "A §ewooden axe§r is weak, but it'll do for starters."
+
+quest.woodcutter.quest2.first: "Time to test what you're made of. Get me §e10 oak logs§r."
+quest.woodcutter.quest2.second: "Good, not bad for the first time. Let's continue!"
+
+quest.woodcutter.quest3.first: "Saw the logs into §e32 oak planks§r. Show the confidence of a real lumberjack!"
+quest.woodcutter.quest3.second: "Now I can see things are moving forward!"
+
+quest.woodcutter.quest4.first: "You won't get far with such an axe. Make yourself a §estone axe§r already."
+quest.woodcutter.quest4.second: "Perfect! With such a tool, trees will fall by themselves."
+
+quest.woodcutter.quest5.first: "Test your new axe in action: get §e32 oak blocks§r."
+quest.woodcutter.quest5.second: "You've really got the hang of it, well done!"
+
+quest.woodcutter.quest6.first: "You've earned a rest. Come back later - there'll be work."
+quest.woodcutter.quest6.second: "Work calling again? Great, I have plenty of it."
+
+quest.woodcutter.quest7.first: "Now a more serious task: §e64 oak blocks§r. Can you handle it?"
+quest.woodcutter.quest7.second: "Impressive! Faster and stronger each time."
+
+quest.woodcutter.quest8.first: "Get §e128 oak§r and §e32 birch§r. This is an endurance test!"
+quest.woodcutter.quest8.second: "Finished so quickly? Must be giant's blood flowing in you."
+
+quest.woodcutter.quest9.first: "That's enough for today. Take a break from the axe."
+quest.woodcutter.quest9.second: "You're here again? Perfect! There's plenty of work."
+
+quest.woodcutter.quest10.first: "A friend needs help: §e64 birch§r and §e16 dark oak§r."
+quest.woodcutter.quest10.second: "A real man of his word, I respect that."
+
+quest.woodcutter.quest11.first: "I need §eacacia§r, but can't find suitable ones. Will you help?"
+quest.woodcutter.quest11.second: "Your skills are impressive!"
+
+quest.woodcutter.quest12.first: "A real lumberjack needs an §eiron axe§r. Make one!"
+quest.woodcutter.quest12.second: "Now the forest will bow to you. Excellent work!"
+
+quest.woodcutter.quest13.first: "Let's test the new axe. Bring §e64 acacia§r, §edark oak§r and §ebirch§r each."
+quest.woodcutter.quest13.second: "Superb! Soon there won't be any forests left."
+
+quest.woodcutter.quest14.first: "You've worked well. Rest a bit."
+quest.woodcutter.quest14.second: "You're just in time! Real lumberjacks don't get rest."
+
+quest.woodcutter.quest15.first: "Test your axe on planks: §e128 oak§r, §e192 birch§r and §e64 dark oak§r."
+quest.woodcutter.quest15.second: "Now trees will fear your name."
+
+quest.woodcutter.quest16.first: "Help a friend: §e64 acacia§r, §e128 dark oak§r, §e256 oak planks§r."
+quest.woodcutter.quest16.second: "You're a real sawmill. Excellent!"
+
+quest.woodcutter.quest17.first: "I'll introduce you to the §eMiner§r later. Now §e384 oak slabs§r, §e64 acacia§r, §e128 dark oak§r."
+quest.woodcutter.quest17.second: "On time and on point. I respect that!"
+
+quest.woodcutter.quest18.first: "§e64 jungle wood§r - valuable timber. Can you get it?"
+quest.woodcutter.quest18.second: "You managed that too! Not surprised."
+
+quest.woodcutter.quest19.first: "Exotic stuff: §e128 jungle wood§r, §e15 dead bushes§r, §e32 jungle leaves§r."
+quest.woodcutter.quest19.second: "I'd go to the jungle with you! Well done!"
+
+quest.woodcutter.quest20.first: "Forest needs restoration. §e15 saplings§r of each tree type."
+quest.woodcutter.quest20.second: "You're strong and smart!"
+
+quest.woodcutter.quest21.first: "Make a §ediamond axe§r for real masters."
+quest.woodcutter.quest21.second: "Beautiful! Only saw such axes in legends."
+
+quest.woodcutter.quest22.first: "Test the §ediamond axe§r: §e192 oak§r, §e192 dark oak§r, §e256 jungle wood§r, §e256 acacia§r."
+quest.woodcutter.quest22.second: "You're a legend!"
+
+quest.woodcutter.quest23.first: "Rest and come back later."
+quest.woodcutter.quest23.second: "Your return is a celebration for me and terror for trees."
+
+quest.woodcutter.quest24.first: "Help the builders: §e256 oak§r, §e256 jungle wood§r, §e320 oak slabs§r."
+quest.woodcutter.quest24.second: "Reliable as granite!"
+
+quest.woodcutter.quest25.first: "Final: §e32 oak saplings§r, §e128 jungle leaves§r, §e64 dark oak slabs§r, §e64 birch slabs§r, §e192 jungle logs§r, §e256 birch planks§r."
+quest.woodcutter.quest25.second: "I could start a lumber business with you! Go to the §eMiner§r and tell him the best lumberjack in the area sent you!"
+
+# MINER
+quest.miner.quest1.first: "So the §eWoodcutter§r sent you? Make a §ewooden pickaxe§r and come back."
+quest.miner.quest1.second: "I hope you know how to use it, not just hold it for show."
+
+quest.miner.quest2.first: "Let's see you in action. Bring me §e9 coal§r."
+quest.miner.quest2.second: "Not bad for a rookie. Keep it up!"
+
+quest.miner.quest3.first: "Making it harder: §e32 cobblestone§r and §e16 coal§r."
+quest.miner.quest3.second: "Maybe the §eWoodcutter§r was right about you. Let's see what's next."
+
+quest.miner.quest4.first: "Show yourself: §e64 cobblestone§r and §e32 coal§r. Can't handle it?"
+quest.miner.quest4.second: "Excellent work! You've earned respect."
+
+quest.miner.quest5.first: "Stop carrying that wooden stick. Make a §estone pickaxe§r already."
+quest.miner.quest5.second: "Now you look like a miner. Well done!"
+
+quest.miner.quest6.first: "Stone's better than wood, but it's iron time. Bring §e32 iron ore§r, §e16 iron ingots§r and §e64 coal§r."
+quest.miner.quest6.second: "You managed, but it'll get harder from here!"
+
+quest.miner.quest7.first: "Let's test your strength: §e64 iron ingots§r, §e64 stone§r, §e32 coal§r, §e16 iron ore§r and §e128 cobblestone§r."
+quest.miner.quest7.second: "A real miner! I respect that!"
+
+quest.miner.quest8.first: "You've earned a rest. Come back later."
+quest.miner.quest8.second: "Back already? Great, it was boring without you."
+
+quest.miner.quest9.first: "Simple task: §e64 iron ingots§r, §e128 iron ore§r and §e128 coal§r."
+quest.miner.quest9.second: "That's speed! Is your pickaxe still alive?"
+
+quest.miner.quest10.first: "Your pickaxe is falling apart. Make an §eiron pickaxe§r and come back."
+quest.miner.quest10.second: "Finally a proper tool. Well done!"
+
+quest.miner.quest11.first: "Time for serious mining: §e32 gold ore§r, §e128 redstone§r, §e64 gold ingots§r and §e2 diamonds§r."
+quest.miner.quest11.second: "Excellent work!"
+
+quest.miner.quest12.first: "Big task: §e15 diamonds§r, §e64 gold ingots§r, §e2 emeralds§r, §e128 lapis lazuli§r and §e128 redstone§r."
+quest.miner.quest12.second: "Incredible! You were definitely born in a mine!"
+
+quest.miner.quest13.first: "Winter is coming: §e128 coal§r, §e128 stone§r, §e8 emeralds§r and §e64 gold ingots§r."
+quest.miner.quest13.second: "Perfect, now we won't freeze."
+
+quest.miner.quest14.first: "Make yourself a §ediamond pickaxe§r, time to test it in action."
+quest.miner.quest14.second: "Now even mountains are within your reach!"
+
+quest.miner.quest15.first: "Test the diamond pickaxe: §e256 cobblestone§r, §e128 iron ore§r and §e64 gold ore§r."
+quest.miner.quest15.second: "Diamond pickaxe is power! Excellent work!"
+
+quest.miner.quest16.first: "Need lots of materials: §e128 iron ingots§r, §e32 diamonds§r and §e256 coal§r."
+quest.miner.quest16.second: "You're becoming a master of your craft!"
+
+quest.miner.quest17.first: "Take a little rest, mining is hard work."
+quest.miner.quest17.second: "Ready for new challenges? Then get to work!"
+
+quest.miner.quest18.first: "Rare materials: §e64 emeralds§r, §e128 lapis lazuli§r and §e256 redstone§r."
+quest.miner.quest18.second: "Such riches! You're a real treasure hunter!"
+
+quest.miner.quest19.first: "Big order: §e512 cobblestone§r, §e256 stone§r and §e128 iron ingots§r."
+quest.miner.quest19.second: "Mountains are no obstacle for you!"
+
+quest.miner.quest20.first: "Precious stones: §e128 diamonds§r, §e64 emeralds§r and §e32 gold blocks§r."
+quest.miner.quest20.second: "Immeasurable wealth! You're a legend of the depths!"
+
+quest.miner.quest21.first: "Even a miner needs a break. Come back later."
+quest.miner.quest21.second: "Missing the mines? I understand, they're calling!"
+
+quest.miner.quest22.first: "Mass mining: §e256 iron ingots§r, §e128 gold ingots§r and §e64 diamonds§r."
+quest.miner.quest22.second: "You've surpassed all miners I've ever known!"
+
+quest.miner.quest23.first: "Extreme task: §e512 coal§r, §e256 iron ore§r and §e128 gold ore§r."
+quest.miner.quest23.second: "Even a dragon would envy your supplies!"
+
+quest.miner.quest24.first: "Penultimate trial: §e128 emeralds§r, §e256 lapis lazuli§r and §e512 redstone§r."
+quest.miner.quest24.second: "Ready for the final challenge? Then gather all your strength!"
+
+quest.miner.quest25.first: "Final challenge: §e256 emeralds§r and §e256 diamonds§r!"
+quest.miner.quest25.second: "We're rich! Thank you, friend, now I can truly rest!"
+
+# ═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════
+# FARMER - Quests for drops from breedable mobs
+# ═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════
+
+# Quest 1: First eggs
+quest.farmer.quest1.first: "§6Welcome to the farm! §fI'm a §bfarmer§f and I breed animals. §eLet's start simple - bring me §610 eggs§e from chickens. This is the foundation of any homestead!"
+quest.farmer.quest1.second: "§aExcellent! §fThese eggs will be useful for cooking and breeding new chickens. §eNow you're ready for the next task!"
+
+# Quest 2: Chicken meat
+quest.farmer.quest2.first: "§6Poultry farming is an important part of agriculture. §fBring me §65 raw chicken meat§f. §eThis will show that you know how to handle poultry properly."
+quest.farmer.quest2.second: "§aSuperb! §fChicken meat is a valuable source of protein. §eLet's continue developing your livestock skills!"
+
+# Quest 3: Feathers for pillows
+quest.farmer.quest3.first: "§6Chickens give more than just meat and eggs! §fCollect §615 feathers§f - they're needed for making pillows and arrows. §eShow that you value every gift of nature!"
+quest.farmer.quest3.second: "§aWonderful! §fThese feathers are soft and high quality. §eYou're learning to use all resources that animals provide!"
+
+# Quest 4: Pork for feast
+quest.farmer.quest4.first: "§6Time to get into pig farming! §fPigs are undemanding animals that give delicious meat. §eBring me §68 pieces of raw pork§e for a festive feast!"
+quest.farmer.quest4.second: "§aMagnificent! §fThis pork turned out excellent, fatty and juicy. §eYour farmer skills grow every day!"
+
+# Quest 5: Leather for crafting
+quest.farmer.quest5.first: "§6Animal husbandry gives more than just meat! §fLeather is a valuable material for craftsmen. §eGet §612 pieces of leather§e from cows. This requires patience and skill!"
+quest.farmer.quest5.second: "§aExcellent! §fThis leather is high quality, soft and durable. §eNow you understand the value of every animal!"
+
+# Quest 6: Premium beef
+quest.farmer.quest6.first: "§6Cows are the foundation of animal husbandry! §fThey give milk, leather and excellent meat. §eBring me §66 pieces of raw beef§e of the highest quality!"
+quest.farmer.quest6.second: "§aDelightful! §fThis beef is marbled with fat streaks - a real delicacy! §eYou're becoming a true master!"
+
+# Quest 7: Wool for clothing
+quest.farmer.quest7.first: "§6Sheep farming is the art of obtaining wool! §fSheep give us warm wool for clothing. §eCollect §620 blocks of white wool§e. Shear carefully!"
+quest.farmer.quest7.second: "§aWonderful! §fThis wool is soft and fluffy, perfect for warm clothing. §eYou've mastered the basics of sheep farming!"
+
+# Quest 8: Rest - animal care
+quest.farmer.quest8.first: "§6Time to rest and think about animal welfare. §fHealthy and happy animals give better products. §eTake care of your pets, and they will reward you!"
+quest.farmer.quest8.second: "§aGood! §fCaring for animals is the foundation of successful farming. §eNow you're ready for more complex tasks!"
+
+# Quest 9: Meat variety
+quest.farmer.quest9.first: "§6A real farmer breeds different animals! §fShow your mastery: bring §610 chicken§f, §610 pork§f and §68 beef§f. §eDiversity is the key to success!"
+quest.farmer.quest9.second: "§aMagnificent! §fSuch an assortment of meat speaks of your professionalism. §eYou can be proud of your achievements!"
+
+# Quest 10: Large batch of eggs
+quest.farmer.quest10.first: "§6Your poultry farm should work at full capacity! §fI need a large batch of eggs for city deliveries. §eBring §632 eggs§e!"
+quest.farmer.quest10.second: "§aAmazing! §fSuch a quantity of quality eggs is a sign of a well-organized farm! §eYou're a true professional!"
+
+# Quest 11: Colored wool
+quest.farmer.quest11.first: "§6Time to master wool dyeing! §fMulticolored wool is valued higher than regular. §eBring §616 blocks each§e of white, orange, purple and light blue wool!"
+quest.farmer.quest11.second: "§aAmazing! §fThese bright colors will decorate any clothing. §eYou've mastered the art of working with dyes!"
+
+# Quest 12: Rabbit farming
+quest.farmer.quest12.first: "§6Rabbits are fast-breeding animals! §fThey give meat and hides for light leather. §eBring §615 rabbit meat§e and §610 rabbit hides§e!"
+quest.farmer.quest12.second: "§aExcellent! §fRabbits are indeed prolific, and their fur is very soft. §eYou're expanding your farming business!"
+
+# Quest 13: Mutton for restaurant
+quest.farmer.quest13.first: "§6Mutton is a delicacy for gourmets! §fSheep give not only wool but also tender meat. §eBring §612 pieces of raw mutton§e for an elite restaurant!"
+quest.farmer.quest13.second: "§aDelightful! §fThis mutton has a delicate taste and tender texture. §eYour reputation as a farmer is growing!"
+
+# Quest 14: Mass leather production
+quest.farmer.quest14.first: "§6The leather industry needs raw materials! §fLarge orders require large volumes. §eSupply §632 pieces of leather§e for large-scale production!"
+quest.farmer.quest14.second: "§aMagnificent! §fSuch a volume of quality leather will provide work for an entire workshop! §eYou think like a true entrepreneur!"
+
+# Quest 15: Variegated wool
+quest.farmer.quest15.first: "§6Fashion demands bright colors! §fCollect a rainbow of colors for fashion designers. §eNeed §612 blocks each§e of yellow, lime, pink, gray and light gray wool!"
+quest.farmer.quest15.second: "§aAmazing! §fThis color palette will allow creating the most fashionable outfits! §eYou understand market demands!"
+
+# Quest 16: Poultry factory
+quest.farmer.quest16.first: "§6Time to create a real poultry factory! §fIndustrial-scale poultry farming requires mastery. §eBring §625 chicken§e, §640 feathers§e and §648 eggs§e!"
+quest.farmer.quest16.second: "§aIncredible! §fSuch productivity is worthy of the most modern poultry farms! §eYou're a master of industrial poultry farming!"
+
+# Quest 17: Rest - farm improvement
+quest.farmer.quest17.first: "§6Time to modernize the farm! §fImproving animal housing conditions will increase product quality. §eThink about new pens, feeders and waterers!"
+quest.farmer.quest17.second: "§aExcellent! §fA modern farm with good conditions is the key to high product quality! §eYou think strategically!"
+
+# Quest 18: Meat assortment
+quest.farmer.quest18.first: "§6The meat processing plant ordered a full assortment! §fMeat variety is the foundation of healthy nutrition. §eSupply §620 beef§e, §620 pork§e, §615 mutton§e and §625 rabbit§e!"
+quest.farmer.quest18.second: "§aDelightful! §fSuch an assortment will provide the city with quality meat for a month! §eYour farm has become a real enterprise!"
+
+# Quest 19: Rainbow wool
+quest.farmer.quest19.first: "§6Artists ordered all colors of the rainbow! §fBright wool is needed for creating works of art. §eCollect §610 blocks each§e of cyan, purple, blue, brown, green, red and black wool!"
+quest.farmer.quest19.second: "§aAmazing! §fThis rainbow of colors will inspire artists to create masterpieces! §eYou create beauty with your own hands!"
+
+# Quest 20: Leatherworking
+quest.farmer.quest20.first: "§6The leather workshop is expanding! §fLots of raw materials needed for producing armor and saddles. §eSupply §664 pieces of regular leather§e and §632 rabbit hides§e!"
+quest.farmer.quest20.second: "§aMagnificent! §fDifferent types of leather will allow creating products for any taste! §eYou supply the entire region with quality raw materials!"
+
+# Quest 21: Rest - equipment modernization
+quest.farmer.quest21.first: "§6Time to update farm equipment! §fModern technologies will help increase productivity and improve conditions for animals. §eInvestments in the future always pay off!"
+quest.farmer.quest21.second: "§aExcellent! §fNew equipment will make your farm exemplary! §eNow you're ready for the most ambitious projects!"
+
+# Quest 22: Industrial livestock
+quest.farmer.quest22.first: "§6Large order from the capital market! §fHuge volumes of meat needed to supply the city. §eSupply §640 beef§e, §640 pork§e, §650 chicken§e, §630 mutton§e and §635 rabbit§e!"
+quest.farmer.quest22.second: "§aIncredible! §fSuch production volumes make you one of the largest suppliers in the region! §eYou've reached industrial scale!"
+
+# Quest 23: Feather pillow
+quest.farmer.quest23.first: "§6Royal order for luxury pillows! §fMany feathers needed for stuffing the softest pillows. §eCollect §6128 feathers§e of the highest quality!"
+quest.farmer.quest23.second: "§aDelightful! §fThese feathers will make pillows worthy of a royal bedroom! §eYour products are valued in the highest circles!"
+
+# Quest 24: Wool empire
+quest.farmer.quest24.first: "§6Create a wool empire! §fThe textile factory ordered a huge batch of multicolored wool. §eSupply §664 white§e, §632 each§e of orange, yellow, blue, red and black wool!"
+quest.farmer.quest24.second: "§aAmazing! §fYour wool empire will clothe half the continent! §eYou've become a textile industry magnate!"
+
+# Quest 25: Master of livestock
+quest.farmer.quest25.first: "§6Final test of mastery! §fShow all your livestock skills. §eSupply §6128 eggs§e, §696 leather§e, §664 beef§e, §664 pork§e, §680 chicken§e, §6160 feathers§e and §6128 white wool§e!"
+quest.farmer.quest25.second: "§aLegendary! §fYou've reached the pinnacle of livestock mastery! §eNow you are the §6Grand Master Farmer§e, and your fame will spread across all lands! §bYour farm has become a model to follow!"
+
+# ═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════
+# HUNTER - Quests for drops from non-breedable mobs
+# ═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════
+
+# Quest 1: First trophies
+quest.hunter.quest1.first: "§6Welcome, warrior! §fI'm a §bhunter§f and I hunt dangerous creatures. §eLet's start simple - bring me §68 rotten flesh§e from zombies. This will show your courage!"
+quest.hunter.quest1.second: "§aExcellent! §fYou're not afraid of the undead. Rotten flesh will be useful for luring predators. §eNow you're ready for more serious challenges!"
+
+# Quest 2: Bone meal
+quest.hunter.quest2.first: "§6Skeletons are ancient guardians of darkness! §fTheir bones are valuable material for alchemy. §eGet §66 bones§e from skeletons. Be careful of their arrows!"
+quest.hunter.quest2.second: "§aMagnificent! §fThese bones are white as snow and strong as steel. §eYou've proven you can fight the archers of darkness!"
+
+# Quest 3: Spider webs
+quest.hunter.quest3.first: "§6Spiders weave webs stronger than steel! §fTheir thread is essential for traps and ropes. §eCollect §612 strings§e from spiders. Beware of their poison!"
+quest.hunter.quest3.second: "§aSuperb! §fThis thread is thin but incredibly strong. §eYou've mastered the art of hunting arachnids!"
+
+# Quest 4: Explosives
+quest.hunter.quest4.first: "§6Creepers are living bombs of nature! §fTheir gunpowder is the base for explosives. §eGet §610 gunpowder§e from creepers. Don't let them explode near you!"
+quest.hunter.quest4.second: "§aAmazing! §fSuch gunpowder can be used for fireworks and explosives. §eYour combat agility grows every day!"
+
+# Quest 5: Predator eyes
+quest.hunter.quest5.first: "§6Spider eyes see in the dark! §fThey contain magical properties needed by alchemists. §eCollect §68 spider eyes§e. Fight bravely!"
+quest.hunter.quest5.second: "§aDelightful! §fThese eyes still glow with magical energy. §eYou're becoming a true monster hunter!"
+
+# Quest 6: Sticky slime
+quest.hunter.quest6.first: "§6Slimes are mysterious creatures of the dungeons! §fTheir slime has unique properties. §eGet §65 slimeballs§e from slimes. They're slippery and fast!"
+quest.hunter.quest6.second: "§aWonderful! §fThis slime is sticky and elastic, perfect for pistons. §eYou've learned the secrets of underground creatures!"
+
+# Quest 7: Ink for writing
+quest.hunter.quest7.first: "§6Squids inhabit the ocean depths! §fTheir ink is valued by scribes and artists. §eCollect §610 ink sacs§e from squids. Dive deeper!"
+quest.hunter.quest7.second: "§aExcellent! §fThis ink is black as night and never fades. §eYou've mastered underwater hunting!"
+
+# Quest 8: Rest - studying behavior
+quest.hunter.quest8.first: "§6Time to study monster behavior! §fKnowing their habits and weaknesses is the foundation of successful hunting. §eObserve, study, remember!"
+quest.hunter.quest8.second: "§aGood! §fNow you know when and where to find each monster. §eKnowledge is your best weapon!"
+
+# Quest 9: Night hunt
+quest.hunter.quest9.first: "§6A true hunter doesn't fear the night! §fShow your mastery: get §620 rotten flesh§f, §615 bones§f and §618 strings§f. §eNight is the hunter's time!"
+quest.hunter.quest9.second: "§aBrilliant! §fSuch a catch speaks of your mastery in night combat. §eYou're a true warrior of darkness!"
+
+# Quest 10: Explosive cargo
+quest.hunter.quest10.first: "§6A large batch of gunpowder is needed for military purposes! §fCreepers are cunning, but you're stronger. §eCollect §624 gunpowder§e for the arsenal!"
+quest.hunter.quest10.second: "§aIncredible! §fSuch an amount of gunpowder is enough for a whole battery of cannons! §eYour courage knows no bounds!"
+
+# Quest 11: Alchemical components
+quest.hunter.quest11.first: "§6Alchemists need rare ingredients! §fCollect §616 spider eyes§f, §612 slimeballs§f and §620 gunpowder§f. §eCombine hunting different monsters!"
+quest.hunter.quest11.second: "§aMagnificent! §fSuch a set of ingredients will allow creating powerful potions! §eYou supply alchemists with everything they need!"
+
+# Quest 12: Ender pearl
+quest.hunter.quest12.first: "§6Endermen are guardians of the void! §fTheir pearls possess teleportation power. §eGet §63 ender pearls§e. Don't look them in the eyes!"
+quest.hunter.quest12.second: "§aAmazing! §fThese pearls shimmer with energy from other worlds. §eYou've fought the very guardians of the void!"
+
+# Quest 13: Blaze rod
+quest.hunter.quest13.first: "§6Blazes are spirits of hellish flame! §fTheir rods burn with eternal fire. §eGet §62 blaze rods§e from the Nether. Fire is their element!"
+quest.hunter.quest13.second: "§aDelightful! §fThese rods blaze but don't burn. §eYou've conquered the very hellish flame!"
+
+# Quest 14: Ghast tear
+quest.hunter.quest14.first: "§6Ghasts are crying spirits of the Nether! §fTheir tears are rare and magically powerful. §eGet §61 ghast tear§e. Their fireballs are deadly!"
+quest.hunter.quest14.second: "§aLegendary! §fA ghast tear is worth a fortune. §eYou've defeated one of the most dangerous opponents!"
+
+# Quest 15: Magma cream
+quest.hunter.quest15.first: "§6Magma cubes are spawn of lava! §fTheir cream burns but doesn't scorch hands. §eCollect §64 magma creams§e. Lava is their home!"
+quest.hunter.quest15.second: "§aExcellent! §fThis cream is warm to the touch and smells of sulfur. §eYou've mastered hunting in lava caves!"
+
+# Quest 16: Portal journey
+quest.hunter.quest16.first: "§6Time for an expedition between worlds! §fCollect §68 ender pearls§f, §64 blaze rods§f and §62 ghast tears§f. §eShow mastery in different dimensions!"
+quest.hunter.quest16.second: "§aIncredible! §fYou've mastered hunting in three dimensions! §eYour fame spreads across all worlds!"
+
+# Quest 17: Rest - equipment upgrade
+quest.hunter.quest17.first: "§6Time to upgrade equipment! §fSharp swords, strong armor and magical enchantments are the foundation of success. §eInvest in your armament!"
+quest.hunter.quest17.second: "§aExcellent! §fNow you're armed like a true hero! §eYour equipment is worthy of legends!"
+
+# Quest 18: Mass hunt
+quest.hunter.quest18.first: "§6The army needs supplies! §fLead a mass hunt: §664 rotten flesh§f, §648 bones§f, §640 strings§f and §632 gunpowder§f. §eShow industrial scale!"
+quest.hunter.quest18.second: "§aGrand! §fSuch volumes of trophies will supply an entire army! §eYou've become a true military commander!"
+
+# Quest 19: Rare trophies
+quest.hunter.quest19.first: "§6Collectors pay for rarities! §fCollect §632 spider eyes§f, §624 slimeballs§f and §632 ink sacs§f. §eRare trophies are valued by weight in gold!"
+quest.hunter.quest19.second: "§aMagnificent! §fSuch a collection of rarities is worthy of the royal treasury! §eYour name is known to all collectors!"
+
+# Quest 20: Ender collection
+quest.hunter.quest20.first: "§6Ender pearls are the key to teleportation magic! §fThe portal master needs a large batch. §eCollect §616 ender pearls§e for the great ritual!"
+quest.hunter.quest20.second: "§aIncredible! §fWith such a collection you can open a portal to any point in the world! §eYou're a master of endermen hunting!"
+
+# Quest 21: Rest - ancient knowledge
+quest.hunter.quest21.first: "§6Time to study ancient texts about hunting! §fOld books contain secrets lost for centuries. §eAncestral knowledge will make you invincible!"
+quest.hunter.quest21.second: "§aWise! §fNow you know the secrets of ancient hunters. §eTheir wisdom flows in your veins!"
+
+# Quest 22: Hellish materials
+quest.hunter.quest22.first: "§6The Nether is full of dangers and riches! §fCollect §68 blaze rods§f, §64 ghast tears§f and §612 magma creams§f. §eHell awaits a hero!"
+quest.hunter.quest22.second: "§aLegendary! §fYou've conquered the most dangerous depths of the Nether! §eEven demons know your name!"
+
+# Quest 23: Alchemical warehouse
+quest.hunter.quest23.first: "§6The great alchemist ordered a huge batch! §fNeed §664 spider eyes§f, §664 gunpowder§f and §648 slimeballs§f. §eCreate an alchemical empire!"
+quest.hunter.quest23.second: "§aAmazing! §fSuch a warehouse is enough to create thousands of potions! §eYou've become the main supplier to alchemists!"
+
+# Quest 24: Portal master
+quest.hunter.quest24.first: "§6The final ritual requires many materials! §fCollect §632 ender pearls§f, §616 blaze rods§f and §68 ghast tears§f. §eBecome the lord of portals!"
+quest.hunter.quest24.second: "§aDelightful! §fWith such materials you can build an entire network of portals! §eYou're a master of interdimensional travel!"
+
+# Quest 25: Legendary hunter
+quest.hunter.quest25.first: "§6Final test of a hero! §fShow all your mastery: §6128 rotten flesh§f, §696 bones§f, §680 strings§f, §664 gunpowder§f, §648 eyes§f, §624 pearls§f, §612 rods§f and §66 tears§f!"
+quest.hunter.quest25.second: "§aINCREDIBLE! §fYou've reached the pinnacle of hunting mastery! §eNow you are the §6Legendary Hunter§e, and your name will be remembered for ages! §bEven ancient monsters bow before your power!"
