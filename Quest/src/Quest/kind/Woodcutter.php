@@ -35,14 +35,12 @@ class Woodcutter extends Kind
     public function getYaw(): float        { return 0; }
     public function getPitch(): float      { return 0; }
     public function getSkinName(): string  { return 'lumberjack'; }
+    public function getLanguageKey() : string { return 'woodcutter'; }
 
-    /* ─────────────── Конструктор ─────────────── */
-
-    public function __construct()
-    {
+    public function __construct(){
         // Квест 1: Дубовая палочка
         $this->addQuest(0, 1, [
-            ItemIds::STICK . ':0' => 1  // ID 280, damage 0
+            ItemIds::WOODEN_AXE . ':0' => 1  // ID 280, damage 0
         ], [], 100, 50);
 
         // Квест 2: 10 дубовых брёвен
@@ -183,143 +181,5 @@ class Woodcutter extends Kind
             ItemIds::LOG . ':3' => 192,           // ID 17, damage 3 (тропическое)
             ItemIds::PLANKS . ':2' => 256         // ID 5, damage 2 (берёза)
         ], [], 5000, 2500);
-    }
-
-    /* ─────────────── Вспомогательные методы ─────────────── */
-
-    /**
-     * Добавляет обычный квест с требованиями.
-     * 
-     * @param int $questId ID квеста (начинается с 0)
-     * @param int $questNumber Номер квеста для языковых строк (1-25)
-     * @param array $requirements Требования ['itemId:damage' => amount]
-     * @param array $rewards Награды предметами ['itemId:damage' => amount]
-     * @param int $coins Награда монетами
-     * @param int $exp Награда опытом
-     */
-    private function addQuest(int $questId, int $questNumber, array $requirements, array $rewards = [], int $coins = 0, int $exp = 0): void
-    {
-        $this->add($questId, new KindData(
-            $this->makeTranslatedMessage("quest.woodcutter.quest{$questNumber}.first"),
-            $this->makeCheckHasItems($requirements),
-            $this->makeRewardGiveItems($rewards, $coins, $exp, "quest.woodcutter.quest{$questNumber}.second"),
-            true
-        ));
-    }
-
-    /**
-     * Добавляет квест-отдых без требований.
-     * 
-     * @param int $questId ID квеста
-     * @param int $questNumber Номер квеста для языковых строк
-     */
-    private function addRestQuest(int $questId, int $questNumber): void
-    {
-        $this->add($questId, new KindData(
-            $this->makeTranslatedMessage("quest.woodcutter.quest{$questNumber}.first"),
-            $this->makeCheckAlwaysTrue(),
-            $this->makeRewardGiveItems([], 0, 0, "quest.woodcutter.quest{$questNumber}.second"),
-            true
-        ));
-    }
-
-    /**
-     * Создаёт колбэк для отправки переведённого сообщения.
-     */
-    private function makeTranslatedMessage(string $langKey): callable
-    {
-        return fn(Player $p) => $p->sendMessage(Language::translate("%{$langKey}%", $p));
-    }
-
-    /**
-     * Проверка: в инвентаре есть ВСЕ требуемые предметы/кол-ва с учётом damage values.
-     * @param array $requirements Требования в формате ['itemId:damage' => amount]
-     */
-    private function makeCheckHasItems(array $requirements): callable
-    {
-        return function (Player $p) use ($requirements): bool {
-            // Собираем счётчики из инвентаря с учётом damage values
-            $have = [];
-            foreach ($p->getInventory()->getContents() as $stack) {
-                $key = $stack->getId() . ':' . $stack->getDamage();
-                $have[$key] = ($have[$key] ?? 0) + $stack->getCount();
-            }
-
-            // Ищем недостающие позиции
-            $missing = [];
-            foreach ($requirements as $itemKey => $need) {
-                if (($have[$itemKey] ?? 0) < $need) {
-                    [$itemId, $damage] = explode(':', $itemKey);
-                    $item = ItemFactory::get((int)$itemId, (int)$damage);
-                    $missing[] = $item->getName() . " ×" . ($need - ($have[$itemKey] ?? 0));
-                }
-            }
-
-            if ($missing === []) {
-                return true; // всё есть
-            }
-
-            $p->sendMessage("§cНе хватает: " . implode(', ', $missing));
-            return false;
-        };
-    }
-
-    /**
-     * Проверка: всегда возвращает true (для квестов-отдыха).
-     */
-    private function makeCheckAlwaysTrue(): callable
-    {
-        return fn(Player $p): bool => true;
-    }
-
-    /**
-     * Награда: опыт → деньги → предметы.
-     *
-     * @param array $items  Предметы в формате ['itemId:damage' => amount]
-     * @param int   $coins  Сколько монет начислить
-     * @param int   $exp    Сколько опыта профессии дать
-     * @param string $langKey Ключ языкового сообщения игроку
-     */
-    private function makeRewardGiveItems(
-        array $items = [],
-        int $coins = 0,
-        int $exp = 0,
-        string $langKey = ''
-    ): callable {
-        return function (Player $p) use ($items, $coins, $exp, $langKey): void {
-            // Добавляем опыт
-            if ($exp > 0) {
-                $playerData = PlayerDataFactory::getData($p->getLowerCaseName());
-                $playerData->getJobData()->getWoodcutter()->addExp($exp);
-            }
-
-            // Добавляем монеты
-            if ($coins > 0) {
-                $playerData = PlayerDataFactory::getData($p->getLowerCaseName());
-                $playerData->getEconomyData()->addCoins($coins);
-                $p->sendMessage("§a+{$coins} монет!");
-            }
-
-            // Добавляем предметы
-            foreach ($items as $itemKey => $amount) {
-                [$itemId, $damage] = explode(':', $itemKey);
-                $item = ItemFactory::get((int)$itemId, (int)$damage, $amount);
-                if ($p->getInventory()->canAddItem($item)) {
-                    $p->getInventory()->addItem($item);
-                } else {
-                    $p->getLevel()->dropItem($p, $item);
-                }
-            }
-
-            // Отправляем сообщение о завершении
-            if (!empty($langKey)) {
-                $p->sendMessage(Language::translate("%{$langKey}%", $p));
-            }
-
-            // Показываем полученный опыт
-            if ($exp > 0) {
-                $p->sendMessage("§b+{$exp} опыта лесоруба!");
-            }
-        };
     }
 }
