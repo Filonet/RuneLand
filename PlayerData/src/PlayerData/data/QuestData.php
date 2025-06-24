@@ -42,4 +42,20 @@ class QuestData {
     public function getHunter() : StaticQuestData{
         return $this->hunter;
     }
+
+    public function setWoodcutter(StaticQuestData $woodcutter) : void{
+        $this->woodcutter = $woodcutter;
+    }
+
+    public function setMiner(StaticQuestData $miner) : void{
+        $this->miner = $miner;
+    }
+
+    public function setFarmer(StaticQuestData $farmer) : void{
+        $this->farmer = $farmer;
+    }
+
+    public function setHunter(StaticQuestData $hunter) : void{
+        $this->hunter = $hunter;
+    }
 }

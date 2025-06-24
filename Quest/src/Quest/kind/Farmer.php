@@ -29,6 +29,7 @@ class Farmer extends Kind
     public function getPitch(): float      { return 0; }
     public function getSkinName(): string  { return 'bard'; }
     public function getLanguageKey() : string { return 'farmer'; }
+    public function getDataBaseKey(): string { return 'questFarmer'; }
 
     public function __construct(){
         // Квест 1: Первые яйца

@@ -29,6 +29,7 @@ class Hunter extends Kind
     public function getPitch(): float      { return 0; }
     public function getSkinName(): string  { return 'pirate'; }
     public function getLanguageKey() : string { return 'hunter'; }
+    public function getDataBaseKey(): string{ return 'questHunter'; }
 
     public function __construct(){
         // Квест 1: Первые трофеи

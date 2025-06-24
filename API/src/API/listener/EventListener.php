@@ -43,7 +43,7 @@ class EventListener implements Listener {
 
         if (isset(Loader::$playerTimes[$player->getLowerCaseName()])) {
             $time = (time() - Loader::$playerTimes[$player->getLowerCaseName()]);
-            \PlayerData\Loader::$mThread->pushQueryPacket('INSERT INTO `stats` (`nickname`, `money`, `runes`, `kills`, `deaths`, `gameTime`) VALUES("' . $player->getLowerCaseName() . '", ' . $time . ') ON DUPLICATE KEY UPDATE `gameTime` = `gameTime` + ' . $time . ';');
+            \PlayerData\Loader::$mThread->pushQueryPacket('INSERT INTO `stats` (`nickname`, `money`, `runes`, `kills`, `deaths`, `gameTime`) VALUES("' . $player->getLowerCaseName() . '", 0, 0, 0, 0, ' . $time . ') ON DUPLICATE KEY UPDATE `gameTime` = `gameTime` + ' . $time . ';');
 
             unset(Loader::$playerTimes[$player->getLowerCaseName()]);
         }

@@ -44,8 +44,8 @@ class Manager {
 
         $this->spawnTo($player, "%scoreboard.update.title%", "%scoreboard.update.lines%", [
             "nickname" => $player->getName(),
-            "group" => $groupData->getGroup() === Group::NONE ? "%scoreboard.dont.group%" : $groupData->getGroup(),
-            "title" => $groupText,
+            "group" => $groupText,
+            "title" => $groupData->getTitle() === Group::NONE ? "%scoreboard.dont.title%" : $groupData->getTitle(),
             "kills" => $statsData->getKills(),
             "deaths" => $statsData->getDeaths(),
             "ping" => $player->getPing(),
