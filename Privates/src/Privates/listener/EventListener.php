@@ -11,6 +11,8 @@ use pocketmine\event\entity\EntityExplodeEvent;
 use pocketmine\event\player\PlayerInteractEvent;
 use pocketmine\block\Block;
 use pocketmine\Player;
+use pocketmine\form\MenuForm;
+use pocketmine\form\ModalForm;
 use Privates\Loader;
 
 class EventListener implements Listener {
@@ -28,25 +30,30 @@ class EventListener implements Listener {
         $position = $block->asPosition();
         $world = $position->getLevel()->getFolderName();
 
+        $player->sendMessage("§7[DEBUG] Поставлен блок ID: " . $block->getId());
+        
+        // Проверяем, является ли блок приватным блоком
+        $blockSizes = $this->plugin->getPrivateManager()->getBlockSizes();
+        $player->sendMessage("§7[DEBUG] Доступные блоки: " . implode(", ", array_keys($blockSizes)));
+        
+        if (isset($blockSizes[$block->getId()])) {
+            $player->sendMessage("§7[DEBUG] Это приватный блок!");
+            // Создаем приват
+            if ($this->plugin->getPrivateManager()->createPrivate($player, $position, $world, $block->getId())) {
+                $size = $blockSizes[$block->getId()];
+                $blockName = $this->getBlockName($block->getId());
+                $player->sendMessage("§aВы создали приват из блока '" . $blockName . "' размером " . $size . "x" . $size . "x" . $size . "!");
+            } else {
+                $player->sendMessage("§cНе удалось создать приват!");
+            }
+            return;
+        }
+
         // Проверяем, можно ли строить в этом месте
         if (!$this->plugin->getPrivateManager()->canBuild($player, $position, $world)) {
             $event->setCancelled();
             $player->sendMessage($this->plugin->getMessage("no-build-permission"));
             return;
-        }
-
-        // Проверяем, является ли блок приватным блоком
-        $blockSizes = $this->plugin->getPrivateManager()->getBlockSizes();
-        if (isset($blockSizes[$block->getId()])) {
-            // Создаем приват
-            if ($this->plugin->getPrivateManager()->createPrivate($player, $position, $world, $block->getId())) {
-                $size = $blockSizes[$block->getId()];
-                $blockName = $this->getBlockName($block->getId());
-                $player->sendMessage($this->plugin->getMessage("private-created-detailed", [
-                    "block" => $blockName,
-                    "size" => $size . "x" . $size . "x" . $size
-                ]));
-            }
         }
     }
 
@@ -87,6 +94,30 @@ class EventListener implements Listener {
         $block = $event->getBlock();
         $position = $block->asPosition();
         $world = $position->getLevel()->getFolderName();
+
+        // Проверяем, является ли этот блок центром привата
+        $private = $this->plugin->getPrivateManager()->getPrivateAt($position, $world);
+        if ($private !== null) {
+            $blockSizes = $this->plugin->getPrivateManager()->getBlockSizes();
+            if (isset($blockSizes[$block->getId()]) && 
+                $private->getCenter()->equals($position)) {
+                
+                // Это центральный блок привата
+                if ($private->getOwner() === $player->getName()) {
+                    // Открываем форму управления приватом
+                    $this->openPrivateManagementForm($player, $private);
+                    $event->setCancelled();
+                    return;
+                } else {
+                    $player->sendMessage("§eИнформация о привате:");
+                    $player->sendMessage("§6Владелец: §f" . $private->getOwner());
+                    $player->sendMessage("§6Размер: §f" . $private->getSize() . "x" . $private->getSize() . "x" . $private->getSize());
+                    $player->sendMessage("§6Тип блока: §f" . $private->getBlockTypeName());
+                    $event->setCancelled();
+                    return;
+                }
+            }
+        }
 
         // Проверяем взаимодействие с блоками в приватах
         if (!$this->plugin->getPrivateManager()->canBuild($player, $position, $world)) {
@@ -159,6 +190,28 @@ class EventListener implements Listener {
             }
         }
     }
+
+    private function openPrivateManagementForm(Player $player, $private): void {
+        // Показываем меню через сообщения
+        $player->sendMessage("§e=== Управление приватом ===");
+        $player->sendMessage("§6Используйте команды для управления:");
+        $player->sendMessage("§f/pv info §7- Информация о привате");
+        $player->sendMessage("§f/pv add <игрок> §7- Добавить участника");
+        $player->sendMessage("§f/pv remove <игрок> §7- Удалить участника");
+        $player->sendMessage("§f/pv members §7- Список участников");
+        $player->sendMessage("§f/pv delete §7- Удалить приват");
+    }
+
+    private function showPrivateInfo(Player $player, $private): void {
+        $player->sendMessage("§e=== Информация о привате ===");
+        $player->sendMessage("§6Владелец: §f" . $private->getOwner());
+        $player->sendMessage("§6Размер: §f" . $private->getSize() . "x" . $private->getSize() . "x" . $private->getSize());
+        $player->sendMessage("§6Тип блока: §f" . $private->getBlockTypeName());
+        $player->sendMessage("§6Участников: §f" . count($private->getMembers()));
+        $player->sendMessage("§6Центр: §f" . (int)$private->getCenter()->x . ", " . (int)$private->getCenter()->y . ", " . (int)$private->getCenter()->z);
+    }
+
+
 
     private function getBlockName(int $blockId): string {
         switch ($blockId) {

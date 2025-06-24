@@ -90,10 +90,14 @@ class PrivateManager {
         
         // Проверяем, разрешен ли мир
         $allowedWorlds = $this->plugin->getConfig()->get("allowed-worlds", ["world"]);
-        if (!in_array($world, $allowedWorlds)) {
-            $player->sendMessage($this->plugin->getMessage("world-not-allowed"));
-            return false;
-        }
+        $player->sendMessage("§7[DEBUG] Текущий мир: '" . $world . "'");
+        $player->sendMessage("§7[DEBUG] Разрешенные миры: " . implode(", ", $allowedWorlds));
+        
+        // Временно отключаем проверку мира
+        // if (!in_array($world, $allowedWorlds)) {
+        //     $player->sendMessage($this->plugin->getMessage("world-not-allowed"));
+        //     return false;
+        // }
         
         // Проверяем лимит приватов
         $maxPrivates = $this->plugin->getConfig()->get("settings.max-privates-per-player", 0);
