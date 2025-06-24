@@ -3,7 +3,7 @@
 namespace Privates\manager;
 
 use pocketmine\block\Block;
-use pocketmine\math\Vector3;
+use pocketmine\level\Position;
 use pocketmine\Player;
 use pocketmine\utils\Config;
 use Privates\Loader;
@@ -55,7 +55,7 @@ class PrivateManager {
             $this->privates[$id] = new PrivateArea(
                 $id,
                 $data["owner"],
-                new Vector3($data["x"], $data["y"], $data["z"]),
+                new Position($data["x"], $data["y"], $data["z"], null),
                 $data["world"],
                 $data["size"],
                 $data["members"] ?? [],
@@ -67,11 +67,12 @@ class PrivateManager {
     public function saveAll(): void {
         $data = [];
         foreach ($this->privates as $id => $private) {
+            $center = $private->getCenter();
             $data[$id] = [
                 "owner" => $private->getOwner(),
-                "x" => $private->getCenter()->getX(),
-                "y" => $private->getCenter()->getY(),
-                "z" => $private->getCenter()->getZ(),
+                "x" => (int)$center->x,
+                "y" => (int)$center->y,
+                "z" => (int)$center->z,
                 "world" => $private->getWorld(),
                 "size" => $private->getSize(),
                 "members" => $private->getMembers(),
@@ -82,7 +83,7 @@ class PrivateManager {
         $this->data->save();
     }
 
-    public function createPrivate(Player $player, Vector3 $position, string $world, int $blockType): bool {
+    public function createPrivate(Player $player, Position $position, string $world, int $blockType): bool {
         if (!isset($this->blockSizes[$blockType])) {
             return false;
         }
@@ -131,7 +132,7 @@ class PrivateManager {
         return false;
     }
 
-    public function getPrivateAt(Vector3 $position, string $world): ?PrivateArea {
+    public function getPrivateAt(Position $position, string $world): ?PrivateArea {
         foreach ($this->privates as $private) {
             if ($private->getWorld() === $world && $private->isInside($position)) {
                 return $private;
@@ -150,7 +151,7 @@ class PrivateManager {
         return $result;
     }
 
-    public function hasConflict(Vector3 $position, string $world, int $size): bool {
+    public function hasConflict(Position $position, string $world, int $size): bool {
         $radius = floor($size / 2);
         
         foreach ($this->privates as $private) {
@@ -166,7 +167,7 @@ class PrivateManager {
         return false;
     }
 
-    public function canBuild(Player $player, Vector3 $position, string $world): bool {
+    public function canBuild(Player $player, Position $position, string $world): bool {
         $private = $this->getPrivateAt($position, $world);
         if ($private === null) {
             return true;
