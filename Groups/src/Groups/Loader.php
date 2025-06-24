@@ -8,6 +8,7 @@ use Groups\command\GivegroupCommand;
 use Groups\command\GroupsCommand;
 use Groups\command\SetgroupCommand;
 use Groups\listener\EventListener;
+use Groups\task\CheckTimeGroupTask;
 use PlayerData\Language;
 use pocketmine\plugin\PluginBase;
 
@@ -31,5 +32,7 @@ class Loader extends PluginBase {
         ]);
 
         $this->getServer()->getPluginManager()->registerEvents(new EventListener(), $this);
+
+        $this->getScheduler()->scheduleRepeatingTask(new CheckTimeGroupTask($this->getServer()), 20 * 5);
     }
 }

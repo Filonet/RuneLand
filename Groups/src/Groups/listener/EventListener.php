@@ -25,7 +25,6 @@ class EventListener implements Listener {
     private array $warn_count = [];
     private array $drop = [];
     private array $cooldown = [];
-    private array $has_playtime = [];
 
     public function __construct(){
         //NOOP
