@@ -9,7 +9,6 @@ use API\manager\Manager;
 use pocketmine\event\entity\EntityDamageEvent;
 use pocketmine\event\Listener;
 use pocketmine\event\player\PlayerJoinEvent;
-use pocketmine\event\player\PlayerMoveEvent;
 use pocketmine\event\player\PlayerQuitEvent;
 use pocketmine\Player;
 
@@ -18,18 +17,14 @@ class EventListener implements Listener {
         private Manager $manager
     ){}
 
-    public function onMove(PlayerMoveEvent $event) : void {
-        $player = $event->getPlayer();
-
-        $this->manager->cancelTeleport($player);
-    }
-
     public function onDamage(EntityDamageEvent $event) : void {
         $entity = $event->getEntity();
         if ($entity instanceof Player) {
             if ($this->manager->isRandomTeleport($entity)) {
                 $event->setCancelled();
             }
+
+            $this->manager->cancelTeleport($entity);
         }
     }
 
