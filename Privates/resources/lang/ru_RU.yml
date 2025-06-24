@@ -1,0 +1,37 @@
+# Сообщения плагина приватов на русском языке
+
+# Создание приватов
+private-created: "§aВы создали приват размером {size}!"
+private-created-detailed: "§aВы создали приват из блока '{block}' размером {size}!"
+private-conflict: "§cЗдесь нельзя создать приват - конфликт с другим приватом!"
+private-removed: "§aВы убрали приват!"
+private-deleted: "§aПриват удален!"
+
+# Права доступа
+no-build-permission: "§cВы не можете строить в чужом привате!"
+no-break-permission: "§cВы не можете ломать блоки в чужом привате!"
+no-interact-permission: "§cВы не можете взаимодействовать с этим блоком в чужом привате!"
+no-break-private-permission: "§cВы не можете сломать чужой приват!"
+
+# Управление участниками
+not-owner: "§cВы не владелец этого привата!"
+not-in-private: "§cВы не находитесь в привате!"
+member-added: "§aИгрок {player} добавлен в приват!"
+member-removed: "§aИгрок {player} удален из привата!"
+already-member: "§cИгрок {player} уже является участником привата!"
+not-member: "§cИгрок {player} не является участником привата!"
+added-to-private: "§aВас добавили в приват игрока {owner}!"
+removed-from-private: "§cВас исключили из привата игрока {owner}!"
+
+# Информация
+no-privates: "§eУ вас нет приватов!"
+world-not-allowed: "§cВ этом мире нельзя создавать приваты!"
+max-privates-reached: "§cВы достигли максимального количества приватов ({max})!"
+no-pvp-in-private: "§cПvP запрещено в приватах!"
+
+# Блоки
+iron-block: "Железный блок"
+gold-block: "Золотой блок"
+diamond-block: "Алмазный блок"
+emerald-block: "Изумрудный блок"
+netherite-block: "Незеритовый блок" 

@@ -1,0 +1,23 @@
+name: Privates
+version: 1.0.0
+main: Privates\Loader
+api: 3.0.0
+author: RuneLand
+description: "Система приватов с блочной защитой"
+
+permissions:
+  privates.admin:
+    description: "Администратор приватов"
+    default: op
+  privates.use:
+    description: "Использование приватов"
+    default: true
+  privates.break:
+    description: "Разрушение приватов"
+    default: op
+
+commands:
+  privates:
+    description: "Команды приватов"
+    permission: privates.use
+    aliases: ["private", "pv"] 

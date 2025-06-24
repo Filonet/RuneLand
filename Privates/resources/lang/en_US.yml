@@ -1,0 +1,37 @@
+# Private plugin messages in English
+
+# Creating privates
+private-created: "§aYou created a private area of size {size}!"
+private-created-detailed: "§aYou created a private area with '{block}' block of size {size}!"
+private-conflict: "§cCannot create private here - conflict with another private area!"
+private-removed: "§aYou removed the private area!"
+private-deleted: "§aPrivate area deleted!"
+
+# Access permissions
+no-build-permission: "§cYou cannot build in someone else's private area!"
+no-break-permission: "§cYou cannot break blocks in someone else's private area!"
+no-interact-permission: "§cYou cannot interact with this block in someone else's private area!"
+no-break-private-permission: "§cYou cannot break someone else's private area!"
+
+# Member management
+not-owner: "§cYou are not the owner of this private area!"
+not-in-private: "§cYou are not in a private area!"
+member-added: "§aPlayer {player} added to private area!"
+member-removed: "§aPlayer {player} removed from private area!"
+already-member: "§cPlayer {player} is already a member of the private area!"
+not-member: "§cPlayer {player} is not a member of the private area!"
+added-to-private: "§aYou were added to {owner}'s private area!"
+removed-from-private: "§cYou were removed from {owner}'s private area!"
+
+# Information
+no-privates: "§eYou don't have any private areas!"
+world-not-allowed: "§cPrivate areas are not allowed in this world!"
+max-privates-reached: "§cYou have reached the maximum number of private areas ({max})!"
+no-pvp-in-private: "§cPvP is not allowed in private areas!"
+
+# Blocks
+iron-block: "Iron Block"
+gold-block: "Gold Block"
+diamond-block: "Diamond Block"
+emerald-block: "Emerald Block"
+netherite-block: "Netherite Block" 

@@ -1,0 +1,36 @@
+# Конфигурация плагина приватов
+
+# Настройки языка
+language: "ru_RU"  # ru_RU или en_US
+
+# Настройки приватов
+settings:
+  # Максимальное количество приватов на игрока (0 = без ограничений)
+  max-privates-per-player: 0
+  
+  # Автосохранение (в секундах)
+  auto-save-interval: 300
+  
+  # Защита от взрывов в приватах
+  protect-from-explosions: true
+  
+  # Защита от огня в приватах
+  protect-from-fire: true
+  
+  # Разрешить PvP в приватах
+  allow-pvp-in-privates: false
+
+# Размеры приватов для блоков
+block-sizes:
+  iron: 5      # Железный блок - 5x5x5
+  gold: 7      # Золотой блок - 7x7x7
+  diamond: 11  # Алмазный блок - 11x11x11
+  emerald: 21  # Изумрудный блок - 21x21x21
+  netherite: 31 # Незеритовый блок - 31x31x31
+
+# Разрешенные миры для создания приватов
+allowed-worlds:
+  - "world"
+
+# Отладочный режим
+debug: false 
