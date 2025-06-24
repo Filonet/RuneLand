@@ -36,6 +36,7 @@ class Miner extends Kind
     public function getPitch(): float      { return 0; }
     public function getSkinName(): string  { return 'miner'; }
     public function getLanguageKey() : string { return 'miner'; }
+    public function getDataBaseKey(): string { return 'questMiner'; }
 
     public function __construct(){
         // Квест 1: Деревянная кирка

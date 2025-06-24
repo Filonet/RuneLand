@@ -7,6 +7,7 @@ namespace Quest\kind;
 use PlayerData\helper\PlayerDataHelper;
 use PlayerData\Language;
 use PlayerData\types\StaticQuestData;
+use PlayerData\types\Title;
 use pocketmine\item\ItemFactory;
 use pocketmine\level\particle\DustParticle;
 use pocketmine\math\Vector3;
@@ -34,6 +35,8 @@ abstract class Kind {
 
     abstract public function getLanguageKey() : string;
 
+    abstract public function getDataBaseKey() : string;
+
     public function add(int $id, KindData $data) : void {
         $this->quests[$id] = $data;
     }
@@ -52,7 +55,9 @@ abstract class Kind {
         if (!$questData->isTake()) {
             ($kindData->getTake())($player);
 
-            $questData->setTake(true); //TODO: set database
+            $questData->setTake(true);
+
+            \PlayerData\Loader::$mThread->pushQueryPacket('INSERT INTO `' . $this->getDataBaseKey() . '` (`nickname`, `questId`, `isTake`, `progress`) VALUES("' . $player->getLowerCaseName() . '", "' . $questData->getQuestId() . '", "' . (int) $questData->isTake() . '", "' . $questData->getProgress() . '") ON DUPLICATE KEY UPDATE `questId` = "' . $questData->getQuestId() . '", `isTake` = "' . (int) $questData->isTake() . '", `progress` = "' . $questData->getProgress() . '";');
             return;
         }
 
@@ -65,21 +70,21 @@ abstract class Kind {
             ($kindData->getSuccess())($player);
         }
 
-        $questData->setQuestId($questData->getQuestId() + 1); //TODO: set database
+        $questData->setQuestId($questData->getQuestId() + 1);
 
         $volume = 0x10000000 * (min(30, $questData->getQuestId()) / 5); //No idea why such odd numbers, but this works...
         $player->level->broadcastLevelSoundEvent($player, LevelSoundEventPacket::SOUND_LEVELUP, (int) $volume);
 
-        $radius = 2.0;
+        $radius = 3.0;
         $count = 200;
         for($i = 0; $i < $count; $i++){
-            $particle = new DustParticle($player->asVector3()->add(0, 3, 0), mt_rand(0, 0xff), mt_rand(0, 0xff), mt_rand(0, 0xff));
+            $particle = new DustParticle($this->getVector3()->add(0, 3, 0), mt_rand(0, 0xff), mt_rand(0, 0xff), mt_rand(0, 0xff));
 
             $pitch = (mt_rand(1, mt_getrandmax() - 1) / mt_getrandmax()) * M_PI;
             $yaw = (mt_rand(1, mt_getrandmax() - 1) / mt_getrandmax()) * 2 * M_PI;
 
             $cosPitch = cos($pitch);
-            $vector = $player->addVector((new Vector3(-sin($yaw) * $cosPitch, 3, cos($yaw) * $cosPitch))->normalize()->multiply($radius));
+            $vector = $this->getVector3()->addVector((new Vector3(-sin($yaw) * $cosPitch, 3, cos($yaw) * $cosPitch))->normalize()->multiply($radius));
             $particle->x = $vector->x;
             $particle->y = $vector->y;
             $particle->z = $vector->z;
@@ -92,6 +97,9 @@ abstract class Kind {
         }
 
         $questData->setTake(false);
+        $questData->setProgress(0.0);
+
+        \PlayerData\Loader::$mThread->pushQueryPacket('INSERT INTO `' . $this->getDataBaseKey() . '` (`nickname`, `questId`, `isTake`, `progress`) VALUES("' . $player->getLowerCaseName() . '", "' . $questData->getQuestId() . '", "' . (int) $questData->isTake() . '", "' . $questData->getProgress() . '") ON DUPLICATE KEY UPDATE `questId` = "' . $questData->getQuestId() . '", `isTake` = "' . (int) $questData->isTake() . '", `progress` = "' . $questData->getProgress() . '";');
     }
 
     /**

@@ -36,6 +36,7 @@ class Woodcutter extends Kind
     public function getPitch(): float      { return 0; }
     public function getSkinName(): string  { return 'lumberjack'; }
     public function getLanguageKey() : string { return 'woodcutter'; }
+    public function getDataBaseKey(): string{ return 'questWoodcutter'; }
 
     public function __construct(){
         // Квест 1: Дубовая палочка

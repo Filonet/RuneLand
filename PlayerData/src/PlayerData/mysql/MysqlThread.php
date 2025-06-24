@@ -7,9 +7,11 @@ namespace PlayerData\mysql;
 use PlayerData\data\AuthData;
 use PlayerData\data\GroupData;
 use PlayerData\data\PlayerData;
+use PlayerData\data\QuestData;
 use PlayerData\data\StatsData;
 use PlayerData\data\TeleportData;
 use PlayerData\types\SessionIds;
+use PlayerData\types\StaticQuestData;
 use PlayerData\types\TeleportDataHome;
 use pmmp\thread\ThreadSafeArray;
 use pocketmine\thread\Thread;
@@ -84,7 +86,7 @@ class MysqlThread extends Thread{
                     $q = $db->query("SELECT `nickname`, `group`, `expirationGroup`, `title` FROM `groups` WHERE " . str_replace("`name`", "`nickname`", $querySeq));
                     if ($q !== false && count($data = $q->fetch_all())) {
                         foreach ($data as $row) {
-                            $result[trim(strtolower($row[0]))]->setGroupData(new GroupData($row[1], $row[2], $row[3]));
+                            $result[trim(strtolower($row[0]))]->setGroupData(new GroupData($row[1], (int) $row[2], $row[3]));
                         }
                     }
 
@@ -119,7 +121,33 @@ class MysqlThread extends Thread{
                         }
                     }
 
-                    //create write table quest
+                    $q = $db->query("SELECT `nickname`, `questId`, `isTake`, `progress` FROM `questWoodcutter` WHERE " . str_replace("`name`", "`nickname`", $querySeq));
+                    if ($q !== false && count($data = $q->fetch_all())) {
+                        foreach ($data as $row) {
+                            $result[trim(strtolower($row[0]))]->getQuestData()->setWoodcutter(new StaticQuestData((int) $row[1], boolval($row[2]), (float) $row[3]));
+                        }
+                    }
+
+                    $q = $db->query("SELECT `nickname`, `questId`, `isTake`, `progress` FROM `questMiner` WHERE " . str_replace("`name`", "`nickname`", $querySeq));
+                    if ($q !== false && count($data = $q->fetch_all())) {
+                        foreach ($data as $row) {
+                            $result[trim(strtolower($row[0]))]->getQuestData()->setMiner(new StaticQuestData((int) $row[1], boolval($row[2]), (float) $row[3]));
+                        }
+                    }
+
+                    $q = $db->query("SELECT `nickname`, `questId`, `isTake`, `progress` FROM `questHunter` WHERE " . str_replace("`name`", "`nickname`", $querySeq));
+                    if ($q !== false && count($data = $q->fetch_all())) {
+                        foreach ($data as $row) {
+                            $result[trim(strtolower($row[0]))]->getQuestData()->setHunter(new StaticQuestData((int) $row[1], boolval($row[2]), (float) $row[3]));
+                        }
+                    }
+
+                    $q = $db->query("SELECT `nickname`, `questId`, `isTake`, `progress` FROM `questFarmer` WHERE " . str_replace("`name`", "`nickname`", $querySeq));
+                    if ($q !== false && count($data = $q->fetch_all())) {
+                        foreach ($data as $row) {
+                            $result[trim(strtolower($row[0]))]->getQuestData()->setFarmer(new StaticQuestData((int) $row[1], boolval($row[2]), (float) $row[3]));
+                        }
+                    }
 
                     foreach ($players as $data) {
                         $result[$data[0]]->setCid(intval($data[1]));
