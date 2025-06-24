@@ -2,7 +2,7 @@
 
 namespace Privates\types;
 
-use pocketmine\math\Vector3;
+use pocketmine\level\Position;
 
 class PrivateArea {
 
@@ -12,7 +12,7 @@ class PrivateArea {
     /** @var string */
     private $owner;
     
-    /** @var Vector3 */
+    /** @var Position */
     private $center;
     
     /** @var string */
@@ -27,7 +27,7 @@ class PrivateArea {
     /** @var int */
     private $blockType;
 
-    public function __construct(string $id, string $owner, Vector3 $center, string $world, int $size, array $members, int $blockType) {
+    public function __construct(string $id, string $owner, Position $center, string $world, int $size, array $members, int $blockType) {
         $this->id = $id;
         $this->owner = $owner;
         $this->center = $center;
@@ -49,7 +49,7 @@ class PrivateArea {
         $this->owner = $owner;
     }
 
-    public function getCenter(): Vector3 {
+    public function getCenter(): Position {
         return $this->center;
     }
 
@@ -87,29 +87,31 @@ class PrivateArea {
         return $this->blockType;
     }
 
-    public function isInside(Vector3 $position): bool {
+    public function isInside(Position $position): bool {
         $radius = floor($this->size / 2);
         
-        return abs($position->getX() - $this->center->getX()) <= $radius &&
-               abs($position->getY() - $this->center->getY()) <= $radius &&
-               abs($position->getZ() - $this->center->getZ()) <= $radius;
+        return abs($position->x - $this->center->x) <= $radius &&
+               abs($position->y - $this->center->y) <= $radius &&
+               abs($position->z - $this->center->z) <= $radius;
     }
 
-    public function getMinPosition(): Vector3 {
+    public function getMinPosition(): Position {
         $radius = floor($this->size / 2);
-        return new Vector3(
-            $this->center->getX() - $radius,
-            $this->center->getY() - $radius,
-            $this->center->getZ() - $radius
+        return new Position(
+            (int)$this->center->x - $radius,
+            (int)$this->center->y - $radius,
+            (int)$this->center->z - $radius,
+            $this->center->getLevel()
         );
     }
 
-    public function getMaxPosition(): Vector3 {
+    public function getMaxPosition(): Position {
         $radius = floor($this->size / 2);
-        return new Vector3(
-            $this->center->getX() + $radius,
-            $this->center->getY() + $radius,
-            $this->center->getZ() + $radius
+        return new Position(
+            (int)$this->center->x + $radius,
+            (int)$this->center->y + $radius,
+            (int)$this->center->z + $radius,
+            $this->center->getLevel()
         );
     }
 
