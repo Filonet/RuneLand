@@ -1,0 +1,5 @@
+name: FormAPI
+version: 1.0.0
+api: 3.28.0
+main: FormAPI\FormAPI
+author: S1mon
