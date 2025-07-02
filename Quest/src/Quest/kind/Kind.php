@@ -10,6 +10,7 @@ use PlayerData\types\StaticQuestData;
 use PlayerData\types\Title;
 use pocketmine\item\ItemFactory;
 use pocketmine\level\particle\DustParticle;
+use pocketmine\level\Position;
 use pocketmine\math\Vector3;
 use pocketmine\network\mcpe\protocol\LevelSoundEventPacket;
 use pocketmine\Player;
@@ -75,21 +76,19 @@ abstract class Kind {
         $volume = 0x10000000 * (min(30, $questData->getQuestId()) / 5); //No idea why such odd numbers, but this works...
         $player->level->broadcastLevelSoundEvent($player, LevelSoundEventPacket::SOUND_LEVELUP, (int) $volume);
 
-        $radius = 3.0;
-        $count = 200;
-        for($i = 0; $i < $count; $i++){
-            $particle = new DustParticle($this->getVector3()->add(0, 3, 0), mt_rand(0, 0xff), mt_rand(0, 0xff), mt_rand(0, 0xff));
+        $center = Position::fromObject($this->getVector3(), $player->getLevel());
+        $size = 4;
+        $count = 80;
 
-            $pitch = (mt_rand(1, mt_getrandmax() - 1) / mt_getrandmax()) * M_PI;
-            $yaw = (mt_rand(1, mt_getrandmax() - 1) / mt_getrandmax()) * 2 * M_PI;
+        for ($yaw = 0, $y = $center->y; $y < $center->y + $size; $yaw += (M_PI * 2) / 100, $y += 1 / $count) {
+            $particle = new DustParticle($center, mt_rand(0, 0xff), mt_rand(0, 0xff), mt_rand(0, 0xff));
 
-            $cosPitch = cos($pitch);
-            $vector = $this->getVector3()->addVector((new Vector3(-sin($yaw) * $cosPitch, 3, cos($yaw) * $cosPitch))->normalize()->multiply($radius));
-            $particle->x = $vector->x;
-            $particle->y = $vector->y;
-            $particle->z = $vector->z;
-
-            $player->level->broadcastPacketToViewers($player, $particle->encode());
+            $x = -sin($yaw) + $center->x;
+            $z = cos($yaw) + $center->z;
+            $particle->x = $x;
+            $particle->y = $y;
+            $particle->z = $z;
+            $center->getLevel()->addParticle($particle);
         }
 
         if ($kindData->isAutoTakeNextQuest()) {
