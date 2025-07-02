@@ -8,6 +8,7 @@ use Groups\types\Permission;
 use PlayerData\data\PlayerDataFactory;
 use PlayerData\Language;
 use PlayerData\Loader;
+use PlayerData\types\Group;
 use PlayerData\types\TeleportDataHome;
 use pocketmine\command\Command;
 use pocketmine\command\CommandSender;
@@ -26,7 +27,8 @@ class SetHomeCommand extends Command {
                 $homes = PlayerDataFactory::getData($sender->getLowerCaseName())->getTeleportData()->getHomes();
                 if (count($homes) > 0) {
                     $maxHomes = match (true) {
-                        default => 4,
+                        Permission::hasPermission(Group::HERO, "home.limit.hero") => 5,
+                        default => 1,
                     };
                     if (count($homes) >= $maxHomes) {
                         $sender->sendMessage(Language::translate("%api.command.setHome.busy%", $sender, ["maxHomes" => $maxHomes]));

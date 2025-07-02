@@ -4,13 +4,12 @@ declare(strict_types=1);
 
 namespace PlayerData\listener;
 
-use PlayerData\data\PlayerData;
 use PlayerData\data\PlayerDataFactory;
 use PlayerData\event\LoadPlayerDataEvent;
 use PlayerData\Language;
 use PlayerData\Loader;
 use PlayerData\types\SessionIds;
-use PlayerData\types\Utils;
+use PlayerData\utils\Utils;
 use pocketmine\entity\Effect;
 use pocketmine\entity\EffectInstance;
 use pocketmine\event\block\BlockBreakEvent;
@@ -202,69 +201,6 @@ class EventListener implements Listener {
                     $authData->setAddress($player->getAddress());
 
                     Loader::$mThread->pushQueryPacket('INSERT INTO `auth` (`nickname`, `password`, `address`) VALUES("' . $player->getLowerCaseName() . '", "' . Utils::encryptionPassword($password) . '", "' . $player->getAddress() . '") ON DUPLICATE KEY UPDATE `address` = "' . $player->getAddress() . '";');
-
-                    $armorInventory = $player->getArmorInventory();
-                    $armorInventory->clearAll();
-
-                    $helmet = ItemFactory::get(Item::CHAIN_HELMET);
-                    $helmet->addEnchantment(new EnchantmentInstance(Enchantment::getEnchantment(Enchantment::PROTECTION), 1));
-                    $helmet->addEnchantment(new EnchantmentInstance(Enchantment::getEnchantment(Enchantment::UNBREAKING), 1));
-                    $armorInventory->setHelmet($helmet);
-
-                    $chestPlate = ItemFactory::get(Item::CHAIN_CHESTPLATE);
-                    $chestPlate->addEnchantment(new EnchantmentInstance(Enchantment::getEnchantment(Enchantment::PROTECTION), 1));
-                    $chestPlate->addEnchantment(new EnchantmentInstance(Enchantment::getEnchantment(Enchantment::UNBREAKING), 1));
-                    $armorInventory->setChestplate($chestPlate);
-
-                    $leggings = ItemFactory::get(Item::CHAIN_LEGGINGS);
-                    $leggings->addEnchantment(new EnchantmentInstance(Enchantment::getEnchantment(Enchantment::PROTECTION), 1));
-                    $leggings->addEnchantment(new EnchantmentInstance(Enchantment::getEnchantment(Enchantment::UNBREAKING), 1));
-                    $armorInventory->setLeggings($leggings);
-
-                    $boots = ItemFactory::get(Item::CHAIN_BOOTS);
-                    $boots->addEnchantment(new EnchantmentInstance(Enchantment::getEnchantment(Enchantment::PROTECTION), 1));
-                    $boots->addEnchantment(new EnchantmentInstance(Enchantment::getEnchantment(Enchantment::UNBREAKING), 1));
-                    $armorInventory->setBoots($boots);
-
-                    $inventory = $player->getInventory();
-                    $inventory->clearAll();
-
-                    $sword = ItemFactory::get(Item::STONE_SWORD);
-                    $sword->addEnchantment(new EnchantmentInstance(Enchantment::getEnchantment(Enchantment::SHARPNESS), 1));
-                    $sword->addEnchantment(new EnchantmentInstance(Enchantment::getEnchantment(Enchantment::UNBREAKING), 1));
-                    $sword->addEnchantment(new EnchantmentInstance(Enchantment::getEnchantment(Enchantment::KNOCKBACK), 1));
-                    $inventory->addItem($sword);
-
-                    $axe = ItemFactory::get(Item::STONE_AXE);
-                    $axe->addEnchantment(new EnchantmentInstance(Enchantment::getEnchantment(Enchantment::EFFICIENCY), 1));
-                    $axe->addEnchantment(new EnchantmentInstance(Enchantment::getEnchantment(Enchantment::UNBREAKING), 1));
-                    $inventory->addItem($axe);
-
-                    $pickaxe = ItemFactory::get(Item::STONE_PICKAXE);
-                    $pickaxe->addEnchantment(new EnchantmentInstance(Enchantment::getEnchantment(Enchantment::EFFICIENCY), 1));
-                    $pickaxe->addEnchantment(new EnchantmentInstance(Enchantment::getEnchantment(Enchantment::UNBREAKING), 1));
-                    $inventory->addItem($pickaxe);
-
-                    $shovel = ItemFactory::get(Item::STONE_SHOVEL);
-                    $shovel->addEnchantment(new EnchantmentInstance(Enchantment::getEnchantment(Enchantment::EFFICIENCY), 1));
-                    $shovel->addEnchantment(new EnchantmentInstance(Enchantment::getEnchantment(Enchantment::UNBREAKING), 1));
-                    $inventory->addItem($shovel);
-
-                    $inventory->addItem(ItemFactory::get(Item::BOW));
-                    $inventory->addItem(ItemFactory::get(Item::BREAD, 0, 32));
-                    $inventory->addItem(ItemFactory::get(Item::CAKE));
-                    $inventory->addItem(ItemFactory::get(Item::SEA_LANTERN, 0, 4));
-                    $inventory->addItem(ItemFactory::get(Item::COAL_ORE, 0, 8));
-                    $inventory->addItem(ItemFactory::get(Item::IRON_ORE, 0, 4));
-                    $inventory->addItem(ItemFactory::get(Item::LAPIS_ORE, 0, 8));
-                    $inventory->addItem(ItemFactory::get(Item::ARROW, 0, 16));
-                    $inventory->addItem(ItemFactory::get(Item::LOG, 0, 16));
-                    $inventory->addItem(ItemFactory::get(Item::LOG, 1, 16));
-                    $inventory->addItem(ItemFactory::get(Item::LOG, 2, 16));
-                    $inventory->addItem(ItemFactory::get(Item::WOOL, 8, 8));
-                    $inventory->addItem(ItemFactory::get(Item::GLASS, 0, 8));
-                    $inventory->addItem(ItemFactory::get(Item::CONCRETE, 0, 8));
-                    $inventory->addItem(ItemFactory::get(Item::BED, 8));
                 } else {
                     if (!preg_match("/^[0-9a-zA-Zа-яА-Я.,!?@#$%^&*_]{6,24}$/", $password)) {
                         $player->sendMessage(Language::translate("%playerdata.auth.incorrect.syntax%", $player));
