@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace PlayerData\types;
+namespace PlayerData\utils;
 
 class Utils {
 
