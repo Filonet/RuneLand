@@ -8,6 +8,7 @@ use Groups\helper\GroupHelper;
 use Groups\Loader;
 use Groups\types\Settings;
 use Groups\utils\Utils;
+use PlayerData\data\GroupData;
 use PlayerData\data\PlayerDataFactory;
 use PlayerData\event\LoadPlayerDataEvent;
 use PlayerData\types\Group;
@@ -35,10 +36,12 @@ class EventListener implements Listener {
 
         $player = $event->getPlayer();
 
-        $groupData = $event->getData()->getGroupData();
+        $data = $event->getData();
+        $groupData = $data->getGroupData();
         $expirationGroup = $groupData->getExpirationGroup();
         if ($expirationGroup !== 0 && $expirationGroup < time()) {
             $groupData->setGroup(Group::NONE);
+            $groupData->setExpirationGroup(0);
 
             $player->getServer()->dispatchCommand(new ConsoleCommandSender(), "setgroup " . $player->getLowerCaseName() . " " . Group::NONE);
         }
