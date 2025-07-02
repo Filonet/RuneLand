@@ -30,9 +30,9 @@ class Miner extends Kind
             ->getMiner();
     }
 
-    public function getNameTag(): string   { return 'Miner'; }
-    public function getVector3(): Vector3  { return new Vector3(210.5, 119, 180.5); }
-    public function getYaw(): float        { return 180; }
+    public function getNameTag(): string   { return '§bMiner§r'; }
+    public function getVector3(): Vector3  { return new Vector3(196.5, 119, 174.5); }
+    public function getYaw(): float        { return 0; }
     public function getPitch(): float      { return 0; }
     public function getSkinName(): string  { return 'miner'; }
     public function getLanguageKey() : string { return 'miner'; }

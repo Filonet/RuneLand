@@ -23,9 +23,9 @@ class Farmer extends Kind
         return PlayerDataFactory::getData($player->getLowerCaseName())->getQuestData()->getFarmer();
     }
 
-    public function getNameTag(): string   { return 'Farmer'; }
-    public function getVector3(): Vector3  { return new Vector3(185.5, 119, 165.5); }
-    public function getYaw(): float        { return 90; }
+    public function getNameTag(): string   { return '§eFarmer§r'; }
+    public function getVector3(): Vector3  { return new Vector3(208.5, 119, 176.5); }
+    public function getYaw(): float        { return 0; }
     public function getPitch(): float      { return 0; }
     public function getSkinName(): string  { return 'bard'; }
     public function getLanguageKey() : string { return 'farmer'; }

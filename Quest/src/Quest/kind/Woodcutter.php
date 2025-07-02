@@ -30,8 +30,8 @@ class Woodcutter extends Kind
             ->getWoodcutter();
     }
 
-    public function getNameTag(): string   { return 'Woodcutter'; }
-    public function getVector3(): Vector3  { return new Vector3(200.5, 119, 173.5); }
+    public function getNameTag(): string   { return '§aWoodCutter§r'; }
+    public function getVector3(): Vector3  { return new Vector3(192.5, 119, 176.5); }
     public function getYaw(): float        { return 0; }
     public function getPitch(): float      { return 0; }
     public function getSkinName(): string  { return 'lumberjack'; }
