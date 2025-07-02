@@ -21,7 +21,12 @@ final class Permission {
         Group::HERO => [
             self::PERMISSIONS => [
                 "home.limit.hero",
-                "kit.hero"
+                "kit.hero",
+            ],
+        ],
+        Group::HUNTER => [
+            self::PERMISSIONS => [
+                "kit.hunter"
             ],
         ],
     ];
