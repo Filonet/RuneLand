@@ -1,0 +1,4 @@
+profession.mining.name: "§3Шахтерство§f"
+
+profession.levelUp.title: "§aПовышение уровня!"
+profession.levelUp.subtitle: "§fПолучен уровень §a%level% §fв ремесле §a%profession%"

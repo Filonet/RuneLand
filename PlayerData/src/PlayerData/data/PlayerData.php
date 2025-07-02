@@ -15,6 +15,7 @@ class PlayerData {
         private StatsData       $statsData,
         private QuestData       $questData,
         private TeleportData    $teleportData,
+        private ProfessionData  $professionData,
         private int             $cid = 0
     ) {}
 
@@ -24,7 +25,8 @@ class PlayerData {
             GroupData::make(),
             StatsData::make(),
             QuestData::make(),
-            TeleportData::make()
+            TeleportData::make(),
+            ProfessionData::make()
         );
     }
 
@@ -46,6 +48,10 @@ class PlayerData {
 
     public function getTeleportData() : TeleportData{
         return $this->teleportData;
+    }
+
+    public function getProfessionData() : ProfessionData{
+        return $this->professionData;
     }
 
     public function getCid() : int{
@@ -70,6 +76,10 @@ class PlayerData {
 
     public function setTeleportData(TeleportData $teleportData) : void{
         $this->teleportData = $teleportData;
+    }
+
+    public function setProfessionData(ProfessionData $professionData) : void{
+        $this->professionData = $professionData;
     }
 
     public function setCid(int $cid) : void{
