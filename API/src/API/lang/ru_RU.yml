@@ -41,6 +41,6 @@ api.command.delHome.success: "§6Дом §c%home%§6 удален."
 api.command.stats.wellPlayed: "Наиграно"
 
 api.utils.timer.days: "д."
-api.utils.timer.hour: "ч."
+api.utils.timer.hours: "ч."
 api.utils.timer.minutes: "м."
 api.utils.timer.seconds: "с."
