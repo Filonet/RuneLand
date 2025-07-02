@@ -150,24 +150,25 @@ class Settings {
 
     public const array CHAT = [
         Group::NONE => '{nickname}§r§8: §7{message}§r',
-        Group::GRIEFER => '{nickname}§r§4: §7{message}§r',
-        Group::HUSTANG => '{nickname}§r§6: §7{message}§r',
-        Group::GHAST => '{nickname}§r§b: §7{message}§r',
-        Group::WITHER => '{nickname}§r§e: §7{message}§r',
-        Group::KRAKEN => '{nickname}§r§d: §7{message}§r',
-        Group::DRAGON => '{nickname}§r§4: §7{message}§r',
-        Group::STINGER => '{nickname}§r§5: §7{message}§r'
+        Group::HERO => '{nickname}§r§b: §7{message}§r',
+        Group::HUNTER => '{nickname}§r§4: §7{message}§r',
+        Group::RANGER => '{nickname}§r§d: §7{message}§r',
+        Group::ELEMENTAL => '{nickname}§r§b: §7{message}§r',
+        Group::PHANTOM => '{nickname}§r§6: §7{message}§r',
+        Group::ARCANA => '{nickname}§r§e: §7{message}§r',
+        Group::TITAN => '{nickname}§r§a: §7{message}§r',
+        Group::ELDER => '{nickname}§r§c: §7{message}§r'
     ];
 
     public const array TAG_LIST = [
         Group::NONE => '§f§r{name}',
-        Group::GRIEFER => '§c§o§lGRIEFER§r §f§r{name}',
-        Group::HUSTANG => '§e§o§lHUSTANGE§r §f§r{name}',
-        Group::GHAST => '§b§o§lGHAST§r §f§r{name}',
-        Group::WITHER => '§6§o§lWITHER§r §f§r{name}',
-        Group::KRAKEN => '§a§o§lKRAKEN§r §f§r{name}',
-        Group::DRAGON => '§5§o§lDRAGON§r §f§r{name}',
-        Group::STINGER => '§c§o§lSTINGER§r §f§r{name}',
-        Group::ETERNITY => '§d§o§lETERNITY§r §f§r{name}',
+        Group::HERO => '§o§9§lHERO§r §f§r{name}',
+        Group::HUNTER => '§o§c§lHUNTER§r §f§r{name}',
+        Group::RANGER => '§o§d§lRANGER§r §f§r{name}',
+        Group::ELEMENTAL => '§o§b§lELEMENTAL§r §f§r{name}',
+        Group::PHANTOM => '§o§e§lPHANTOM§r §f§r{name}',
+        Group::ARCANA => '§o§6§lARCANA§r §f§r{name}',
+        Group::TITAN => '§o§a§lTITAN§r §f§r{name}',
+        Group::ELDER => '§o§4§lELDER§r §f§r{name}'
     ];
 }

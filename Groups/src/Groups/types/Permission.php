@@ -14,13 +14,16 @@ final class Permission {
         //NOOP
     }
 
-    public const INHERITANCE = 'inheritance';
-    public const PERMISSIONS = 'permissions';
+    public const string INHERITANCE = 'inheritance';
+    public const string PERMISSIONS = 'permissions';
 
-    public const GROUPS = [
-        Group::NONE => [
-            self::PERMISSIONS => [],
-        ]
+    public const array GROUPS = [
+        Group::HERO => [
+            self::PERMISSIONS => [
+                "home.limit.hero",
+                "kit.hero"
+            ],
+        ],
     ];
 
     private static array $permissionGroups = [];
