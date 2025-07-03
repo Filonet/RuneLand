@@ -26,7 +26,7 @@ class EventListener implements Listener {
     public function onLoad(LoadPlayerDataEvent $event) : void {
         $player = $event->getPlayer();
         $this->loader->getScheduler()->scheduleDelayedTask(new ClosureTask(function (int $currentTick) use ($player) : void {
-            foreach (Settings::FLOATING_TEXTS as [$x, $y, $z, $text]) {
+            foreach (Settings::getFloatingTexts() as [$x, $y, $z, $text]) {
                 $this->level->addParticle(new FloatingTextParticle(new Vector3($x, $y, $z), "", Language::translate($text, $player)), [$player]);
             }
         }), 40);
