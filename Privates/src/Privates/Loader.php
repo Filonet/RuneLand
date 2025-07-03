@@ -7,7 +7,8 @@ use pocketmine\utils\Config;
 use pocketmine\scheduler\ClosureTask;
 use Privates\listener\EventListener;
 use Privates\manager\PrivateManager;
-use Privates\command\PrivatesCommand;
+use Privates\command\AdminPrivatesCommand;
+
 
 class Loader extends PluginBase {
 
@@ -26,10 +27,18 @@ class Loader extends PluginBase {
         $this->privateManager = new PrivateManager($this);
         
         $this->getServer()->getPluginManager()->registerEvents(new EventListener($this), $this);
-        $this->getServer()->getCommandMap()->register("privates", new PrivatesCommand($this));
+        $this->getServer()->getCommandMap()->register("adminprivates", new AdminPrivatesCommand($this));
         
         // Запускаем автосохранение
         $this->startAutoSave();
+        
+        // Проверяем наличие FormAPI
+        $formAPI = $this->getServer()->getPluginManager()->getPlugin("FormAPI");
+        if ($formAPI !== null) {
+            $this->getLogger()->info("§aFormAPI найден! Будут использоваться графические формы.");
+        } else {
+            $this->getLogger()->warning("§eFormAPI не найден! Управление через команды в чате.");
+        }
         
         $this->getLogger()->info("§aПлагин приватов успешно загружен!");
     }

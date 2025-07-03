@@ -125,7 +125,7 @@ class PrivateArea {
                 return "Алмазный блок";
             case 133: // EMERALD_BLOCK
                 return "Изумрудный блок";
-            case 20: // NETHERITE_BLOCK (примерный ID)
+            case 526: // NETHERITE_BLOCK
                 return "Незеритовый блок";
             default:
                 return "Неизвестный блок";

@@ -11,8 +11,8 @@ use pocketmine\event\entity\EntityExplodeEvent;
 use pocketmine\event\player\PlayerInteractEvent;
 use pocketmine\block\Block;
 use pocketmine\Player;
-use pocketmine\form\MenuForm;
-use pocketmine\form\ModalForm;
+use Privates\forms\PrivateManagementForm;
+use Privates\forms\SimpleFormManager;
 use Privates\Loader;
 
 class EventListener implements Listener {
@@ -74,16 +74,26 @@ class EventListener implements Listener {
         $private = $this->plugin->getPrivateManager()->getPrivateAt($position, $world);
         if ($private !== null) {
             $blockSizes = $this->plugin->getPrivateManager()->getBlockSizes();
+            $center = $private->getCenter();
+            
+            // Проверяем, является ли этот блок центральным блоком привата
             if (isset($blockSizes[$block->getId()]) && 
-                $private->getCenter()->equals($position)) {
+                (int)$center->x === (int)$position->x && 
+                (int)$center->y === (int)$position->y && 
+                (int)$center->z === (int)$position->z) {
                 
                 // Это центральный блок привата
                 if ($private->getOwner() === $player->getName() || $player->hasPermission("privates.break")) {
-                    $this->plugin->getPrivateManager()->removePrivate($private->getId());
-                    $player->sendMessage($this->plugin->getMessage("private-removed"));
+                    if ($this->plugin->getPrivateManager()->removePrivate($private->getId())) {
+                        $player->sendMessage("§aПриват успешно удален!");
+                        $this->plugin->getLogger()->info("Приват " . $private->getId() . " удален игроком " . $player->getName());
+                    } else {
+                        $player->sendMessage("§cОшибка при удалении привата!");
+                        $this->plugin->getLogger()->warning("Не удалось удалить приват " . $private->getId());
+                    }
                 } else {
                     $event->setCancelled();
-                    $player->sendMessage($this->plugin->getMessage("no-break-private-permission"));
+                    $player->sendMessage("§cУ вас нет прав на удаление этого привата!");
                 }
             }
         }
@@ -99,8 +109,13 @@ class EventListener implements Listener {
         $private = $this->plugin->getPrivateManager()->getPrivateAt($position, $world);
         if ($private !== null) {
             $blockSizes = $this->plugin->getPrivateManager()->getBlockSizes();
+            $center = $private->getCenter();
+            
+            // Проверяем, является ли этот блок центральным блоком привата
             if (isset($blockSizes[$block->getId()]) && 
-                $private->getCenter()->equals($position)) {
+                (int)$center->x === (int)$position->x && 
+                (int)$center->y === (int)$position->y && 
+                (int)$center->z === (int)$position->z) {
                 
                 // Это центральный блок привата
                 if ($private->getOwner() === $player->getName()) {
@@ -192,14 +207,23 @@ class EventListener implements Listener {
     }
 
     private function openPrivateManagementForm(Player $player, $private): void {
-        // Показываем меню через сообщения
-        $player->sendMessage("§e=== Управление приватом ===");
-        $player->sendMessage("§6Используйте команды для управления:");
-        $player->sendMessage("§f/pv info §7- Информация о привате");
-        $player->sendMessage("§f/pv add <игрок> §7- Добавить участника");
-        $player->sendMessage("§f/pv remove <игрок> §7- Удалить участника");
-        $player->sendMessage("§f/pv members §7- Список участников");
-        $player->sendMessage("§f/pv delete §7- Удалить приват");
+        // Проверяем, доступен ли FormAPI
+        if ($this->plugin->getServer()->getPluginManager()->getPlugin("FormAPI") !== null) {
+            try {
+                $form = PrivateManagementForm::getMainForm($private, $this->plugin);
+                $player->sendForm($form);
+            } catch (\Throwable $e) {
+                $this->plugin->getLogger()->warning("Ошибка при создании формы: " . $e->getMessage());
+                $this->showPrivateMenuInChat($player, $private);
+            }
+        } else {
+            // Если FormAPI недоступен, показываем меню через чат
+            $this->showPrivateMenuInChat($player, $private);
+        }
+    }
+    
+    private function showPrivateMenuInChat(Player $player, $private): void {
+        SimpleFormManager::sendPrivateMenu($player, $private, $this->plugin);
     }
 
     private function showPrivateInfo(Player $player, $private): void {

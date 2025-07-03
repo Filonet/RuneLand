@@ -66,7 +66,25 @@ class PrivateManager {
 
     public function saveAll(): void {
         $data = [];
+        $cleaned = 0;
+        
         foreach ($this->privates as $id => $private) {
+            // Проверяем, существует ли блок в центре привата (только если мир загружен)
+            $server = $this->plugin->getServer();
+            if ($server->isLevelLoaded($private->getWorld())) {
+                $level = $server->getLevelByName($private->getWorld());
+                if ($level !== null) {
+                    $center = $private->getCenter();
+                    $block = $level->getBlock($center);
+                    
+                    if (!isset($this->blockSizes[$block->getId()])) {
+                        // Блок не является приватным блоком, пропускаем сохранение
+                        $cleaned++;
+                        continue;
+                    }
+                }
+            }
+            
             $center = $private->getCenter();
             $data[$id] = [
                 "owner" => $private->getOwner(),
@@ -79,6 +97,24 @@ class PrivateManager {
                 "blockType" => $private->getBlockType()
             ];
         }
+        
+        if ($cleaned > 0) {
+            $this->plugin->getLogger()->info("Автоматически очищено висячих приватов: " . $cleaned);
+            // Обновляем массив приватов
+            $this->privates = array_filter($this->privates, function($private) {
+                $server = $this->plugin->getServer();
+                if ($server->isLevelLoaded($private->getWorld())) {
+                    $level = $server->getLevelByName($private->getWorld());
+                    if ($level !== null) {
+                        $center = $private->getCenter();
+                        $block = $level->getBlock($center);
+                        return isset($this->blockSizes[$block->getId()]);
+                    }
+                }
+                return true; // Сохраняем приваты из незагруженных миров
+            });
+        }
+        
         $this->data->set("privates", $data);
         $this->data->save();
     }

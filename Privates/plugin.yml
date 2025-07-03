@@ -5,6 +5,13 @@ api: 3.0.0
 author: RuneLand
 description: "Система приватов с блочной защитой"
 
+softdepend: [FormAPI]
+
+commands:
+  adminprivates:
+    description: "Админские команды приватов"
+    permission: privates.admin
+
 permissions:
   privates.admin:
     description: "Администратор приватов"
@@ -16,8 +23,4 @@ permissions:
     description: "Разрушение приватов"
     default: op
 
-commands:
-  privates:
-    description: "Команды приватов"
-    permission: privates.use
-    aliases: ["private", "pv"] 
+ 
