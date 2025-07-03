@@ -441,16 +441,17 @@ class Settings {
                     'id' => ItemIds::SEA_LANTERN,
                     'count' => 16
                 ], [
-                    'id' => ItemIds::COAL_ORE,
+                    'id' => ItemIds::COAL,
                     'count' => 32
                 ], [
-                    'id' => ItemIds::IRON_ORE,
+                    'id' => ItemIds::IRON_INGOT,
                     'count' => 20
                 ], [
-                    'id' => ItemIds::LAPIS_ORE,
+                    'id' => ItemIds::DYE,
+                    'meta' => 4,
                     'count' => 32
                 ], [
-                    'id' => ItemIds::GOLD_ORE,
+                    'id' => ItemIds::GOLD_INGOT,
                     'count' => 8
                 ], [
                     'id' => ItemIds::ARROW,
@@ -486,7 +487,7 @@ class Settings {
         ],
         Group::ELEMENTAL => [
             "cooldown" => 3600 * 24 * 4,
-            "shulker" => [340, 100, 85],
+            "shulker" => [340, 100, 86],
             "items" =>
                 [
                     [
@@ -576,13 +577,14 @@ class Settings {
                     'id' => ItemIds::SEA_LANTERN,
                     'count' => 24
                 ], [
-                    'id' => ItemIds::COAL_ORE,
+                    'id' => ItemIds::COAL,
                     'count' => 48
                 ], [
-                    'id' => ItemIds::IRON_ORE,
+                    'id' => ItemIds::IRON_INGOT,
                     'count' => 32
                 ], [
-                    'id' => ItemIds::LAPIS_ORE,
+                    'id' => ItemIds::DYE,
+                    'meta' => 4,
                     'count' => 48
                 ], [
                     'id' => ItemIds::ARROW,
@@ -618,7 +620,7 @@ class Settings {
         ],
         Group::PHANTOM => [
             "cooldown" => 3600 * 24 * 5,
-            "shulker" => [339, 100, 96],
+            "shulker" => [341, 100, 91],
             "items" =>
                 [
                     [
@@ -709,19 +711,20 @@ class Settings {
                     'id' => ItemIds::SEA_LANTERN,
                     'count' => 32
                 ], [
-                    'id' => ItemIds::GOLD_ORE,
+                    'id' => ItemIds::GOLD_INGOT,
                     'count' => 20
                 ], [
-                    'id' => ItemIds::DIAMOND_ORE,
+                    'id' => ItemIds::DIAMOND,
                     'count' => 8
                 ], [
-                    'id' => ItemIds::COAL_ORE,
+                    'id' => ItemIds::COAL,
                     'count' => 64
                 ], [
-                    'id' => ItemIds::IRON_ORE,
+                    'id' => ItemIds::IRON_INGOT,
                     'count' => 48
                 ], [
-                    'id' => ItemIds::LAPIS_ORE,
+                    'id' => ItemIds::DYE,
+                    'meta' => 4,
                     'count' => 64
                 ], [
                     'id' => ItemIds::ARROW,
@@ -757,7 +760,7 @@ class Settings {
         ],
         Group::ARCANA => [
             "cooldown" => 3600 * 24 * 6,
-            "shulker" => [332, 100, 98],
+            "shulker" => [339, 100, 96],
             "items" =>
                 [
                     [
@@ -853,22 +856,23 @@ class Settings {
                     'id' => ItemIds::SEA_LANTERN,
                     'count' => 40
                 ], [
-                    'id' => ItemIds::GOLD_ORE,
+                    'id' => ItemIds::GOLD_INGOT,
                     'count' => 20
                 ], [
-                    'id' => ItemIds::DIAMOND_ORE,
+                    'id' => ItemIds::DIAMOND,
                     'count' => 12
                 ], [
-                    'id' => ItemIds::EMERALD_ORE,
+                    'id' => ItemIds::EMERALD,
                     'count' => 2
                 ], [
-                    'id' => ItemIds::COAL_ORE,
+                    'id' => ItemIds::COAL,
                     'count' => 64
                 ], [
-                    'id' => ItemIds::IRON_ORE,
+                    'id' => ItemIds::IRON_INGOT,
                     'count' => 64
                 ], [
-                    'id' => ItemIds::LAPIS_ORE,
+                    'id' => ItemIds::DYE,
+                    'meta' => 4,
                     'count' => 64
                 ], [
                     'id' => ItemIds::ARROW,
@@ -904,7 +908,7 @@ class Settings {
         ],
         Group::TITAN => [
             "cooldown" => 3600 * 24 * 7,
-            "shulker" => [326, 100, 99],
+            "shulker" => [332, 100, 98],
             "items" =>
                 [
                     [
@@ -1000,22 +1004,23 @@ class Settings {
                     'id' => ItemIds::SEA_LANTERN,
                     'count' => 48
                 ], [
-                    'id' => ItemIds::GOLD_ORE,
+                    'id' => ItemIds::GOLD_INGOT,
                     'count' => 64
                 ], [
-                    'id' => ItemIds::DIAMOND_ORE,
+                    'id' => ItemIds::DIAMOND,
                     'count' => 64
                 ], [
-                    'id' => ItemIds::EMERALD_ORE,
+                    'id' => ItemIds::EMERALD,
                     'count' => 32
                 ], [
-                    'id' => ItemIds::COAL_ORE,
+                    'id' => ItemIds::COAL,
                     'count' => 64
                 ], [
-                    'id' => ItemIds::IRON_ORE,
+                    'id' => ItemIds::IRON_INGOT,
                     'count' => 64
                 ], [
-                    'id' => ItemIds::LAPIS_ORE,
+                    'id' => ItemIds::DYE,
+                    'meta' => 4,
                     'count' => 64
                 ], [
                     'id' => ItemIds::ARROW,
@@ -1051,7 +1056,7 @@ class Settings {
         ],
         Group::ELDER => [
             "cooldown" => 3600 * 24 * 8,
-            "shulker" => [366, 100, 88],
+            "shulker" => [327, 100, 99],
             "items" =>
                 [
                     [
@@ -1150,22 +1155,23 @@ class Settings {
                     'id' => ItemIds::SEA_LANTERN,
                     'count' => 48
                 ], [
-                    'id' => ItemIds::GOLD_ORE,
+                    'id' => ItemIds::GOLD_INGOT,
                     'count' => 64
                 ], [
-                    'id' => ItemIds::DIAMOND_ORE,
+                    'id' => ItemIds::DIAMOND,
                     'count' => 64
                 ], [
-                    'id' => ItemIds::EMERALD_ORE,
+                    'id' => ItemIds::EMERALD,
                     'count' => 64
                 ], [
-                    'id' => ItemIds::COAL_ORE,
+                    'id' => ItemIds::COAL,
                     'count' => 64
                 ], [
-                    'id' => ItemIds::IRON_ORE,
+                    'id' => ItemIds::IRON_INGOT,
                     'count' => 64
                 ], [
-                    'id' => ItemIds::LAPIS_ORE,
+                    'id' => ItemIds::DYE,
+                    'meta' => 4,
                     'count' => 64
                 ], [
                     'id' => ItemIds::ARROW,
