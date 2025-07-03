@@ -72,6 +72,8 @@ abstract class Profession {
                 10, 10, 10
             );
         }
+
+        \PlayerData\Loader::$mThread->pushQueryPacket('INSERT INTO `profession` (`nickname`, `level`, `experience`) VALUES("' . $player->getLowerCaseName() . '", "' . $professionData->getLevel() . '", "' . $professionData->getExperience() . '") ON DUPLICATE KEY UPDATE `level` = "' . $professionData->getLevel() . '", `experience` = "' . (int) $professionData->getExperience() . '";');
     }
 
     public function generateProgressBar($max, $have): string{
