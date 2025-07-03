@@ -7,6 +7,7 @@ namespace PlayerData\mysql;
 use PlayerData\data\AuthData;
 use PlayerData\data\GroupData;
 use PlayerData\data\PlayerData;
+use PlayerData\data\ProfessionData;
 use PlayerData\data\QuestData;
 use PlayerData\data\StatsData;
 use PlayerData\data\TeleportData;
@@ -146,6 +147,13 @@ class MysqlThread extends Thread{
                     if ($q !== false && count($data = $q->fetch_all())) {
                         foreach ($data as $row) {
                             $result[trim(strtolower($row[0]))]->getQuestData()->setFarmer(new StaticQuestData((int) $row[1], boolval($row[2]), (float) $row[3]));
+                        }
+                    }
+
+                    $q = $db->query("SELECT `nickname`, `level`, `experience` FROM `profession` WHERE " . str_replace("`name`", "`nickname`", $querySeq));
+                    if ($q !== false && count($data = $q->fetch_all())) {
+                        foreach ($data as $row) {
+                            $result[trim(strtolower($row[0]))]->setProfessionData(new ProfessionData((int) $row[1], (int) $row[2]));
                         }
                     }
 
