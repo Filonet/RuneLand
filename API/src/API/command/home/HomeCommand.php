@@ -33,7 +33,7 @@ class HomeCommand extends Command {
                 $y = $coords->getY();
                 $z = $coords->getZ();
 
-                $this->manager->teleport($sender, new Position($x, $y, $z, $sender->getServer()->getLevelByName("survival")), 3, $coords->getName());
+                $this->manager->teleport($sender, new Position($x, $y, $z, $sender->getServer()->getLevelByName("survival")), 3, (string) $coords->getName());
                 return false;
             }
         }

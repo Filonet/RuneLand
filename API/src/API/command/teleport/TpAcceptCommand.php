@@ -30,7 +30,7 @@ class TpAcceptCommand extends Command {
                 $sender->sendMessage(Language::translate("%api.command.tpAccept.success.target%", $sender, ["player" => $target->getName()]));
                 $target->sendMessage(Language::translate("%api.command.tpAccept.success.player%", $target, ["target" => $sender->getName()]));
 
-                $this->manager->teleport($target, $sender, 3, $sender->getLowerCaseName());
+                $this->manager->teleport($target, $sender, 3, (string) $sender->getLowerCaseName());
                 return true;
             }
         }
