@@ -355,823 +355,849 @@ class Settings {
                 ]
                 ]
         ],
+        Group::RANGER => [
+            "cooldown" => 3600 * 24 * 3,
+            "shulker" => [335, 100, 83],
+            "items" =>
+                [
+                    [
+                        'id' => ItemIds::DIAMOND_HELMET,
+                        'count' => 1,
+                        'enchant' => [
+                            Enchantment::PROTECTION => 2,
+                            Enchantment::UNBREAKING => 2,
+                            Enchantment::RESPIRATION => 1],
+                        'name' => "§9§lRANGER"
+                    ], [
+                    'id' => ItemIds::DIAMOND_CHESTPLATE,
+                    'count' => 1,
+                    'enchant' => [
+                        Enchantment::PROTECTION => 2,
+                        Enchantment::UNBREAKING => 2],
+                    'name' => "§9§lRANGER"
+                ], [
+                    'id' => ItemIds::DIAMOND_LEGGINGS,
+                    'count' => 1,
+                    'enchant' => [
+                        Enchantment::PROTECTION => 2,
+                        Enchantment::UNBREAKING => 2],
+                    'name' => "§9§lRANGER"
+                ], [
+                    'id' => ItemIds::DIAMOND_BOOTS,
+                    'count' => 1,
+                    'enchant' => [
+                        Enchantment::PROTECTION => 2,
+                        Enchantment::UNBREAKING => 2,
+                        Enchantment::DEPTH_STRIDER => 1],
+                    'name' => "§9§lRANGER"
+                ], [
+                    'id' => ItemIds::DIAMOND_SWORD,
+                    'count' => 1,
+                    'enchant' => [
+                        Enchantment::SHARPNESS => 2,
+                        Enchantment::UNBREAKING => 2,
+                        Enchantment::KNOCKBACK => 1],
+                    'name' => "§9§lRANGER"
+                ], [
+                    'id' => ItemIds::DIAMOND_AXE,
+                    'count' => 1,
+                    'enchant' => [
+                        Enchantment::EFFICIENCY => 2,
+                        Enchantment::UNBREAKING => 2],
+                    'name' => "§9§lRANGER"
+                ], [
+                    'id' => ItemIds::DIAMOND_PICKAXE,
+                    'count' => 1,
+                    'enchant' => [
+                        Enchantment::EFFICIENCY => 2,
+                        Enchantment::UNBREAKING => 2],
+                    'name' => "§9§lRANGER"
+                ], [
+                    'id' => ItemIds::DIAMOND_SHOVEL,
+                    'count' => 1,
+                    'enchant' => [
+                        Enchantment::EFFICIENCY => 2,
+                        Enchantment::UNBREAKING => 2],
+                    'name' => "§9§lRANGER"
+                ], [
+                    'id' => ItemIds::BOW,
+                    'count' => 1,
+                    'enchant' => [
+                        Enchantment::POWER => 2,
+                        Enchantment::UNBREAKING => 2],
+                    'name' => "§9§lRANGER"
+                ], [
+                    'id' => ItemIds::GOLDEN_APPLE,
+                    'count' => 2
+                ], [
+                    'id' => ItemIds::COOKED_CHICKEN,
+                    'count' => 63
+                ], [
+                    'id' => ItemIds::CAKE
+                ], [
+                    'id' => ItemIds::BOOK,
+                    'count' => 2
+                ], [
+                    'id' => ItemIds::SEA_LANTERN,
+                    'count' => 16
+                ], [
+                    'id' => ItemIds::COAL_ORE,
+                    'count' => 32
+                ], [
+                    'id' => ItemIds::IRON_ORE,
+                    'count' => 20
+                ], [
+                    'id' => ItemIds::LAPIS_ORE,
+                    'count' => 32
+                ], [
+                    'id' => ItemIds::GOLD_ORE,
+                    'count' => 8
+                ], [
+                    'id' => ItemIds::ARROW,
+                    'count' => 64
+                ], [
+                    'id' => ItemIds::LOG,
+                    'meta' => 0,
+                    'count' => 48
+                ], [
+                    'id' => ItemIds::LOG,
+                    'meta' => 1,
+                    'count' => 48
+                ], [
+                    'id' => ItemIds::LOG,
+                    'meta' => 2,
+                    'count' => 48
+                ], [
+                    'id' => ItemIds::WOOL,
+                    'meta' => 2,
+                    'count' => 32
+                ], [
+                    'id' => ItemIds::GLASS,
+                    'count' => 32
+                ], [
+                    'id' => ItemIds::CONCRETE,
+                    'meta' => 2,
+                    'count' => 32
+                ], [
+                    'id' => ItemIds::BED,
+                    'meta' => 2
+                ]
+                ]
+        ],
+        Group::ELEMENTAL => [
+            "cooldown" => 3600 * 24 * 4,
+            "shulker" => [340, 100, 85],
+            "items" =>
+                [
+                    [
+                        'id' => ItemIds::DIAMOND_HELMET,
+                        'count' => 1,
+                        'enchant' => [
+                            Enchantment::PROTECTION => 3,
+                            Enchantment::UNBREAKING => 3,
+                            Enchantment::RESPIRATION => 2],
+                        'name' => "§9§lELEMENTAL"
+                    ], [
+                    'id' => ItemIds::DIAMOND_CHESTPLATE,
+                    'count' => 1,
+                    'enchant' => [
+                        Enchantment::PROTECTION => 3,
+                        Enchantment::UNBREAKING => 3],
+                    'name' => "§9§lELEMENTAL"
+                ], [
+                    'id' => ItemIds::DIAMOND_LEGGINGS,
+                    'count' => 1,
+                    'enchant' => [
+                        Enchantment::PROTECTION => 3,
+                        Enchantment::UNBREAKING => 3],
+                    'name' => "§9§lELEMENTAL"
+                ], [
+                    'id' => ItemIds::DIAMOND_BOOTS,
+                    'count' => 1,
+                    'enchant' => [
+                        Enchantment::PROTECTION => 3,
+                        Enchantment::UNBREAKING => 3,
+                        Enchantment::DEPTH_STRIDER => 3],
+                    'name' => "§9§lELEMENTAL"
+                ], [
+                    'id' => ItemIds::DIAMOND_SWORD,
+                    'count' => 1,
+                    'enchant' => [
+                        Enchantment::SHARPNESS => 3,
+                        Enchantment::UNBREAKING => 3,
+                        Enchantment::KNOCKBACK => 2,
+                        Enchantment::FIRE_ASPECT => 1],
+                    'name' => "§9§lELEMENTAL"
+                ], [
+                    'id' => ItemIds::DIAMOND_AXE,
+                    'count' => 1,
+                    'enchant' => [
+                        Enchantment::SHARPNESS => 1,
+                        Enchantment::EFFICIENCY => 3,
+                        Enchantment::UNBREAKING => 3,
+                        Enchantment::KNOCKBACK => 1],
+                    'name' => "§9§lELEMENTAL"
+                ], [
+                    'id' => ItemIds::DIAMOND_PICKAXE,
+                    'count' => 1,
+                    'enchant' => [
+                        Enchantment::EFFICIENCY => 3,
+                        Enchantment::UNBREAKING => 3],
+                    'name' => "§9§lELEMENTAL"
+                ], [
+                    'id' => ItemIds::DIAMOND_SHOVEL,
+                    'count' => 1,
+                    'enchant' => [
+                        Enchantment::EFFICIENCY => 3,
+                        Enchantment::UNBREAKING => 3],
+                    'name' => "§9§lELEMENTAL"
+                ], [
+                    'id' => ItemIds::BOW,
+                    'count' => 1,
+                    'enchant' => [
+                        Enchantment::POWER => 3,
+                        Enchantment::UNBREAKING => 3,
+                        Enchantment::INFINITY => 1],
+                    'name' => "§9§lELEMENTAL"
+                ], [
+                    'id' => ItemIds::GOLDEN_APPLE,
+                    'count' => 2
+                ], [
+                    'id' => ItemIds::TOTEM
+                ], [
+                    'id' => ItemIds::COOKED_CHICKEN,
+                    'count' => 64
+                ], [
+                    'id' => ItemIds::CAKE
+                ], [
+                    'id' => ItemIds::BOOK,
+                    'count' => 4
+                ], [
+                    'id' => ItemIds::SEA_LANTERN,
+                    'count' => 24
+                ], [
+                    'id' => ItemIds::COAL_ORE,
+                    'count' => 48
+                ], [
+                    'id' => ItemIds::IRON_ORE,
+                    'count' => 32
+                ], [
+                    'id' => ItemIds::LAPIS_ORE,
+                    'count' => 48
+                ], [
+                    'id' => ItemIds::ARROW,
+                    'count' => 64
+                ], [
+                    'id' => ItemIds::LOG,
+                    'meta' => 0,
+                    'count' => 64
+                ], [
+                    'id' => ItemIds::LOG,
+                    'meta' => 1,
+                    'count' => 64
+                ], [
+                    'id' => ItemIds::LOG,
+                    'meta' => 2,
+                    'count' => 64
+                ], [
+                    'id' => ItemIds::PLANKS,
+                    'meta' => 3,
+                    'count' => 32
+                ], [
+                    'id' => ItemIds::GLASS,
+                    'count' => 32
+                ], [
+                    'id' => ItemIds::CONCRETE,
+                    'meta' => 3,
+                    'count' => 32
+                ], [
+                    'id' => ItemIds::BED,
+                    'meta' => 3
+                ]
+                ]
+        ],
+        Group::PHANTOM => [
+            "cooldown" => 3600 * 24 * 5,
+            "shulker" => [339, 100, 96],
+            "items" =>
+                [
+                    [
+                        'id' => ItemIds::DIAMOND_HELMET,
+                        'count' => 1,
+                        'enchant' => [
+                            Enchantment::PROTECTION => 4,
+                            Enchantment::UNBREAKING => 3,
+                            Enchantment::RESPIRATION => 3,
+                            Enchantment::AQUA_AFFINITY => 1],
+                        'name' => "§9§lPHANTOM"
+                    ], [
+                    'id' => ItemIds::DIAMOND_CHESTPLATE,
+                    'count' => 1,
+                    'enchant' => [
+                        Enchantment::PROTECTION => 4,
+                        Enchantment::UNBREAKING => 3],
+                    'name' => "§9§lPHANTOM"
+                ], [
+                    'id' => ItemIds::DIAMOND_LEGGINGS,
+                    'count' => 1,
+                    'enchant' => [
+                        Enchantment::PROTECTION => 4,
+                        Enchantment::UNBREAKING => 3],
+                    'name' => "§9§lPHANTOM"
+                ], [
+                    'id' => ItemIds::DIAMOND_BOOTS,
+                    'count' => 1,
+                    'enchant' => [
+                        Enchantment::PROTECTION => 3,
+                        Enchantment::FEATHER_FALLING => 2,
+                        Enchantment::DEPTH_STRIDER => 3,
+                        Enchantment::UNBREAKING => 3],
+                    'name' => "§9§lPHANTOM"
+                ], [
+                    'id' => ItemIds::DIAMOND_SWORD,
+                    'count' => 1,
+                    'enchant' => [
+                        Enchantment::SHARPNESS => 4,
+                        Enchantment::UNBREAKING => 3,
+                        Enchantment::KNOCKBACK => 2,
+                        Enchantment::FIRE_ASPECT => 2],
+                    'name' => "§9§lPHANTOM"
+                ], [
+                    'id' => ItemIds::DIAMOND_AXE,
+                    'count' => 1,
+                    'enchant' => [
+                        Enchantment::SHARPNESS => 2,
+                        Enchantment::EFFICIENCY => 4,
+                        Enchantment::UNBREAKING => 3,
+                        Enchantment::KNOCKBACK => 1],
+                    'name' => "§9§lPHANTOM"
+                ], [
+                    'id' => ItemIds::DIAMOND_PICKAXE,
+                    'count' => 1,
+                    'enchant' => [
+                        Enchantment::EFFICIENCY => 4,
+                        Enchantment::UNBREAKING => 3],
+                    'name' => "§9§lPHANTOM"
+                ], [
+                    'id' => ItemIds::DIAMOND_SHOVEL,
+                    'count' => 1,
+                    'enchant' => [
+                        Enchantment::EFFICIENCY => 4,
+                        Enchantment::UNBREAKING => 3],
+                    'name' => "§9§lPHANTOM"
+                ], [
+                    'id' => ItemIds::BOW,
+                    'count' => 1,
+                    'enchant' => [
+                        Enchantment::POWER => 4,
+                        Enchantment::UNBREAKING => 3,
+                        Enchantment::FLAME => 1,
+                        Enchantment::INFINITY => 1],
+                    'name' => "§9§lPHANTOM"
+                ], [
+                    'id' => ItemIds::GOLDEN_APPLE,
+                    'count' => 3
+                ], [
+                    'id' => ItemIds::TOTEM
+                ], [
+                    'id' => ItemIds::COOKED_BEEF,
+                    'count' => 64
+                ], [
+                    'id' => ItemIds::BOOK,
+                    'count' => 4
+                ], [
+                    'id' => ItemIds::SEA_LANTERN,
+                    'count' => 32
+                ], [
+                    'id' => ItemIds::GOLD_ORE,
+                    'count' => 20
+                ], [
+                    'id' => ItemIds::DIAMOND_ORE,
+                    'count' => 8
+                ], [
+                    'id' => ItemIds::COAL_ORE,
+                    'count' => 64
+                ], [
+                    'id' => ItemIds::IRON_ORE,
+                    'count' => 48
+                ], [
+                    'id' => ItemIds::LAPIS_ORE,
+                    'count' => 64
+                ], [
+                    'id' => ItemIds::ARROW,
+                    'count' => 64
+                ], [
+                    'id' => ItemIds::LOG,
+                    'meta' => 0,
+                    'count' => 64
+                ], [
+                    'id' => ItemIds::LOG,
+                    'meta' => 1,
+                    'count' => 64
+                ], [
+                    'id' => ItemIds::LOG,
+                    'meta' => 2,
+                    'count' => 64
+                ], [
+                    'id' => ItemIds::WOOL,
+                    'meta' => 4,
+                    'count' => 32
+                ], [
+                    'id' => ItemIds::GLASS,
+                    'count' => 32
+                ], [
+                    'id' => ItemIds::CONCRETE,
+                    'meta' => 4,
+                    'count' => 32
+                ], [
+                    'id' => ItemIds::BED,
+                    'meta' => 4
+                ]
+                ]
+        ],
+        Group::ARCANA => [
+            "cooldown" => 3600 * 24 * 6,
+            "shulker" => [332, 100, 98],
+            "items" =>
+                [
+                    [
+                        'id' => ItemIds::DIAMOND_HELMET,
+                        'count' => 1,
+                        'enchant' => [
+                            Enchantment::PROTECTION => 4,
+                            Enchantment::UNBREAKING => 3,
+                            Enchantment::RESPIRATION => 3,
+                            Enchantment::AQUA_AFFINITY => 1],
+                        'name' => "§9§lARCANA"
+                    ], [
+                    'id' => ItemIds::DIAMOND_CHESTPLATE,
+                    'count' => 1,
+                    'enchant' => [
+                        Enchantment::PROTECTION => 4,
+                        Enchantment::UNBREAKING => 3],
+                    'name' => "§9§lARCANA"
+                ], [
+                    'id' => ItemIds::DIAMOND_LEGGINGS,
+                    'count' => 1,
+                    'enchant' => [
+                        Enchantment::PROTECTION => 4,
+                        Enchantment::UNBREAKING => 3],
+                    'name' => "§9§lARCANA"
+                ], [
+                    'id' => ItemIds::DIAMOND_BOOTS,
+                    'count' => 1,
+                    'enchant' => [
+                        Enchantment::PROTECTION => 4,
+                        Enchantment::FEATHER_FALLING => 3,
+                        Enchantment::DEPTH_STRIDER => 3,
+                        Enchantment::UNBREAKING => 3],
+                    'name' => "§9§lARCANA"
+                ], [
+                    'id' => ItemIds::DIAMOND_SWORD,
+                    'count' => 1,
+                    'enchant' => [
+                        Enchantment::SHARPNESS => 5,
+                        Enchantment::KNOCKBACK => 1,
+                        Enchantment::FIRE_ASPECT => 2,
+                        Enchantment::LOOTING => 1,
+                        Enchantment::UNBREAKING => 3],
+                    'name' => "§9§lARCANA"
+                ], [
+                    'id' => ItemIds::DIAMOND_AXE,
+                    'count' => 1,
+                    'enchant' => [
+                        Enchantment::SHARPNESS => 3,
+                        Enchantment::EFFICIENCY => 5,
+                        Enchantment::UNBREAKING => 3,
+                        Enchantment::KNOCKBACK => 1],
+                    'name' => "§9§lARCANA"
+                ], [
+                    'id' => ItemIds::DIAMOND_PICKAXE,
+                    'count' => 1,
+                    'enchant' => [
+                        Enchantment::EFFICIENCY => 5,
+                        Enchantment::UNBREAKING => 4],
+                    'name' => "§9§lARCANA"
+                ], [
+                    'id' => ItemIds::DIAMOND_SHOVEL,
+                    'count' => 1,
+                    'enchant' => [
+                        Enchantment::EFFICIENCY => 5,
+                        Enchantment::UNBREAKING => 4],
+                    'name' => "§9§lARCANA"
+                ], [
+                    'id' => ItemIds::BOW,
+                    'count' => 1,
+                    'enchant' => [
+                        Enchantment::POWER => 5,
+                        Enchantment::UNBREAKING => 3,
+                        Enchantment::FLAME => 1,
+                        Enchantment::INFINITY => 1],
+                    'name' => "§9§lARCANA"
+                ], [
+                    'id' => ItemIds::GOLDEN_APPLE,
+                    'count' => 4
+                ], [
+                    'id' => ItemIds::TOTEM,
+                    'count' => 1
+                ], [
+                    'id' => ItemIds::TOTEM,
+                    'count' => 1
+                ], [
+                    'id' => ItemIds::COOKED_BEEF,
+                    'count' => 64
+                ], [
+                    'id' => ItemIds::BOOK,
+                    'count' => 16
+                ], [
+                    'id' => ItemIds::SEA_LANTERN,
+                    'count' => 40
+                ], [
+                    'id' => ItemIds::GOLD_ORE,
+                    'count' => 20
+                ], [
+                    'id' => ItemIds::DIAMOND_ORE,
+                    'count' => 12
+                ], [
+                    'id' => ItemIds::EMERALD_ORE,
+                    'count' => 2
+                ], [
+                    'id' => ItemIds::COAL_ORE,
+                    'count' => 64
+                ], [
+                    'id' => ItemIds::IRON_ORE,
+                    'count' => 64
+                ], [
+                    'id' => ItemIds::LAPIS_ORE,
+                    'count' => 64
+                ], [
+                    'id' => ItemIds::ARROW,
+                    'count' => 64
+                ], [
+                    'id' => ItemIds::LOG,
+                    'meta' => 0,
+                    'count' => 64
+                ], [
+                    'id' => ItemIds::LOG,
+                    'meta' => 1,
+                    'count' => 64
+                ], [
+                    'id' => ItemIds::LOG,
+                    'meta' => 2,
+                    'count' => 64
+                ], [
+                    'id' => ItemIds::WOOL,
+                    'meta' => 1,
+                    'count' => 32
+                ], [
+                    'id' => ItemIds::GLASS,
+                    'count' => 32
+                ], [
+                    'id' => ItemIds::CONCRETE,
+                    'meta' => 1,
+                    'count' => 32
+                ], [
+                    'id' => ItemIds::BED,
+                    'meta' => 1
+                ]
+                ]
+        ],
+        Group::TITAN => [
+            "cooldown" => 3600 * 24 * 7,
+            "shulker" => [326, 100, 99],
+            "items" =>
+                [
+                    [
+                        'id' => ItemIds::DIAMOND_HELMET,
+                        'count' => 1,
+                        'enchant' => [
+                            Enchantment::PROTECTION => 4,
+                            Enchantment::UNBREAKING => 3,
+                            Enchantment::RESPIRATION => 4,
+                            Enchantment::AQUA_AFFINITY => 1],
+                        'name' => "§9§lTITAN"
+                    ], [
+                    'id' => ItemIds::DIAMOND_CHESTPLATE,
+                    'count' => 1,
+                    'enchant' => [
+                        Enchantment::PROTECTION => 4,
+                        Enchantment::UNBREAKING => 3],
+                    'name' => "§9§lTITAN"
+                ], [
+                    'id' => ItemIds::DIAMOND_LEGGINGS,
+                    'count' => 1,
+                    'enchant' => [
+                        Enchantment::PROTECTION => 4,
+                        Enchantment::UNBREAKING => 3],
+                    'name' => "§9§lTITAN"
+                ], [
+                    'id' => ItemIds::DIAMOND_BOOTS,
+                    'count' => 1,
+                    'enchant' => [
+                        Enchantment::PROTECTION => 4,
+                        Enchantment::FEATHER_FALLING => 4,
+                        Enchantment::DEPTH_STRIDER => 3,
+                        Enchantment::UNBREAKING => 3],
+                    'name' => "§9§lTITAN"
+                ], [
+                    'id' => ItemIds::DIAMOND_SWORD,
+                    'count' => 1,
+                    'enchant' => [
+                        Enchantment::SHARPNESS => 5,
+                        Enchantment::FIRE_ASPECT => 2,
+                        Enchantment::LOOTING => 2,
+                        Enchantment::UNBREAKING => 2],
+                    'name' => "§9§lTITAN"
+                ], [
+                    'id' => ItemIds::DIAMOND_AXE,
+                    'count' => 1,
+                    'enchant' => [
+                        Enchantment::SHARPNESS => 4,
+                        Enchantment::EFFICIENCY => 5,
+                        Enchantment::UNBREAKING => 3,
+                        Enchantment::KNOCKBACK => 1,
+                        Enchantment::FIRE_ASPECT => 1],
+                    'name' => "§9§lTITAN"
+                ], [
+                    'id' => ItemIds::DIAMOND_PICKAXE,
+                    'count' => 1,
+                    'enchant' => [
+                        Enchantment::EFFICIENCY => 5,
+                        Enchantment::UNBREAKING => 4],
+                    'name' => "§9§lTITAN"
+                ], [
+                    'id' => ItemIds::DIAMOND_SHOVEL,
+                    'count' => 1,
+                    'enchant' => [
+                        Enchantment::EFFICIENCY => 5,
+                        Enchantment::UNBREAKING => 4],
+                    'name' => "§9§lTITAN"
+                ], [
+                    'id' => ItemIds::BOW,
+                    'count' => 1,
+                    'enchant' => [
+                        Enchantment::POWER => 5,
+                        Enchantment::UNBREAKING => 3,
+                        Enchantment::FLAME => 1,
+                        Enchantment::INFINITY => 1],
+                    'name' => "§9§lTITAN"
+                ], [
+                    'id' => ItemIds::GOLDEN_APPLE,
+                    'count' => 7
+                ], [
+                    'id' => ItemIds::TOTEM,
+                    'count' => 1
+                ], [
+                    'id' => ItemIds::TOTEM,
+                    'count' => 1
+                ], [
+                    'id' => ItemIds::COOKED_BEEF,
+                    'count' => 64
+                ], [
+                    'id' => ItemIds::BOOK,
+                    'count' => 24
+                ], [
+                    'id' => ItemIds::SEA_LANTERN,
+                    'count' => 48
+                ], [
+                    'id' => ItemIds::GOLD_ORE,
+                    'count' => 64
+                ], [
+                    'id' => ItemIds::DIAMOND_ORE,
+                    'count' => 64
+                ], [
+                    'id' => ItemIds::EMERALD_ORE,
+                    'count' => 32
+                ], [
+                    'id' => ItemIds::COAL_ORE,
+                    'count' => 64
+                ], [
+                    'id' => ItemIds::IRON_ORE,
+                    'count' => 64
+                ], [
+                    'id' => ItemIds::LAPIS_ORE,
+                    'count' => 64
+                ], [
+                    'id' => ItemIds::ARROW,
+                    'count' => 64
+                ], [
+                    'id' => ItemIds::LOG,
+                    'meta' => 0,
+                    'count' => 64
+                ], [
+                    'id' => ItemIds::LOG,
+                    'meta' => 1,
+                    'count' => 64
+                ], [
+                    'id' => ItemIds::LOG,
+                    'meta' => 2,
+                    'count' => 64
+                ], [
+                    'id' => ItemIds::WOOL,
+                    'meta' => 5,
+                    'count' => 32
+                ], [
+                    'id' => ItemIds::GLASS,
+                    'count' => 32
+                ], [
+                    'id' => ItemIds::CONCRETE,
+                    'meta' => 5,
+                    'count' => 32
+                ], [
+                    'id' => ItemIds::BED,
+                    'meta' => 5
+                ]
+                ]
+        ],
+        Group::ELDER => [
+            "cooldown" => 3600 * 24 * 8,
+            "shulker" => [366, 100, 88],
+            "items" =>
+                [
+                    [
+                        'id' => ItemIds::DIAMOND_HELMET,
+                        'count' => 1,
+                        'enchant' => [
+                            Enchantment::PROTECTION => 4,
+                            Enchantment::UNBREAKING => 3,
+                            Enchantment::RESPIRATION => 4,
+                            Enchantment::AQUA_AFFINITY => 1],
+                        'name' => "§9§lELDER"
+                    ], [
+                    'id' => ItemIds::DIAMOND_CHESTPLATE,
+                    'count' => 1,
+                    'enchant' => [
+                        Enchantment::PROTECTION => 4,
+                        Enchantment::UNBREAKING => 3],
+                    'name' => "§9§lELDER"
+                ], [
+                    'id' => ItemIds::DIAMOND_LEGGINGS,
+                    'count' => 1,
+                    'enchant' => [
+                        Enchantment::PROTECTION => 4,
+                        Enchantment::UNBREAKING => 3],
+                    'name' => "§9§lELDER"
+                ], [
+                    'id' => ItemIds::DIAMOND_BOOTS,
+                    'count' => 1,
+                    'enchant' => [
+                        Enchantment::PROTECTION => 4,
+                        Enchantment::FEATHER_FALLING => 3,
+                        Enchantment::DEPTH_STRIDER => 3,
+                        Enchantment::UNBREAKING => 3],
+                    'name' => "§9§lELDER"
+                ], [
+                    'id' => ItemIds::DIAMOND_SWORD,
+                    'count' => 1,
+                    'enchant' => [
+                        Enchantment::SHARPNESS => 5,
+                        Enchantment::FIRE_ASPECT => 2,
+                        Enchantment::LOOTING => 3,
+                        Enchantment::UNBREAKING => 3],
+                    'name' => "§9§lELDER"
+                ], [
+                    'id' => ItemIds::DIAMOND_AXE,
+                    'count' => 1,
+                    'enchant' => [
+                        Enchantment::SHARPNESS => 4,
+                        Enchantment::EFFICIENCY => 5,
+                        Enchantment::UNBREAKING => 3,
+                        Enchantment::KNOCKBACK => 1,
+                        Enchantment::FIRE_ASPECT => 1],
+                    'name' => "§9§lELDER"
+                ], [
+                    'id' => ItemIds::DIAMOND_PICKAXE,
+                    'count' => 1,
+                    'enchant' => [
+                        Enchantment::EFFICIENCY => 7,
+                        Enchantment::UNBREAKING => 6],
+                    'name' => "§9§lELDER"
+                ], [
+                    'id' => ItemIds::DIAMOND_SHOVEL,
+                    'count' => 1,
+                    'enchant' => [
+                        Enchantment::EFFICIENCY => 5,
+                        Enchantment::UNBREAKING => 4],
+                    'name' => "§9§lELDER"
+                ], [
+                    'id' => ItemIds::BOW,
+                    'count' => 1,
+                    'enchant' => [
+                        Enchantment::POWER => 6,
+                        Enchantment::UNBREAKING => 3,
+                        Enchantment::FLAME => 1,
+                        Enchantment::INFINITY => 1],
+                    'name' => "§9§lELDER"
+                ], [
+                    'id' => ItemIds::GOLDEN_APPLE,
+                    'count' => 8
+                ], [
+                    'id' => ItemIds::TOTEM,
+                    'count' => 1
+                ], [
+                    'id' => ItemIds::TOTEM,
+                    'count' => 1
+                ], [
+                    'id' => ItemIds::TOTEM,
+                    'count' => 1
+                ], [
+                    'id' => ItemIds::COOKED_BEEF,
+                    'count' => 64
+                ], [
+                    'id' => ItemIds::BOOK,
+                    'count' => 32
+                ], [
+                    'id' => ItemIds::SEA_LANTERN,
+                    'count' => 48
+                ], [
+                    'id' => ItemIds::GOLD_ORE,
+                    'count' => 64
+                ], [
+                    'id' => ItemIds::DIAMOND_ORE,
+                    'count' => 64
+                ], [
+                    'id' => ItemIds::EMERALD_ORE,
+                    'count' => 64
+                ], [
+                    'id' => ItemIds::COAL_ORE,
+                    'count' => 64
+                ], [
+                    'id' => ItemIds::IRON_ORE,
+                    'count' => 64
+                ], [
+                    'id' => ItemIds::LAPIS_ORE,
+                    'count' => 64
+                ], [
+                    'id' => ItemIds::ARROW,
+                    'count' => 64
+                ], [
+                    'id' => ItemIds::LOG,
+                    'meta' => 0,
+                    'count' => 64
+                ], [
+                    'id' => ItemIds::LOG,
+                    'meta' => 1,
+                    'count' => 64
+                ], [
+                    'id' => ItemIds::LOG,
+                    'meta' => 2,
+                    'count' => 64
+                ], [
+                    'id' => ItemIds::WOOL,
+                    'meta' => 14,
+                    'count' => 32
+                ], [
+                    'id' => ItemIds::GLASS,
+                    'count' => 32
+                ], [
+                    'id' => ItemIds::CONCRETE,
+                    'meta' => 14,
+                    'count' => 32
+                ], [
+                    'id' => ItemIds::BED,
+                    'meta' => 14
+                ]
+                ]
+        ],
     ];
-
-    /*
-     * from old plugins
-     *
-    private const array KITS3 = [
-        3 => [
-            [
-                'id' => "diamond_helmet",
-                'count' => 1,
-                'enchant' => [
-                    Enchantment::PROTECTION => 2,
-                    Enchantment::UNBREAKING => 2,
-                    Enchantment::RESPIRATION => 1],
-                'name' => "§9§lRANGER"
-            ], [
-                'id' => "diamond_chestplate",
-                'count' => 1,
-                'enchant' => [
-                    Enchantment::PROTECTION => 2,
-                    Enchantment::UNBREAKING => 2],
-                'name' => "§9§lRANGER"
-            ], [
-                'id' => "diamond_leggings",
-                'count' => 1,
-                'enchant' => [
-                    Enchantment::PROTECTION => 2,
-                    Enchantment::UNBREAKING => 2],
-                'name' => "§9§lRANGER"
-            ], [
-                'id' => "diamond_boots",
-                'count' => 1,
-                'enchant' => [
-                    Enchantment::PROTECTION => 2,
-                    Enchantment::UNBREAKING => 2,
-                    Enchantment::DEPTH_STRIDER => 1],
-                'name' => "§9§lRANGER"
-            ], [
-                'id' => "diamond_sword",
-                'count' => 1,
-                'enchant' => [
-                    Enchantment::SHARPNESS => 2,
-                    Enchantment::UNBREAKING => 2,
-                    Enchantment::KNOCKBACK => 1],
-                'name' => "§9§lRANGER"
-            ], [
-                'id' => "diamond_axe",
-                'count' => 1,
-                'enchant' => [
-                    Enchantment::EFFICIENCY => 2,
-                    Enchantment::UNBREAKING => 2],
-                'name' => "§9§lRANGER"
-            ], [
-                'id' => "diamond_pickaxe",
-                'count' => 1,
-                'enchant' => [
-                    Enchantment::EFFICIENCY => 2,
-                    Enchantment::UNBREAKING => 2],
-                'name' => "§9§lRANGER"
-            ], [
-                'id' => "diamond_shovel",
-                'count' => 1,
-                'enchant' => [
-                    Enchantment::EFFICIENCY => 2,
-                    Enchantment::UNBREAKING => 2],
-                'name' => "§9§lRANGER"
-            ], [
-                'id' => "bow",
-                'count' => 1,
-                'enchant' => [
-                    Enchantment::POWER => 2,
-                    Enchantment::UNBREAKING => 2],
-                'name' => "§9§lRANGER"
-            ], [
-                'id' => "golden_apple",
-                'count' => 2
-            ], [
-                'id' => ItemTypeIds::COOKED_CHICKEN,
-                'count' => 63
-            ], [
-                'id' => "cake",
-            ], [
-                'id' => "book",
-                'count' => 2
-            ], [
-                'id' => "sea_lantern",
-                'count' => 16
-            ], [
-                'id' => "coal_ore",
-                'count' => 32
-            ], [
-                'id' => "iron_ore",
-                'count' => 20
-            ], [
-                'id' => "lapis_ore",
-                'count' => 32
-            ], [
-                'id' => "gold_ore",
-                'count' => 8
-            ], [
-                'id' => "arrow",
-                'count' => 64
-            ], [
-                'id' => "oak_log",
-                'count' => 48
-            ], [
-                'id' => "oak_log",
-                'damage' => 1,
-                'count' => 48
-            ], [
-                'id' => "oak_log",
-                'damage' => 2,
-                'count' => 48
-            ], [
-                'id' => "wool",
-                'damage' => 2,
-                'count' => 32
-            ], [
-                'id' => "glass",
-                'count' => 32
-            ], [
-                'id' => "concrete",
-                'damage' => 2,
-                'count' => 32
-            ], [
-                'id' => "bed",
-                'damage' => 2
-            ]
-
-        ],
-        4 => [
-            [
-                'id' => "diamond_helmet",
-                'count' => 1,
-                'enchant' => [
-                    Enchantment::PROTECTION => 3,
-                    Enchantment::UNBREAKING => 3,
-                    Enchantment::RESPIRATION => 2],
-                'name' => "§9§lELEMENTAL"
-            ], [
-                'id' => "diamond_chestplate",
-                'count' => 1,
-                'enchant' => [
-                    Enchantment::PROTECTION => 3,
-                    Enchantment::UNBREAKING => 3],
-                'name' => "§9§lELEMENTAL"
-            ], [
-                'id' => "diamond_leggings",
-                'count' => 1,
-                'enchant' => [
-                    Enchantment::PROTECTION => 3,
-                    Enchantment::UNBREAKING => 3],
-                'name' => "§9§lELEMENTAL"
-            ], [
-                'id' => "diamond_boots",
-                'count' => 1,
-                'enchant' => [
-                    Enchantment::PROTECTION => 3,
-                    Enchantment::UNBREAKING => 3,
-                    Enchantment::DEPTH_STRIDER => 3],
-                'name' => "§9§lELEMENTAL"
-            ], [
-                'id' => "diamond_sword",
-                'count' => 1,
-                'enchant' => [
-                    Enchantment::SHARPNESS => 3,
-                    Enchantment::UNBREAKING => 3,
-                    Enchantment::KNOCKBACK => 2,
-                    Enchantment::FIRE_ASPECT => 1],
-                'name' => "§9§lELEMENTAL"
-            ], [
-                'id' => "diamond_axe",
-                'count' => 1,
-                'enchant' => [
-                    Enchantment::SHARPNESS => 1,
-                    Enchantment::EFFICIENCY => 3,
-                    Enchantment::UNBREAKING => 3,
-                    Enchantment::KNOCKBACK => 1],
-                'name' => "§9§lELEMENTAL"
-            ], [
-                'id' => "diamond_pickaxe",
-                'count' => 1,
-                'enchant' => [
-                    Enchantment::EFFICIENCY => 3,
-                    Enchantment::UNBREAKING => 3],
-                'name' => "§9§lELEMENTAL"
-            ], [
-                'id' => "diamond_shovel",
-                'count' => 1,
-                'enchant' => [
-                    Enchantment::EFFICIENCY => 3,
-                    Enchantment::UNBREAKING => 3],
-                'name' => "§9§lELEMENTAL"
-            ], [
-                'id' => "bow",
-                'count' => 1,
-                'enchant' => [
-                    Enchantment::POWER => 3,
-                    Enchantment::UNBREAKING => 3,
-                    Enchantment::INFINITY => 1],
-                'name' => "§9§lELEMENTAL"
-            ], [
-                'id' => "golden_apple",
-                'count' => 2
-            ], [
-                'id' => "totem",
-            ], [
-                'id' => "cooked_chicken",
-                'count' => 64
-            ], [
-                'id' => "cake",
-            ], [
-                'id' => "book",
-                'count' => 4
-            ], [
-                'id' => "sea_lantern",
-                'count' => 24
-            ], [
-                'id' => "coal_ore",
-                'count' => 48
-            ], [
-                'id' => "iron_ore",
-                'count' => 32
-            ], [
-                'id' => "lapis_ore",
-                'count' => 48
-            ], [
-                'id' => "arrow",
-                'count' => 64
-            ], [
-                'id' => "oak_log",
-                'count' => 64
-            ], [
-                'id' => "oak_log",
-                'damage' => 1,
-                'count' => 64
-            ], [
-                'id' => "oak_log",
-                'damage' => 2,
-                'count' => 64
-            ], [
-                'id' => "wooden_planks",
-                'damage' => 3,
-                'count' => 32
-            ], [
-                'id' => "glass",
-                'count' => 32
-            ], [
-                'id' => "concrete",
-                'damage' => 3,
-                'count' => 32
-            ], [
-                'id' => "bed",
-                'damage' => 3
-            ]
-
-        ],
-        5 => [
-            [
-                'id' => "diamond_helmet",
-                'count' => 1,
-                'enchant' => [
-                    Enchantment::PROTECTION => 4,
-                    Enchantment::UNBREAKING => 3,
-                    Enchantment::RESPIRATION => 3,
-                    Enchantment::AQUA_AFFINITY => 1],
-                'name' => "§9§lPHANTOM"
-            ], [
-                'id' => "diamond_chestplate",
-                'count' => 1,
-                'enchant' => [
-                    Enchantment::PROTECTION => 4,
-                    Enchantment::UNBREAKING => 3],
-                'name' => "§9§lPHANTOM"
-            ], [
-                'id' => "diamond_leggings",
-                'count' => 1,
-                'enchant' => [
-                    Enchantment::PROTECTION => 4,
-                    Enchantment::UNBREAKING => 3],
-                'name' => "§9§lPHANTOM"
-            ], [
-                'id' => "diamond_boots",
-                'count' => 1,
-                'enchant' => [
-                    Enchantment::PROTECTION => 3,
-                    Enchantment::FEATHER_FALLING => 2,
-                    Enchantment::DEPTH_STRIDER => 3,
-                    Enchantment::UNBREAKING => 3],
-                'name' => "§9§lPHANTOM"
-            ], [
-                'id' => "diamond_sword",
-                'count' => 1,
-                'enchant' => [
-                    Enchantment::SHARPNESS => 4,
-                    Enchantment::UNBREAKING => 3,
-                    Enchantment::KNOCKBACK => 2,
-                    Enchantment::FIRE_ASPECT => 2],
-                'name' => "§9§lPHANTOM"
-            ], [
-                'id' => "diamond_axe",
-                'count' => 1,
-                'enchant' => [
-                    Enchantment::SHARPNESS => 2,
-                    Enchantment::EFFICIENCY => 4,
-                    Enchantment::UNBREAKING => 3,
-                    Enchantment::KNOCKBACK => 1],
-                'name' => "§9§lPHANTOM"
-            ], [
-                'id' => "diamond_pickaxe",
-                'count' => 1,
-                'enchant' => [
-                    Enchantment::EFFICIENCY => 4,
-                    Enchantment::UNBREAKING => 3],
-                'name' => "§9§lPHANTOM"
-            ], [
-                'id' => "diamond_shovel",
-                'count' => 1,
-                'enchant' => [
-                    Enchantment::EFFICIENCY => 4,
-                    Enchantment::UNBREAKING => 3],
-                'name' => "§9§lPHANTOM"
-            ], [
-                'id' => "bow",
-                'count' => 1,
-                'enchant' => [
-                    Enchantment::POWER => 4,
-                    Enchantment::UNBREAKING => 3,
-                    Enchantment::FLAME => 1,
-                    Enchantment::INFINITY => 1],
-                'name' => "§9§lPHANTOM"
-            ], [
-                'id' => "golden_apple",
-                'count' => 3
-            ], [
-                'id' => "totem",
-            ], [
-                'id' => "cooked_beef",
-                'count' => 64
-            ], [
-                'id' => "book",
-                'count' => 4
-            ], [
-                'id' => "sea_lantern",
-                'count' => 32
-            ], [
-                'id' => "gold_ore",
-                'count' => 20
-            ], [
-                'id' => "diamond_ore",
-                'count' => 8
-            ], [
-                'id' => "coal_ore",
-                'count' => 64
-            ], [
-                'id' => "iron_ore",
-                'count' => 48
-            ], [
-                'id' => "lapis_ore",
-                'count' => 64
-            ], [
-                'id' => "arrow",
-                'count' => 64
-            ], [
-                'id' => "oak_log",
-                'count' => 64
-            ], [
-                'id' => "oak_log",
-                'damage' => 1,
-                'count' => 64
-            ], [
-                'id' => "oak_log",
-                'damage' => 2,
-                'count' => 64
-            ], [
-                'id' => "wool",
-                'damage' => 4,
-                'count' => 32
-            ], [
-                'id' => "glass",
-                'count' => 32
-            ], [
-                'id' => "concrete",
-                'damage' => 4,
-                'count' => 32
-            ], [
-                'id' => "bed",
-                'damage' => 4
-            ]
-        ],
-        6 => [
-            [
-                'id' => "diamond_helmet",
-                'count' => 1,
-                'enchant' => [
-                    Enchantment::PROTECTION => 4,
-                    Enchantment::UNBREAKING => 3,
-                    Enchantment::RESPIRATION => 3,
-                    Enchantment::AQUA_AFFINITY => 1],
-                'name' => "§9§lARCANA"
-            ], [
-                'id' => "diamond_chestplate",
-                'count' => 1,
-                'enchant' => [
-                    Enchantment::PROTECTION => 4,
-                    Enchantment::UNBREAKING => 3],
-                'name' => "§9§lARCANA"
-            ], [
-                'id' => "diamond_leggings",
-                'count' => 1,
-                'enchant' => [
-                    Enchantment::PROTECTION => 4,
-                    Enchantment::UNBREAKING => 3],
-                'name' => "§9§lARCANA"
-            ], [
-                'id' => "diamond_boots",
-                'count' => 1,
-                'enchant' => [
-                    Enchantment::PROTECTION => 4,
-                    Enchantment::FEATHER_FALLING => 3,
-                    Enchantment::DEPTH_STRIDER => 3,
-                    Enchantment::UNBREAKING => 3],
-                'name' => "§9§lARCANA"
-            ], [
-                'id' => "diamond_sword",
-                'count' => 1,
-                'enchant' => [
-                    Enchantment::SHARPNESS => 5,
-                    Enchantment::KNOCKBACK => 1,
-                    Enchantment::FIRE_ASPECT => 2,
-                    Enchantment::LOOTING => 1,
-                    Enchantment::UNBREAKING => 3],
-                'name' => "§9§lARCANA"
-            ], [
-                'id' => "diamond_axe",
-                'count' => 1,
-                'enchant' => [
-                    Enchantment::SHARPNESS => 3,
-                    Enchantment::EFFICIENCY => 5,
-                    Enchantment::UNBREAKING => 3,
-                    Enchantment::KNOCKBACK => 1],
-                'name' => "§9§lARCANA"
-            ], [
-                'id' => "diamond_pickaxe",
-                'count' => 1,
-                'enchant' => [
-                    Enchantment::EFFICIENCY => 5,
-                    Enchantment::UNBREAKING => 4],
-                'name' => "§9§lARCANA"
-            ], [
-                'id' => "diamond_shovel",
-                'count' => 1,
-                'enchant' => [
-                    Enchantment::EFFICIENCY => 5,
-                    Enchantment::UNBREAKING => 4],
-                'name' => "§9§lARCANA"
-            ], [
-                'id' => "bow",
-                'count' => 1,
-                'enchant' => [
-                    Enchantment::POWER => 5,
-                    Enchantment::UNBREAKING => 3,
-                    Enchantment::FLAME => 1,
-                    Enchantment::INFINITY => 1],
-                'name' => "§9§lARCANA"
-            ], [
-                'id' => "golden_apple",
-                'count' => 4
-            ], [
-                'id' => "totem",
-                'count' => 1
-            ], [
-                'id' => "totem",
-                'count' => 1
-            ], [
-                'id' => "cooked_beef",
-                'count' => 64
-            ], [
-                'id' => "book",
-                'count' => 16
-            ], [
-                'id' => "sea_lantern",
-                'count' => 40
-            ], [
-                'id' => "gold_ore",
-                'count' => 20
-            ], [
-                'id' => "diamond_ore",
-                'count' => 12
-            ], [
-                'id' => "emerald_ore",
-                'count' => 2
-            ], [
-                'id' => "coal_ore",
-                'count' => 64
-            ], [
-                'id' => "iron_ore",
-                'count' => 64
-            ], [
-                'id' => "lapis_ore",
-                'count' => 64
-            ], [
-                'id' => "arrow",
-                'count' => 64
-            ], [
-                'id' => "oak_log",
-                'count' => 64
-            ], [
-                'id' => "oak_log",
-                'damage' => 1,
-                'count' => 64
-            ], [
-                'id' => "oak_log",
-                'damage' => 2,
-                'count' => 64
-            ], [
-                'id' => "wool",
-                'damage' => 1,
-                'count' => 32
-            ], [
-                'id' => "glass",
-                'count' => 32
-            ], [
-                'id' => "concrete",
-                'damage' => 1,
-                'count' => 32
-            ], [
-                'id' => "bed",
-                'damage' => 1
-            ]
-        ],
-        7 => [
-            [
-                'id' => "diamond_helmet",
-                'count' => 1,
-                'enchant' => [
-                    Enchantment::PROTECTION => 4,
-                    Enchantment::UNBREAKING => 3,
-                    Enchantment::RESPIRATION => 4,
-                    Enchantment::AQUA_AFFINITY => 1],
-                'name' => "§9§lTITAN"
-            ], [
-                'id' => "diamond_chestplate",
-                'count' => 1,
-                'enchant' => [
-                    Enchantment::PROTECTION => 4,
-                    Enchantment::UNBREAKING => 3],
-                'name' => "§9§lTITAN"
-            ], [
-                'id' => "diamond_leggings",
-                'count' => 1,
-                'enchant' => [
-                    Enchantment::PROTECTION => 4,
-                    Enchantment::UNBREAKING => 3],
-                'name' => "§9§lTITAN"
-            ], [
-                'id' => "diamond_boots",
-                'count' => 1,
-                'enchant' => [
-                    Enchantment::PROTECTION => 4,
-                    Enchantment::FEATHER_FALLING => 4,
-                    Enchantment::DEPTH_STRIDER => 3,
-                    Enchantment::UNBREAKING => 3],
-                'name' => "§9§lTITAN"
-            ], [
-                'id' => "diamond_sword",
-                'count' => 1,
-                'enchant' => [
-                    Enchantment::SHARPNESS => 5,
-                    Enchantment::FIRE_ASPECT => 2,
-                    Enchantment::LOOTING => 2,
-                    Enchantment::UNBREAKING => 2],
-                'name' => "§9§lTITAN"
-            ], [
-                'id' => "diamond_axe",
-                'count' => 1,
-                'enchant' => [
-                    Enchantment::SHARPNESS => 4,
-                    Enchantment::EFFICIENCY => 5,
-                    Enchantment::UNBREAKING => 3,
-                    Enchantment::KNOCKBACK => 1,
-                    Enchantment::FIRE_ASPECT => 1],
-                'name' => "§9§lTITAN"
-            ], [
-                'id' => "diamond_pickaxe",
-                'count' => 1,
-                'enchant' => [
-                    Enchantment::EFFICIENCY => 5,
-                    Enchantment::UNBREAKING => 4],
-                'name' => "§9§lTITAN"
-            ], [
-                'id' => "diamond_shovel",
-                'count' => 1,
-                'enchant' => [
-                    Enchantment::EFFICIENCY => 5,
-                    Enchantment::UNBREAKING => 4],
-                'name' => "§9§lTITAN"
-            ], [
-                'id' => "bow",
-                'count' => 1,
-                'enchant' => [
-                    Enchantment::POWER => 5,
-                    Enchantment::UNBREAKING => 3,
-                    Enchantment::FLAME => 1,
-                    Enchantment::INFINITY => 1],
-                'name' => "§9§lTITAN"
-            ], [
-                'id' => "golden_apple",
-                'count' => 7
-            ], [
-                'id' => "totem",
-                'count' => 1
-            ], [
-                'id' => "totem",
-                'count' => 1
-            ], [
-                'id' => "cooked_beef",
-                'count' => 64
-            ], [
-                'id' => "book",
-                'count' => 24
-            ], [
-                'id' => "sea_lantern",
-                'count' => 48
-            ], [
-                'id' => "gold_ore",
-                'count' => 64
-            ], [
-                'id' => "diamond_ore",
-                'count' => 64
-            ], [
-                'id' => "emerald_ore",
-                'count' => 32
-            ], [
-                'id' => "coal_ore",
-                'count' => 64
-            ], [
-                'id' => "iron_ore",
-                'count' => 64
-            ], [
-                'id' => "lapis_ore",
-                'count' => 64
-            ], [
-                'id' => "arrow",
-                'count' => 64
-            ], [
-                'id' => "oak_log",
-                'count' => 64
-            ], [
-                'id' => "oak_log",
-                'damage' => 1,
-                'count' => 64
-            ], [
-                'id' => "oak_log",
-                'damage' => 2,
-                'count' => 64
-            ], [
-                'id' => "wool",
-                'damage' => 5,
-                'count' => 32
-            ], [
-                'id' => "glass",
-                'count' => 32
-            ], [
-                'id' => "concrete",
-                'damage' => 5,
-                'count' => 32
-            ], [
-                'id' => "bed",
-                'damage' => 5
-            ]
-        ],
-        8 => [
-            [
-                'id' => "diamond_helmet",
-                'count' => 1,
-                'enchant' => [
-                    Enchantment::PROTECTION => 4,
-                    Enchantment::UNBREAKING => 3,
-                    Enchantment::RESPIRATION => 4,
-                    Enchantment::AQUA_AFFINITY => 1],
-                'name' => "§9§lELDER"
-            ], [
-                'id' => "diamond_chestplate",
-                'count' => 1,
-                'enchant' => [
-                    Enchantment::PROTECTION => 4,
-                    Enchantment::UNBREAKING => 3],
-                'name' => "§9§lELDER"
-            ], [
-                'id' => "diamond_leggings",
-                'count' => 1,
-                'enchant' => [
-                    Enchantment::PROTECTION => 4,
-                    Enchantment::UNBREAKING => 3],
-                'name' => "§9§lELDER"
-            ], [
-                'id' => "diamond_boots",
-                'count' => 1,
-                'enchant' => [
-                    Enchantment::PROTECTION => 4,
-                    Enchantment::FEATHER_FALLING => 3,
-                    Enchantment::DEPTH_STRIDER => 3,
-                    Enchantment::UNBREAKING => 3],
-                'name' => "§9§lELDER"
-            ], [
-                'id' => "diamond_sword",
-                'count' => 1,
-                'enchant' => [
-                    Enchantment::SHARPNESS => 5,
-                    Enchantment::FIRE_ASPECT => 2,
-                    Enchantment::LOOTING => 3,
-                    Enchantment::UNBREAKING => 3],
-                'name' => "§9§lELDER"
-            ], [
-                'id' => "diamond_axe",
-                'count' => 1,
-                'enchant' => [
-                    Enchantment::SHARPNESS => 4,
-                    Enchantment::EFFICIENCY => 5,
-                    Enchantment::UNBREAKING => 3,
-                    Enchantment::KNOCKBACK => 1,
-                    Enchantment::FIRE_ASPECT => 1],
-                'name' => "§9§lELDER"
-            ], [
-                'id' => "diamond_pickaxe",
-                'count' => 1,
-                'enchant' => [
-                    Enchantment::EFFICIENCY => 7,
-                    Enchantment::UNBREAKING => 6],
-                'name' => "§9§lELDER"
-            ], [
-                'id' => "diamond_shovel",
-                'count' => 1,
-                'enchant' => [
-                    Enchantment::EFFICIENCY => 5,
-                    Enchantment::UNBREAKING => 4],
-                'name' => "§9§lELDER"
-            ], [
-                'id' => "bow",
-                'count' => 1,
-                'enchant' => [
-                    Enchantment::POWER => 6,
-                    Enchantment::UNBREAKING => 3,
-                    Enchantment::FLAME => 1,
-                    Enchantment::INFINITY => 1],
-                'name' => "§9§lELDER"
-            ], [
-                'id' => "golden_apple",
-                'count' => 8
-            ], [
-                'id' => "totem",
-                'count' => 1
-            ], [
-                'id' => "totem",
-                'count' => 1
-            ],
-            [
-                'id' => "totem",
-                'count' => 1
-            ], [
-                'id' => "cooked_beef",
-                'count' => 64
-            ], [
-                'id' => "book",
-                'count' => 32
-            ], [
-                'id' => "sea_lantern",
-                'count' => 48
-            ], [
-                'id' => "gold_ore",
-                'count' => 64
-            ], [
-                'id' => "diamond_ore",
-                'count' => 64
-            ], [
-                'id' => "emerald_ore",
-                'count' => 64
-            ], [
-                'id' => "coal_ore",
-                'count' => 64
-            ], [
-                'id' => "iron_ore",
-                'count' => 64
-            ], [
-                'id' => "lapis_ore",
-                'count' => 64
-            ], [
-                'id' => "arrow",
-                'count' => 64
-            ], [
-                'id' => "oak_log",
-                'count' => 64
-            ], [
-                'id' => "oak_log",
-                'damage' => 1,
-                'count' => 64
-            ], [
-                'id' => "oak_log",
-                'damage' => 2,
-                'count' => 64
-            ], [
-                'id' => "wool",
-                'damage' => 14,
-                'count' => 32
-            ], [
-                'id' => "glass",
-                'count' => 32
-            ], [
-                'id' => "concrete",
-                'damage' => 14,
-                'count' => 32
-            ], [
-                'id' => "bed",
-                'damage' => 14
-            ]
-        ]
-    ];*/
-    
 }
