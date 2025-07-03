@@ -114,9 +114,9 @@ class Settings {
                 ...self::generatePrivilegeTexts(330.5, 103.5, 82.5, "hunter", 10),
                 ...self::generatePrivilegeTexts(335.5, 103.5, 83.5, "ranger", 10),
                 ...self::generatePrivilegeTexts(340.5, 103.5, 86.5, "elemental", 10),
-                ...self::generatePrivilegeTexts(341.5, 103.5, 90.5, "phantom", 10),
+                ...self::generatePrivilegeTexts(341.5, 103.5, 91.5, "phantom", 10),
                 ...self::generatePrivilegeTexts(339.5, 103.5, 96.5, "arcana", 10),
-                ...self::generatePrivilegeTexts(332.5, 103.5, 97.5, "titan", 10),
+                ...self::generatePrivilegeTexts(332.5, 103.5, 98.5, "titan", 10),
                 ...self::generatePrivilegeTexts(327.5, 103.5, 99.5, "elder", 11),
                 ...self::generatePrivilegeTexts(347, 101, 77, "youtube", 4),
             ];
