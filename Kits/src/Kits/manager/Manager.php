@@ -20,11 +20,19 @@ class Manager {
 
     /** @var Item[][]  */
     private array $kits = [];
+    /** @var Vector3[]  */
+    private array $shulkers = [];
     
     public function __construct(
         private Level $level
     ){
         foreach (Settings::KITS as $kitName => $kit) {
+            if (isset($kit["shulker"])) {
+                $shulkerPosition = $kit["shulker"];
+                $position = new Vector3($shulkerPosition[0], $shulkerPosition[1], $shulkerPosition[2]);
+                $this->shulkers[$kitName] = $position;
+            }
+
             $items = [];
             foreach ($kit["items"] as $slot => $itemData) {
                 $id = (int)$itemData["id"];
@@ -71,6 +79,16 @@ class Manager {
                 $tile->getInventory()->setContents($this->kits[$kitName]);
             }
         }
+    }
+
+    public function isPositionShulker(Vector3 $position) : bool {
+        foreach ($this->shulkers as $kitName => $shulkerPosition) {
+            if ($position->floor()->equals($shulkerPosition->floor())) {
+                return true;
+            }
+        }
+
+        return false;
     }
 
     public function giveKit(Player $player, string $kitName) : void {
