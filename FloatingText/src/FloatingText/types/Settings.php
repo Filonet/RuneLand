@@ -110,15 +110,15 @@ class Settings {
                 ...self::generatePriceListTexts(193.5, 124.3, 197.5),
 
                 // Привилегии (генерируются функцией)
-                ...self::generatePrivilegeTexts(324.5, 104.5, 83.5, "hero", 9),
-                ...self::generatePrivilegeTexts(330.5, 104.5, 82.5, "hunter", 10),
-                ...self::generatePrivilegeTexts(335.5, 104.5, 84.5, "ranger", 10),
-                ...self::generatePrivilegeTexts(340.5, 104.5, 86.5, "elemental", 10),
-                ...self::generatePrivilegeTexts(341.5, 104.5, 87.5, "phantom", 10),
-                ...self::generatePrivilegeTexts(341.5, 104.5, 92.5, "arcana", 10),
-                ...self::generatePrivilegeTexts(340.5, 104.5, 97.5, "titan", 10),
-                ...self::generatePrivilegeTexts(333.5, 107.5, 98.5, "elder", 11),
-                ...self::generatePrivilegeTexts(327.5, 104.5, 99.5, "youtube", 4),
+                ...self::generatePrivilegeTexts(324.5, 103.5, 83.5, "hero", 9),
+                ...self::generatePrivilegeTexts(330.5, 103.5, 82.5, "hunter", 10),
+                ...self::generatePrivilegeTexts(335.5, 103.5, 83.5, "ranger", 10),
+                ...self::generatePrivilegeTexts(340.5, 103.5, 86.5, "elemental", 10),
+                ...self::generatePrivilegeTexts(341.5, 103.5, 90.5, "phantom", 10),
+                ...self::generatePrivilegeTexts(339.5, 103.5, 96.5, "arcana", 10),
+                ...self::generatePrivilegeTexts(332.5, 103.5, 97.5, "titan", 10),
+                ...self::generatePrivilegeTexts(327.5, 103.5, 99.5, "elder", 11),
+                ...self::generatePrivilegeTexts(347, 101, 77, "youtube", 4),
             ];
         }
         return self::$floatingTexts;
