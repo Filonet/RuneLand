@@ -24,7 +24,7 @@ class Farmer extends Kind
     }
 
     public function getNameTag(): string   { return '§eFarmer§r'; }
-    public function getVector3(): Vector3  { return new Vector3(208.5, 119, 176.5); }
+    public function getVector3(): Vector3  { return new Vector3(261.5, 117, 172.5); }
     public function getYaw(): float        { return 0; }
     public function getPitch(): float      { return 0; }
     public function getSkinName(): string  { return 'bard'; }

@@ -24,7 +24,7 @@ class Hunter extends Kind
     }
 
     public function getNameTag(): string   { return '§cHunter§r'; }
-    public function getVector3(): Vector3  { return new Vector3(204.5, 119, 174.5); }
+    public function getVector3(): Vector3  { return new Vector3(52.5, 100, 77.5); }
     public function getYaw(): float        { return 0; }
     public function getPitch(): float      { return 0; }
     public function getSkinName(): string  { return 'pirate'; }
