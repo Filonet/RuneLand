@@ -5,8 +5,9 @@ language: "ru_RU"  # ru_RU или en_US
 
 # Настройки приватов
 settings:
-  # Максимальное количество приватов на игрока (0 = без ограничений)
-  max-privates-per-player: 0
+  # Максимальное количество приватов зависит от привилегии игрока:
+  # NONE: 1, HERO: 2, HUNTER: 4, RANGER: 12, ELEMENTAL: 20, 
+  # PHANTOM: 35, ARCANA: 50, TITAN: 100, ELDER: 200
   
   # Автосохранение (в секундах)
   auto-save-interval: 300

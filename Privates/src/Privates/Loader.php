@@ -8,6 +8,7 @@ use pocketmine\scheduler\ClosureTask;
 use Privates\listener\EventListener;
 use Privates\manager\PrivateManager;
 use Privates\command\AdminPrivatesCommand;
+use Privates\command\PrivatesCommand;
 
 
 class Loader extends PluginBase {
@@ -28,6 +29,7 @@ class Loader extends PluginBase {
         
         $this->getServer()->getPluginManager()->registerEvents(new EventListener($this), $this);
         $this->getServer()->getCommandMap()->register("adminprivates", new AdminPrivatesCommand($this));
+        $this->getServer()->getCommandMap()->register("privates", new PrivatesCommand($this));
         
         // Запускаем автосохранение
         $this->startAutoSave();

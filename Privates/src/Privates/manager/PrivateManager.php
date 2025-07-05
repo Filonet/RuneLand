@@ -8,6 +8,8 @@ use pocketmine\Player;
 use pocketmine\utils\Config;
 use Privates\Loader;
 use Privates\types\PrivateArea;
+use PlayerData\data\PlayerDataFactory;
+use PlayerData\types\Group;
 
 class PrivateManager {
 
@@ -61,6 +63,37 @@ class PrivateManager {
                 $data["members"] ?? [],
                 $data["blockType"]
             );
+        }
+    }
+
+    /**
+     * Получает максимальное количество приватов для игрока в зависимости от его привилегии
+     * @param Player $player
+     * @return int
+     */
+    public function getMaxPrivatesForPlayer(Player $player): int {
+        $playerData = PlayerDataFactory::getData(strtolower($player->getName()));
+        $group = $playerData->getGroupData()->getGroup();
+        
+        switch ($group) {
+            case Group::HERO:
+                return 2;
+            case Group::HUNTER:
+                return 4;
+            case Group::RANGER:
+                return 12;
+            case Group::ELEMENTAL:
+                return 20;
+            case Group::PHANTOM:
+                return 35;
+            case Group::ARCANA:
+                return 50;
+            case Group::TITAN:
+                return 100;
+            case Group::ELDER:
+                return 200; // Предполагаемое количество для ELDER
+            default:
+                return 1; // Для Group::NONE и неизвестных групп
         }
     }
 
@@ -135,14 +168,12 @@ class PrivateManager {
         //     return false;
         // }
         
-        // Проверяем лимит приватов
-        $maxPrivates = $this->plugin->getConfig()->get("settings.max-privates-per-player", 0);
-        if ($maxPrivates > 0) {
-            $playerPrivates = count($this->getPrivateByOwner($player->getName()));
-            if ($playerPrivates >= $maxPrivates) {
-                $player->sendMessage($this->plugin->getMessage("max-privates-reached", ["max" => $maxPrivates]));
-                return false;
-            }
+        // Проверяем лимит приватов в зависимости от привилегии
+        $maxPrivates = $this->getMaxPrivatesForPlayer($player);
+        $playerPrivates = count($this->getPrivateByOwner($player->getName()));
+        if ($playerPrivates >= $maxPrivates) {
+            $player->sendMessage($this->plugin->getMessage("max-privates-reached", ["max" => $maxPrivates]));
+            return false;
         }
         
         $size = $this->blockSizes[$blockType];
@@ -224,5 +255,57 @@ class PrivateManager {
 
     public function getAllPrivates(): array {
         return $this->privates;
+    }
+
+    /**
+     * Отправляет игроку информацию о его приватах и лимитах
+     * @param Player $player
+     */
+    public function sendPrivatesInfo(Player $player): void {
+        $playerData = PlayerDataFactory::getData(strtolower($player->getName()));
+        $group = $playerData->getGroupData()->getGroup();
+        $maxPrivates = $this->getMaxPrivatesForPlayer($player);
+        $currentPrivates = count($this->getPrivateByOwner($player->getName()));
+        
+        // Определяем название группы в зависимости от языка
+        $langCode = $this->plugin->getConfig()->get("language", "ru_RU");
+        switch ($group) {
+            case Group::NONE:
+                $groupName = $langCode === "en_US" ? "Newbie" : "Новичок";
+                break;
+            case Group::HERO:
+                $groupName = "HERO";
+                break;
+            case Group::HUNTER:
+                $groupName = "HUNTER";
+                break;
+            case Group::RANGER:
+                $groupName = "RANGER";
+                break;
+            case Group::ELEMENTAL:
+                $groupName = "ELEMENTAL";
+                break;
+            case Group::PHANTOM:
+                $groupName = "PHANTOM";
+                break;
+            case Group::ARCANA:
+                $groupName = "ARCANA";
+                break;
+            case Group::TITAN:
+                $groupName = "TITAN";
+                break;
+            case Group::ELDER:
+                $groupName = "ELDER";
+                break;
+            default:
+                $groupName = $langCode === "en_US" ? "Unknown" : "Неизвестно";
+                break;
+        }
+        
+        $player->sendMessage($this->plugin->getMessage("privates-count-info", [
+            "current" => $currentPrivates,
+            "max" => $maxPrivates,
+            "group" => $groupName
+        ]));
     }
 } 

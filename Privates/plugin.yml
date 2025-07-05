@@ -6,6 +6,7 @@ author: RuneLand
 description: "Система приватов с блочной защитой"
 
 softdepend: [FormAPI]
+depend: [PlayerData]
 
 commands:
   adminprivates:

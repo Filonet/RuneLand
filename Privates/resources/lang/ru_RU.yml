@@ -26,7 +26,8 @@ removed-from-private: "§cВас исключили из привата игро
 # Информация
 no-privates: "§eУ вас нет приватов!"
 world-not-allowed: "§cВ этом мире нельзя создавать приваты!"
-max-privates-reached: "§cВы достигли максимального количества приватов ({max})!"
+max-privates-reached: "§cВы достигли максимального количества приватов! Лимит для вашей привилегии: {max}"
+privates-count-info: "§6Ваши приваты: §f{current}§6/§f{max} §7(привилегия: §f{group}§7)"
 no-pvp-in-private: "§cПvP запрещено в приватах!"
 
 # Блоки

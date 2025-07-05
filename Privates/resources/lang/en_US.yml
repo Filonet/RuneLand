@@ -26,7 +26,8 @@ removed-from-private: "§cYou were removed from {owner}'s private area!"
 # Information
 no-privates: "§eYou don't have any private areas!"
 world-not-allowed: "§cPrivate areas are not allowed in this world!"
-max-privates-reached: "§cYou have reached the maximum number of private areas ({max})!"
+max-privates-reached: "§cYou have reached the maximum number of private areas! Limit for your privilege: {max}"
+privates-count-info: "§6Your privates: §f{current}§6/§f{max} §7(privilege: §f{group}§7)"
 no-pvp-in-private: "§cPvP is not allowed in private areas!"
 
 # Blocks
