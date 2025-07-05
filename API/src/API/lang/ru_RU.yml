@@ -5,7 +5,7 @@ api.teleport.on.survival: "§6► §fВы телепортировались н�
 
 api.teleport.timer.teleportation: "§6Телепортация..."
 api.teleport.timer.teleportation.target: "§6Телепортация к §c%target%§6."
-api.teleport.timer.count: "§6Телепортация начнется через §c%timer% секунд§6. Не двигайтесь."
+api.teleport.timer.count: "§6Телепортация начнется через §c%timer% секунд§6. Не получайте урон."
 api.teleport.timer.success: "§6Телепортация начинается..."
 api.teleport.timer.cancel: "§cЗапрос на телепортацию отменен."
 

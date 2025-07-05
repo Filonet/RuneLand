@@ -1,0 +1,46 @@
+api.command.clear.success: "§r§6Todo el inventario de §l§c%nickname%§r§6 ha sido limpiado."
+api.command.clear.accept: "§r§7Para §lCONFIRMAR§r§7 la limpieza del inventario, por favor repite el comando: §l§6/clear"
+
+api.teleport.on.survival: "§6► §fHas sido teletransportado a las coordenadas\n§f   X: §6%x%, §fY: §6%y%, §fZ: §6%z%"
+
+api.teleport.timer.teleportation: "§6Teletransportación..."
+api.teleport.timer.teleportation.target: "§6Teletransportando a §c%target%§6."
+api.teleport.timer.count: "§6La teletransportación comenzará en §c%timer% segundos§6. No recibas daño."
+api.teleport.timer.success: "§6La teletransportación está comenzando..."
+api.teleport.timer.cancel: "§cLa solicitud de teletransportación ha sido cancelada."
+
+api.command.tpa.usage: "§7Información del comando: §b/tpa\n§7Información: §fSolicita teletransportación al jugador especificado\n§7Uso:\n§b/tpa <jugador> §e- §fEnvía una solicitud de teletransportación al jugador especificado"
+api.command.tpa.notFound: "§cError: §4Jugador no encontrado."
+api.command.tpa.already: "§cError: §4Ya has enviado una solicitud de teletransportación a %target%."
+api.command.tpa.success.player: "§6Solicitud enviada al jugador §c%target%§6.\n§6Para cancelar la solicitud actual, ingresa §c/tpacancel§6."
+api.command.tpa.success.target: "§6El jugador §c%player% §6te ha enviado una solicitud de teletransportación.\n§6Para aceptar la solicitud actual, ingresa §c/tpaccept§6."
+
+api.command.tpDeny.notFound: "§cError: §4No tienes solicitudes de teletransportación pendientes."
+api.command.tpDeny.success: "§6La solicitud del jugador §c%target% §6ha sido cancelada."
+
+api.command.tpaCancel.notFound: "§cError: §4No tienes solicitudes de teletransportación pendientes."
+api.command.tpaCancel.success: "§6Todas las solicitudes de teletransportación no aceptadas han sido canceladas."
+
+api.command.tpAccept.notFound: "§cError: §4No tienes solicitudes de teletransportación pendientes."
+api.command.tpAccept.success.player: "§c%target% §6ha aceptado tu solicitud de teletransportación."
+api.command.tpAccept.success.target: "§6Has aceptado la solicitud de teletransportación del jugador §c%player%§6."
+
+api.command.setHome.usage: "§7Uso:\n§b/sethome <casa> §e- §fcrea un punto de casa"
+api.command.setHome.success: "§6El punto de casa ha sido establecido."
+api.command.setHome.bad.name: "§cError: §4Nombre de casa inválido."
+api.command.setHome.intersects: "§cError: §4La casa intersecta con el área privada de alguien más."
+api.command.setHome.busy: "§cError: §4La casa ya está ocupada."
+api.command.setHome.max.homes: "§cError: §4No puedes crear más de §c%maxHomes% §4casa(s)."
+
+api.command.home.list: "§6Casas: §f%list%"
+
+api.command.delHome.usage: "§7Uso:\n§b/delhome <casa> §e- §felimina un punto de casa"
+api.command.delHome.dont.found: "§cError: §4Casa no encontrada."
+api.command.delHome.success: "§6La casa §c%home%§6 ha sido eliminada."
+
+api.command.stats.wellPlayed: "Tiempo Jugado"
+
+api.utils.timer.days: "d."
+api.utils.timer.hours: "h."
+api.utils.timer.minutes: "m."
+api.utils.timer.seconds: "s." 

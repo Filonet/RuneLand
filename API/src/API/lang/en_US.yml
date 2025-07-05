@@ -1,9 +1,46 @@
-api.command.clear.success: "§r§6All of §l§c%nickname%§r§6's inventory has been cleared."
-api.command.clear.accept: "§r§7To §lCONFIRM§r§7 clear your inventory, please repeat the command: §l§6/clear"
+api.command.clear.success: "§r§6The entire inventory of §l§c%nickname%§r§6 has been cleared."
+api.command.clear.accept: "§r§7To §lCONFIRM§r§7 clearing the inventory, please repeat the command: §l§6/clear"
 
-api.teleport.on.survival: "§6► §fYou have teleported to coordinates\n§f X: §6%x%, §fY: §6%y%, §fZ: §6%z%"
+api.teleport.on.survival: "§6► §fYou have been teleported to coordinates\n§f   X: §6%x%, §fY: §6%y%, §fZ: §6%z%"
 
-api.teleport.timer.teleportation: "§6Teleporting..."
-api.teleport.timer.count: "§6Teleportation will begin in §c%timer% seconds§6. Do not move."
-api.teleport.timer.success: "§6Teleportation begins..."
-api.teleport.timer.cancel: "§cTeleport request cancelled."
+api.teleport.timer.teleportation: "§6Teleportation..."
+api.teleport.timer.teleportation.target: "§6Teleporting to §c%target%§6."
+api.teleport.timer.count: "§6Teleportation will begin in §c%timer% seconds§6. Don't take damage."
+api.teleport.timer.success: "§6Teleportation starting..."
+api.teleport.timer.cancel: "§cTeleportation request has been cancelled."
+
+api.command.tpa.usage: "§7Command information: §b/tpa\n§7Information: §fRequests teleportation to specified player\n§7Usage:\n§b/tpa <player> §e- §fSends a teleportation request to the specified player"
+api.command.tpa.notFound: "§cError: §4Player not found."
+api.command.tpa.already: "§cError: §4You have already sent a teleportation request to %target%."
+api.command.tpa.success.player: "§6Request sent to player §c%target%§6.\n§6To cancel the current request, enter §c/tpacancel§6."
+api.command.tpa.success.target: "§6Player §c%player% §6has sent you a teleportation request.\n§6To accept the current request, enter §c/tpaccept§6."
+
+api.command.tpDeny.notFound: "§cError: §4You don't have any pending teleportation requests."
+api.command.tpDeny.success: "§6Request from player §c%target% §6has been cancelled."
+
+api.command.tpaCancel.notFound: "§cError: §4You don't have any pending teleportation requests."
+api.command.tpaCancel.success: "§6All unaccepted teleportation requests have been cancelled."
+
+api.command.tpAccept.notFound: "§cError: §4You don't have any pending teleportation requests."
+api.command.tpAccept.success.player: "§c%target% §6has accepted your teleportation request."
+api.command.tpAccept.success.target: "§6You have accepted the teleportation request from player §c%player%§6."
+
+api.command.setHome.usage: "§7Usage:\n§b/sethome <home> §e- §fcreates a home point"
+api.command.setHome.success: "§6Home point has been set."
+api.command.setHome.bad.name: "§cError: §4Invalid home name."
+api.command.setHome.intersects: "§cError: §4Home intersects with someone else's private area."
+api.command.setHome.busy: "§cError: §4Home is already occupied."
+api.command.setHome.max.homes: "§cError: §4You cannot create more than §c%maxHomes% §4home(s)."
+
+api.command.home.list: "§6Homes: §f%list%"
+
+api.command.delHome.usage: "§7Usage:\n§b/delhome <home> §e- §fdeletes a home point"
+api.command.delHome.dont.found: "§cError: §4Home not found."
+api.command.delHome.success: "§6Home §c%home%§6 has been deleted."
+
+api.command.stats.wellPlayed: "Time Played"
+
+api.utils.timer.days: "d."
+api.utils.timer.hours: "h."
+api.utils.timer.minutes: "m."
+api.utils.timer.seconds: "s." 
