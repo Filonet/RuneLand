@@ -98,6 +98,8 @@ class Manager {
 
         $inventory = $player->getInventory();
         foreach ($this->kits[$kitName] as $item) {
+            $item->getNamedTag()->removeTag("blocked");
+
             if ($inventory->canAddItem($item)) {
                 $inventory->addItem($item);
             } else {
