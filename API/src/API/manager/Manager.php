@@ -7,6 +7,11 @@ namespace API\manager;
 use API\Loader;
 use PlayerData\data\PlayerDataFactory;
 use PlayerData\Language;
+use pocketmine\block\Block;
+use pocketmine\block\Leaves;
+use pocketmine\block\Liquid;
+use pocketmine\block\Transparent;
+use pocketmine\block\Water;
 use pocketmine\level\Level;
 use pocketmine\level\Position;
 use pocketmine\math\Vector3;
@@ -24,10 +29,18 @@ class Manager {
     ){}
 
     public function randomTeleport(Player $player) : void {
-        $x = mt_rand(-2000, 2000);
-        $z = mt_rand(-2000, 2000);
+        $finished = false;
+        while (!$finished) {
+            $x = mt_rand(-2000, 2000);
+            $z = mt_rand(-2000, 2000);
 
-        $spawnLocation = new Position($x, 200, $z, $this->loader->getServer()->getLevelByName("survival"));
+            $level = $this->loader->getServer()->getLevelByName("survival");
+            $spawnLocation = new Position($x, 200, $z, $level);
+            $block = $level->getBlockAt($x, $level->getHighestBlockAt($x, $z), $z);
+            if (!$block instanceof Liquid and !$block instanceof Transparent) {
+                $finished = true;
+            }
+        }
 
         $player->teleport($spawnLocation);
 

@@ -17,7 +17,7 @@ use API\command\teleport\TpaCommand;
 use API\command\teleport\TpDenyCommand;
 use API\listener\EventListener;
 use API\manager\Manager;
-use API\task\SpeedTask;
+use API\task\FlyOnSpawnTask;
 use PlayerData\Language;
 use pocketmine\plugin\PluginBase;
 use pocketmine\scheduler\ClosureTask;
@@ -65,7 +65,7 @@ class Loader extends PluginBase {
             $this->getServer()->shutdown();
         }), 20 * 60 * 60 * 5);
 
-        $this->getScheduler()->scheduleRepeatingTask(new SpeedTask($this->getServer()->getDefaultLevel()), 20 * 2);
+        $this->getScheduler()->scheduleRepeatingTask(new FlyOnSpawnTask($this->getServer()->getDefaultLevel()), 20 * 2);
     }
 
     public function getManager() : Manager{
