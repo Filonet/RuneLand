@@ -1,4 +1,4 @@
-api.command.clear.success: "§r§6Весь инвентарь §l§c%nickname%§r§6 был очищен."
+api.command.clear.success: "§r§6 §l§c%nickname%§r§6 был очищен."
 api.command.clear.accept: "§r§7Для §lПОДТВЕРЖДЕНИЯ§r§7 очистки инвентаря, пожалуйста, повторите команду: §l§6/clear"
 
 api.teleport.on.survival: "§6► §fВы телепортировались на координаты\n§f   X: §6%x%, §fY: §6%y%, §fZ: §6%z%"

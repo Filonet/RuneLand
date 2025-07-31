@@ -97,6 +97,27 @@ class Settings {
     }
 
     /**
+     * Генерирует плавающие тексты для размеров приватов
+     * @param float $x Координата X
+     * @param float $y Начальная координата Y
+     * @param float $z Координата Z
+     * @param float $spacing Расстояние между строками
+     * @return array Массив координат и текстов
+     */
+    private static function generatePrivateSizesTexts(float $x, float $y, float $z, float $spacing = 0.3): array {
+        $sizes = [
+            "title", "iron", "gold", "diamond", "emerald", "netherite"
+        ];
+        
+        $texts = [];
+        foreach ($sizes as $index => $size) {
+            $currentY = $y - ($index * $spacing);
+            $texts[] = [$x, $currentY, $z, "%floating.text.private.sizes.{$size}%"];
+        }
+        return $texts;
+    }
+
+    /**
      * Возвращает массив плавающих текстов
      * @return array
      */
@@ -119,6 +140,9 @@ class Settings {
                 ...self::generatePrivilegeTexts(332.5, 103.5, 98.5, "titan", 10),
                 ...self::generatePrivilegeTexts(327.5, 103.5, 99.5, "elder", 11),
                 ...self::generatePrivilegeTexts(347, 101, 77, "youtube", 4),
+
+                // Размеры приватов по типу блока
+                ...self::generatePrivateSizesTexts(188, 119, 192),
             ];
         }
         return self::$floatingTexts;

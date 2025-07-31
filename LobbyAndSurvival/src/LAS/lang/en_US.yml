@@ -1,3 +1,3 @@
-guardlobby.no.permission.break: "§6Hey! §fSorry, but §bYou §fcan't §6break this block §fhere."
-guardlobby.no.permission.place: "§6Hey! §fSorry, but §bYou §fcan't §6place this block §fhere."
-guardlobby.no.permission.pvp: "§6Hey! §fSorry, but §bYou §fcan't §6PVP §fhere."
+las.no.permission.break: "§6Welcome to spawn! §fTo start playing, §bjump off the island §fand go to survival!"
+las.no.permission.place: "§6Welcome to spawn! §fTo start playing, §bjump off the island §fand go to survival!"
+las.no.permission.pvp: "§6This is a peaceful zone! §fTo fight with players, §bjump off the island §fand go to survival!"

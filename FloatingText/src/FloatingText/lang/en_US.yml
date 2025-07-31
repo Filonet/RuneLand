@@ -135,3 +135,11 @@ floating.text.youtube1: "§f§lYou§cTube"
 floating.text.youtube2: "Privilege for YouTubers"
 floating.text.youtube3: "Do you have a YouTube channel?"
 floating.text.youtube4: "Write here - vk.com/yt_pvpex"
+
+# Private sizes by block type
+floating.text.private.sizes.title: "§6§lPrivate sizes by block type:"
+floating.text.private.sizes.iron: "§fIron block — 5×5×5"
+floating.text.private.sizes.gold: "§fGold block — 7×7×7"
+floating.text.private.sizes.diamond: "§fDiamond block — 11×11×11"
+floating.text.private.sizes.emerald: "§fEmerald block — 21×21×21"
+floating.text.private.sizes.netherite: "§fNetherite block — 31×31×31"

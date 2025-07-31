@@ -158,7 +158,7 @@ class PrivateManager {
         }
         
         // Проверяем, разрешен ли мир
-        $allowedWorlds = $this->plugin->getConfig()->get("allowed-worlds", ["world"]);
+        $allowedWorlds = ["survival"];
         $player->sendMessage("§7[DEBUG] Текущий мир: '" . $world . "'");
         $player->sendMessage("§7[DEBUG] Разрешенные миры: " . implode(", ", $allowedWorlds));
         
