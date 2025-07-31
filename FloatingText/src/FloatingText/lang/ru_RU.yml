@@ -138,8 +138,8 @@ floating.text.youtube4: "Пишите сюда - vk.com/yt_pvpex"
 
 # Размеры приватов по типу блока
 floating.text.private.sizes.title: "§6§lРазмеры приватов по типу блока:"
-floating.text.private.sizes.iron: "§fЖелезный блок — 5×5×5"
-floating.text.private.sizes.gold: "§fЗолотой блок — 7×7×7"
-floating.text.private.sizes.diamond: "§fАлмазный блок — 11×11×11"
-floating.text.private.sizes.emerald: "§fИзумрудный блок — 21×21×21"
-floating.text.private.sizes.netherite: "§fНезеритовый блок — 31×31×31"
+floating.text.private.sizes.iron: "§fЖелезный блок — §a5×5×5"
+floating.text.private.sizes.gold: "§fЗолотой блок — §a7×7×7"
+floating.text.private.sizes.diamond: "§fАлмазный блок — §a11×11×11"
+floating.text.private.sizes.emerald: "§fИзумрудный блок — §a21×21×21"
+floating.text.private.sizes.netherite: "§fНезеритовый блок — §a31×31×31"
