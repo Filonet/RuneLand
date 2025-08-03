@@ -6,6 +6,6 @@ donatecase.drop.itme: "§7(§bДОНАТ-КЕЙС §4%count%X§7) §fИгрок 
 donatecase.drop.floating: "§4%count%X §fИгрок §e%nickname% §fвыиграл приз: §e%item%"
 donatecase.drop.final: "§7(§bДОНАТ-КЕЙС §4%count%X§7) §fИгроку §c%nickname% §fвыпало §c%count%§f предметов из Мега-Ящика"
 
-donatecase.floating.name: "§b> §c§lМЕГА-ЯЩИК §r§f§b<"
-donatecase.floating.description: "§b> §f§eЭксклюзивные привилегии§f, §aтитулы§f и все привилегии до §e§lА∂ɱυʜυсτρατσρа§r §b<"
-donatecase.floating.site: "§b> §f§eПокупка на сайте §l§6runeland.net§r §l§d49 руб. §b<"
+donatecase.floating.name: "§b> §e§lДОНАТ-ЯЩИК §r§f§b<"
+donatecase.floating.description: "§b> §f§eПолучи §dпривилегии§f, §eденьжата §fи §9руны§f!§r §b<"
+donatecase.floating.site: "§b> §f§eПокупка на сайте §l§6runeland.net§r §b<"

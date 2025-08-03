@@ -81,7 +81,7 @@ class EventListener implements Listener {
                     \PlayerData\Loader::$mThread->pushQueryPacket('INSERT INTO `donatecase` (`nickname`, `count`) VALUES("' . $player->getLowerCaseName() . '", 0) ON DUPLICATE KEY UPDATE `count` = `count` - 1;');
 
                     foreach ($player->getServer()->getOnlinePlayers() as $target) {
-                        $target->sendPopup(Language::translate("%donatecase.started.open%", $target, [
+                        $target->sendMessage(Language::translate("%donatecase.started.open%", $target, [
                             "nickname" => $player->getName()
                         ]));
                     }
@@ -95,7 +95,7 @@ class EventListener implements Listener {
                     $this->site->setInvisible(true);
                     $player->getServer()->getDefaultLevel()->addParticle($this->site);
 
-                    $this->open($player, $block, 1);
+                    $this->open($player, $block, 0);
                 } else {
                     $player->sendPopup(Language::translate("%donatecase.dont.cases%", $player));
                 }
@@ -126,7 +126,7 @@ class EventListener implements Listener {
                 $this->open->setInvisible(false);
 
                 foreach ($player->getServer()->getOnlinePlayers() as $target) {
-                    $target->sendPopup(Language::translate("%donatecase.drop.itme%", $target, [
+                    $target->sendMessage(Language::translate("%donatecase.drop.itme%", $target, [
                         "count" => $count,
                         "nickname" => $player->getName(),
                         "item" => $animateItem->getName()
@@ -143,7 +143,7 @@ class EventListener implements Listener {
             },
             function () use ($player, $block, $count): void {
                 if ($count <= 7) {
-                    if ($count === 2) {
+                    if ($count === 1 || $count === 2) {
                         $this->open($player, $block, $count);
                         return;
                     } elseif (mt_rand(0, 2) === 2) {
@@ -156,7 +156,7 @@ class EventListener implements Listener {
                 $this->site->setInvisible(false);
 
                 foreach ($player->getServer()->getOnlinePlayers() as $target) {
-                    $target->sendPopup(Language::translate("%donatecase.drop.final%", $target, [
+                    $target->sendMessage(Language::translate("%donatecase.drop.final%", $target, [
                         "nickname" => $player->getName(),
                         "count" => $count
                     ]));
