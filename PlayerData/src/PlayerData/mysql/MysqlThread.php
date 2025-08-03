@@ -157,6 +157,13 @@ class MysqlThread extends Thread{
                         }
                     }
 
+                    $q = $db->query("SELECT `nickname`, `count` FROM `donatecase` WHERE " . str_replace("`name`", "`nickname`", $querySeq));
+                    if ($q !== false && count($data = $q->fetch_all())) {
+                        foreach ($data as $row) {
+                            $result[trim(strtolower($row[0]))]->setDonateCases((int) $row[1]);
+                        }
+                    }
+
                     foreach ($players as $data) {
                         $result[$data[0]]->setCid(intval($data[1]));
                     }

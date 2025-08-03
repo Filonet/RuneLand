@@ -92,10 +92,6 @@ class PlayerData {
         $this->donateCases = $donateCases;
     }
 
-    public function addDonateCases(int $donateCases) : void{
-        $this->donateCases += $donateCases;
-    }
-
     public function setCid(int $cid) : void{
         $this->cid = $cid;
     }

@@ -1,0 +1,11 @@
+donatecase.already.opens: "§b• §fИгрок %nickname% уже открывает кейс §b•"
+donatecase.you.open: "§b• §fВы уже открываете кейс §b•"
+donatecase.started.open: "§7(§bДОНАТ-КЕЙС§7) §fИгрок §b%nickname% §fначал открывать кейс"
+donatecase.dont.cases: "§7(§bДОНАТ-КЕЙС§7) §fУ вас §cнедостаточно§f ключей! Приобрести можно на сайте §l§druneland.net§r"
+donatecase.drop.itme: "§7(§bДОНАТ-КЕЙС §4%count%X§7) §fИгрок §e%nickname% §fвыиграл приз: §e%item%"
+donatecase.drop.floating: "§4%count%X §fИгрок §e%nickname% §fвыиграл приз: §e%item%"
+donatecase.drop.final: "§7(§bДОНАТ-КЕЙС §4%count%X§7) §fИгроку §c%nickname% §fвыпало §c%count%§f предметов из Мега-Ящика"
+
+donatecase.floating.name: "§b> §c§lМЕГА-ЯЩИК §r§f§b<"
+donatecase.floating.description: "§b> §f§eЭксклюзивные привилегии§f, §aтитулы§f и все привилегии до §e§lА∂ɱυʜυсτρατσρа§r §b<"
+donatecase.floating.site: "§b> §f§eПокупка на сайте §l§6runeland.net§r §l§d49 руб. §b<"
