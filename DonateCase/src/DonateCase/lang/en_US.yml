@@ -1,0 +1,11 @@
+donatecase.already.opens: "§b• §fPlayer %nickname% is already opening case §b•"
+donatecase.you.open: "§b• §fYou are already opening case §b•"
+donatecase.started.open: "§7(§bDONATE-CASE§7) §fPlayer §b%nickname% §fstarted opening case"
+donatecase.dont.cases: "§7(§bDONATE-CASE§7) §fYou §cdon't have enough§f keys! You can buy them on the website §l§druneland.net§r"
+donatecase.drop.item: "§7(§bDONATE-CASE §4%count%X§7) §fPlayer §e%nickname% §fwon a prize: §e%item%"
+donatecase.drop.floating: "§4%count%X §fPlayer §e%nickname% §fwon a prize: §e%item%"
+donatecase.drop.final: "§7(§bDONATION CASE §4%count%X§7) §fPlayer §c%nickname% §fdropped §c%count%§f items from the Mega Box"
+
+donatecase.floating.name: "§b> §e§lDONATION BOX §r§f§b<"
+donatecase.floating.description: "§b> §f§eGet §dprivileges§f, §emoney §fи §9руны§f!§r §b<"
+donatecase.floating.site: "§b> §f§ePurchase on the site §l§6runeland.net§r §b<"

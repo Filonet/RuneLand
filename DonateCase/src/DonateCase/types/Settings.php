@@ -10,8 +10,8 @@ class Settings {
         //NOOP
     }
 
-    public const CHEST_X = 688;
-    public const CHEST_Y = 68;
-    public const CHEST_Z = 301;
+    public const CHEST_X = 196;
+    public const CHEST_Y = 119;
+    public const CHEST_Z = 174;
 
 }

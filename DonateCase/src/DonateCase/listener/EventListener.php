@@ -126,7 +126,7 @@ class EventListener implements Listener {
                 $this->open->setInvisible(false);
 
                 foreach ($player->getServer()->getOnlinePlayers() as $target) {
-                    $target->sendMessage(Language::translate("%donatecase.drop.itme%", $target, [
+                    $target->sendMessage(Language::translate("%donatecase.drop.item%", $target, [
                         "count" => $count,
                         "nickname" => $player->getName(),
                         "item" => $animateItem->getName()

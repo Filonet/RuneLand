@@ -116,7 +116,7 @@ class AnimateCaseTask extends Task {
                 $radius = 2.0;
                 $count = 650;
                 for($i = 0; $i < $count; $i++){
-                    $particle = new DustParticle($this->position, mt_rand(0, 0xff), mt_rand(0, 0xff), mt_rand(0, 0xff));
+                    $particle = new DustParticle($this->position, 204, 0, 204);
 
                     $yaw = (mt_rand(1, mt_getrandmax() - 1) / mt_getrandmax()) * 2 * M_PI;
 

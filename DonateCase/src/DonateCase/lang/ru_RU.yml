@@ -2,7 +2,7 @@ donatecase.already.opens: "§b• §fИгрок %nickname% уже открыва
 donatecase.you.open: "§b• §fВы уже открываете кейс §b•"
 donatecase.started.open: "§7(§bДОНАТ-КЕЙС§7) §fИгрок §b%nickname% §fначал открывать кейс"
 donatecase.dont.cases: "§7(§bДОНАТ-КЕЙС§7) §fУ вас §cнедостаточно§f ключей! Приобрести можно на сайте §l§druneland.net§r"
-donatecase.drop.itme: "§7(§bДОНАТ-КЕЙС §4%count%X§7) §fИгрок §e%nickname% §fвыиграл приз: §e%item%"
+donatecase.drop.item: "§7(§bДОНАТ-КЕЙС §4%count%X§7) §fИгрок §e%nickname% §fвыиграл приз: §e%item%"
 donatecase.drop.floating: "§4%count%X §fИгрок §e%nickname% §fвыиграл приз: §e%item%"
 donatecase.drop.final: "§7(§bДОНАТ-КЕЙС §4%count%X§7) §fИгроку §c%nickname% §fвыпало §c%count%§f предметов из Мега-Ящика"
 
