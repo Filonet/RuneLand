@@ -16,6 +16,7 @@ class PlayerData {
         private QuestData       $questData,
         private TeleportData    $teleportData,
         private ProfessionData  $professionData,
+        private int             $donateCases,
         private int             $cid = 0
     ) {}
 
@@ -26,7 +27,8 @@ class PlayerData {
             StatsData::make(),
             QuestData::make(),
             TeleportData::make(),
-            ProfessionData::make()
+            ProfessionData::make(),
+            0
         );
     }
 
@@ -52,6 +54,10 @@ class PlayerData {
 
     public function getProfessionData() : ProfessionData{
         return $this->professionData;
+    }
+
+    public function getDonateCases() : int{
+        return $this->donateCases;
     }
 
     public function getCid() : int{
@@ -80,6 +86,14 @@ class PlayerData {
 
     public function setProfessionData(ProfessionData $professionData) : void{
         $this->professionData = $professionData;
+    }
+
+    public function setDonateCases(int $donateCases) : void{
+        $this->donateCases = $donateCases;
+    }
+
+    public function addDonateCases(int $donateCases) : void{
+        $this->donateCases += $donateCases;
     }
 
     public function setCid(int $cid) : void{
