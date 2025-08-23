@@ -9,7 +9,9 @@ use NPC\Loader;
 use pocketmine\entity\Entity;
 use pocketmine\entity\Skin;
 use pocketmine\level\format\Chunk;
+use pocketmine\level\Level;
 use pocketmine\level\Location;
+use pocketmine\math\Vector3;
 use pocketmine\nbt\tag\ByteArrayTag;
 use pocketmine\nbt\tag\CompoundTag;
 use pocketmine\nbt\tag\StringTag;
@@ -27,6 +29,22 @@ class Manager {
         private Loader $loader
     ){
         //NOOP
+    }
+
+    public function spawn(string $nameTag, Vector3 $vector3, Level $level, float $yaw, float $pitch, string $skinName, string $modelName, ?\Closure $onUse = null) : ?CustomHuman {
+        $skin = $this->getSkin($skinName, $modelName);
+        $entity = $this->getHuman(Location::fromObject($vector3, $level, $yaw, $pitch), $skin, $onUse);
+
+        if ($entity instanceof CustomHuman) {
+            $entity->spawnToAll();
+
+            $entity->setNameTagVisible();
+            $entity->setNameTagAlwaysVisible();
+
+            $entity->setNameTag($nameTag);
+        }
+
+        return $entity;
     }
 
     public function getHuman(Location $location, Skin $skin, ?\Closure $onUse = null) : ?CustomHuman{
@@ -55,12 +73,16 @@ class Manager {
         return new CustomHuman($level, $nbt, $onUse);
     }
 
-    public function getSkin(string $skinData, ?string $modelPath = null, string $skinId = "Custom_Human") : Skin {
-        $skinData = file_get_contents($this->loader->getDataFolder() . "skins/" . $skinData . ".skindata");
+    public function getSkin(string $skinData, ?string $modelData = null, string $skinId = "Custom_Human") : Skin {
+        if (file_exists(($file = $this->loader->getDataFolder() . "skins/" . $skinData . ".skindata"))) {
+            $skinData = file_get_contents($file);
+        } else {
+            $skinData = $this->skinFromPng($this->loader->getDataFolder() . "skins/" . $skinData . ".png");
+        }
 
         $geometryName = null;
-        if ($modelPath !== null) {
-            $geometryData = file_get_contents($this->loader->getDataFolder() . "geometry/" . $modelPath . ".json");
+        if ($modelData !== null) {
+            $geometryData = file_get_contents($this->loader->getDataFolder() . "geometry/" . $modelData . ".json");
             $json = json_decode($geometryData, true);
             $geometryName = $json['minecraft:geometry'][0]['description']['identifier'];
         }
@@ -72,5 +94,28 @@ class Manager {
             $geometryName ?? "",
             $geometryData ?? ""
         );
+    }
+
+    public function skinFromPng(string $path): string{
+        $img = @imagecreatefrompng($path);
+        $skinbytes = "";
+        $size = @getimagesize($path);
+        $s = (int)$size[1];
+        $sy = (int)$size[0];
+
+        for ($y = 0; $y < $s; $y++) {
+            for ($x = 0; $x < $sy; $x++) {
+                $colorat = @imagecolorat($img, $x, $y);
+                $a = ((~((int)($colorat >> 24))) << 1) & 0xff;
+                $r = ($colorat >> 16) & 0xff;
+                $g = ($colorat >> 8) & 0xff;
+                $b = $colorat & 0xff;
+                $skinbytes .= chr($r) . chr($g) . chr($b) . chr($a);
+            }
+        }
+
+        @imagedestroy($img);
+
+        return $skinbytes;
     }
 }
